@@ -47,7 +47,7 @@ Kies wat bij je past:
 | `Project115-1.1.1.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
 | `Project115-1.1.1-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
 | `Project115-1.1.1.zip` | De volledige uitgave in één bestand: alle drie de vormen plus de documentatie. |
-| `Project115-1.1.1-Handleiding.pdf` | Handleiding van elf pagina's. |
+| `Project115-1.1.1-Handleiding.pdf` | Handleiding van twaalf pagina's. |
 
 Uitgebreidere instructies staan in [INSTALLEREN.md](INSTALLEREN.md).
 

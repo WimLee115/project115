@@ -53,6 +53,15 @@ const sources = {
   single: join(root, `dist-single/Project115-${APP_VERSION}-offline.html`),
   web: join(root, 'dist-web'),
   docs: join(root, 'docs'),
+  /*
+   * De handleiding staat één map hoger. Hij stond ooit hier ook, als tweede
+   * exemplaar naast dat van de webhub, en die twee liepen uit elkaar: op het
+   * laatst scheelden ze 285 regels en beschreven ze een andere versie. Nu is
+   * er één bron — `docs/handleiding.html` in de hoofdmap, waar `npm run docs`
+   * de PDF van maakt — en die behandelt alle vier de manieren om Project115
+   * te draaien.
+   */
+  handleiding: join(root, '..', 'Project115 - Handleiding.pdf'),
 };
 
 /** Namen die nooit in het pakket mogen belanden, wat er verder ook gebeurt. */
@@ -99,11 +108,13 @@ execFileSync(
  * hieronder ook nog nagelopen.
  */
 const DOCS = [
-  'Project115 - Handleiding.pdf',
   'INSTALLEREN.md',
   'GEBRUIKSVOORWAARDEN.md',
   'PRIVACY.md',
 ];
+
+require(sources.handleiding, 'Draai eerst `npm run docs` in de hoofdmap.');
+copyFileSync(sources.handleiding, join(staging, 'Project115 - Handleiding.pdf'));
 
 for (const doc of DOCS) {
   const path = join(sources.docs, doc);

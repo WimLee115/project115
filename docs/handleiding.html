@@ -473,9 +473,9 @@ kbd {
 
   <h1>Project115</h1>
   <p class="lead">
-    Je persoonlijke studiehub voor twee certificeringsexamens.
-    Volledige proefexamens onder echte condities, en een dashboard dat
-    precies aanwijst wat je nog moet leren.
+    Studiehub voor twee certificeringsexamens. Volledige proefexamens onder
+    echte condities, en een overzicht dat precies aanwijst wat je nog moet
+    leren. Werkt zonder installatie en zonder internet.
   </p>
 
   <div class="cover-exams">
@@ -501,12 +501,12 @@ kbd {
   <p class="sub">Waar je wat vindt</p>
 
   <ul class="toc-list">
-    <li><span class="toc-num">1</span><span class="toc-title"><strong>Beginnen</strong><br><span class="toc-desc">Opstarten in één handeling, en wat er de eerste keer gebeurt</span></span></li>
+    <li><span class="toc-num">1</span><span class="toc-title"><strong>Beginnen</strong><br><span class="toc-desc">Vier manieren om te starten, en je eerste stappen</span></span></li>
     <li><span class="toc-num">2</span><span class="toc-title"><strong>De twee examens</strong><br><span class="toc-desc">Waar je op wordt getoetst en hoe zwaar elk onderdeel meetelt</span></span></li>
     <li><span class="toc-num">3</span><span class="toc-title"><strong>Wat je ermee kunt</strong><br><span class="toc-desc">Proefexamen, oefenen, herhalen, begrippen en voortgang</span></span></li>
     <li><span class="toc-num">4</span><span class="toc-title"><strong>Een studieaanpak</strong><br><span class="toc-desc">Vier fasen van eerste kennismaking tot examendag</span></span></li>
-    <li><span class="toc-num">5</span><span class="toc-title"><strong>Je gegevens en je beveiliging</strong><br><span class="toc-desc">Wat er waar staat en hoe het beschermd is</span></span></li>
-    <li><span class="toc-num">6</span><span class="toc-title"><strong>Onderhoud</strong><br><span class="toc-desc">Back-up maken, vragen toevoegen, problemen oplossen</span></span></li>
+    <li><span class="toc-num">5</span><span class="toc-title"><strong>Je gegevens</strong><br><span class="toc-desc">Wat er waar staat, en wat er niet gebeurt</span></span></li>
+    <li><span class="toc-num">6</span><span class="toc-title"><strong>Onderhoud</strong><br><span class="toc-desc">Back-ups, meerdere apparaten, vragen toevoegen, problemen oplossen</span></span></li>
     <li><span class="toc-num">7</span><span class="toc-title"><strong>Verantwoording</strong><br><span class="toc-desc">Waar de inhoud vandaan komt en wat er is getest</span></span></li>
   </ul>
 </section>
@@ -514,74 +514,137 @@ kbd {
 <!-- ====================== 1. BEGINNEN ====================== -->
 <section>
   <h2><span class="num">1</span>Beginnen</h2>
-  <p class="sub">Opstarten in één handeling</p>
+  <p class="sub">Vier manieren, kies wat je handig vindt</p>
 
   <p>
-    Project115 draait volledig op je eigen computer. Er is geen account bij een
-    dienst nodig, geen abonnement, en er gaat geen enkel gegeven naar buiten.
+    Project115 draait volledig op je eigen apparaat. Er is geen account bij een
+    dienst nodig, geen abonnement en geen server van iemand anders. De
+    applicatie legt tijdens gebruik geen enkele verbinding met het internet, en
+    er gaat geen gegeven naar buiten.
   </p>
 
-  <h3>Starten</h3>
+  <h3>Het losse bestand — het eenvoudigst</h3>
 
-  <p>Dubbelklik op <code>start.sh</code>. Of, vanuit een terminal:</p>
+  <p>
+    Dubbelklik op <code>Project115-1.1.1-offline.html</code>. Meer is het niet.
+    De hele applicatie zit in dat ene bestand: de vragenbank, de begrippenlijst
+    en alle schermen. Het werkt in elke moderne browser, op Windows, macOS,
+    Linux en op een Chromebook.
+  </p>
+
+  <div class="note note-info">
+    <span class="label">Waar je voortgang blijft</span>
+    <p>
+      De browser waarin je het bestand opent, bewaart je voortgang. Open het dus
+      steeds met dezelfde browser en laat het bestand op zijn plek staan. Wis je
+      de gegevens van je browser, dan is je voortgang weg — tenzij je hebt
+      geëxporteerd.
+    </p>
+  </div>
+
+  <h3>Als Android-app</h3>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Zet het APK-bestand op je telefoon</h4>
+      <p>Via de mail, een link, of een usb-kabel — wat je gewend bent.</p>
+    </div>
+    <div class="step">
+      <h4>Open het bestand en sta de installatie toe</h4>
+      <p>
+        Android meldt dat installeren uit deze bron niet is toegestaan. Tik op
+        <strong>Instellingen</strong> en zet de schakelaar aan voor de app
+        waarmee je het bestand opende. Die waarschuwing is normaal bij software
+        die niet uit de Play Store komt.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Tik op Installeren</h4>
+      <p>
+        Daarna staat Project115 tussen je andere apps. Minimaal Android 7.0
+        nodig; de app is ongeveer drie megabyte.
+      </p>
+    </div>
+  </div>
+
+  <h3>Op een webserver</h3>
+
+  <p>
+    In <code>Project115-1.1.1-web.zip</code> zit dezelfde applicatie als gewone
+    website, bedoeld voor als je hem aan een groep wilt aanbieden. Pak de zip uit
+    in een map op een webserver. Er is geen database nodig en geen installatie;
+    de bestanden serveren volstaat.
+  </p>
+
+  <p>
+    Via HTTPS werkt de site daarna ook zonder internet, en kunnen bezoekers hem
+    op hun beginscherm zetten als een gewone app — via het menu van Chrome, de
+    deelknop van Safari, of het pictogram in de adresbalk op een computer.
+  </p>
+
+  <h3>Zelf hosten, met accounts</h3>
+
+  <p>
+    Wie de broncode heeft, kan in plaats daarvan de volledige studiehub draaien:
+    dezelfde applicatie, maar met inloggen, tweestapsverificatie en een database
+    op de server. Bedoeld voor wie hem binnen een school of team centraal wil
+    aanbieden. Starten gaat met één handeling:
+  </p>
 
   <pre><code>./start.sh</code></pre>
 
   <p>
-    Meer is het niet. Het script controleert of alles aanwezig is, installeert
-    de eerste keer wat er nog ontbreekt, maakt een beveiligingssleutel en de
-    database aan, laadt de vragenbank en opent je browser.
+    Het script controleert of alles aanwezig is, installeert de eerste keer wat
+    er nog ontbreekt, maakt een beveiligingssleutel en de database aan, laadt de
+    vragenbank en opent je browser. De eerste keer duurt dat een paar minuten;
+    daarna is starten een kwestie van seconden. Stoppen doe je met
+    <kbd>Ctrl</kbd>+<kbd>C</kbd>, of met <code>./stop.sh</code> als je dat
+    venster hebt gesloten.
   </p>
 
-  <div class="note note-info">
-    <span class="label">De eerste keer</span>
-    <p>
-      Het opstarten duurt een paar minuten: de onderdelen worden geïnstalleerd
-      en het programma wordt klaargemaakt. Daarna is starten een kwestie van
-      seconden.
-    </p>
-  </div>
+  <p>
+    Bij de eerste start maak je een account aan. Het e-mailadres is alleen je
+    inlognaam: er wordt niets verstuurd en niets gecontroleerd. Kies een
+    wachtwoord van minimaal twaalf tekens — een zin die je onthoudt is sterker
+    dan een kort, ingewikkeld wachtwoord. <em>ZonnigeDinsdagInMaart</em> is beter
+    dan <em>P@ssw0rd!</em>: langer, makkelijker te onthouden, en veel moeilijker
+    te kraken.
+  </p>
 
-  <h3>Je account aanmaken</h3>
+  <p>
+    In je programmamenu zetten kan met
+    <code>cp Project115.desktop ~/.local/share/applications/</code>. Voor de
+    containeropzet, en voor draaien binnen je eigen netwerk, zie
+    <code>DOCKER.md</code>.
+  </p>
+
+  <h3>De eerste stappen in de applicatie</h3>
 
   <div class="steps">
     <div class="step">
-      <h4>Vul je naam en e-mailadres in</h4>
-      <p>
-        Het e-mailadres is alleen je inlognaam. Er wordt niets verstuurd en
-        niets gecontroleerd.
-      </p>
-    </div>
-    <div class="step">
-      <h4>Kies een wachtwoord van minimaal 12 tekens</h4>
-      <p>
-        Een zin die je onthoudt is sterker dan een kort, ingewikkeld wachtwoord.
-        <em>ZonnigeDinsdagInMaart</em> is beter dan <em>P@ssw0rd!</em> — langer,
-        makkelijker te onthouden, en veel moeilijker te kraken.
-      </p>
-    </div>
-    <div class="step">
       <h4>Stel je examendatum in</h4>
       <p>
-        Via <strong>Instellingen</strong>. Het dashboard telt dan af en je weet
-        precies hoeveel tijd je nog hebt.
+        Via <strong>Instellingen → Studieplan</strong>. Het beginscherm telt dan
+        af, zodat je precies weet hoeveel tijd je nog hebt.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Zet eventueel een pincode</h4>
+      <p>
+        Via <strong>Instellingen → Beveiliging</strong>. Handig als je op je
+        telefoon studeert en je toestel weleens uit handen geeft. Draai je de
+        hub met accounts, dan zet je daar in plaats hiervan
+        tweestapsverificatie aan.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Begin met een proefexamen</h4>
+      <p>
+        Ook als je nog niets weet. Je nulmeting bepaalt waar je begint, en het
+        overzicht per leerdoel is pas bruikbaar als er iets in staat.
       </p>
     </div>
   </div>
-
-  <h3>Stoppen</h3>
-
-  <p>
-    Druk op <kbd>Ctrl</kbd>+<kbd>C</kbd> in het venster waarin je gestart bent.
-    Is dat venster per ongeluk gesloten, dan stopt <code>./stop.sh</code> de hub
-    alsnog.
-  </p>
-
-  <h3>In je programmamenu zetten</h3>
-
-  <pre><code>cp Project115.desktop ~/.local/share/applications/</code></pre>
-
-  <p>Daarna staat Project115 gewoon tussen je andere programma's.</p>
 </section>
 
 <!-- ====================== 2. DE EXAMENS ====================== -->
@@ -885,17 +948,69 @@ kbd {
 
 <!-- ====================== 5. BEVEILIGING ====================== -->
 <section>
-  <h2><span class="num">5</span>Je gegevens en je beveiliging</h2>
-  <p class="sub">Wat er waar staat</p>
+  <h2><span class="num">5</span>Je gegevens</h2>
+  <p class="sub">Wat er waar staat, en wat er niet gebeurt</p>
 
   <p>
-    Alles staat op je eigen computer, in één bestand:
-    <code>data/project115.db</code>. Er is geen server van iemand anders in het
-    spel, geen telemetrie, geen analytics. De applicatie legt tijdens gebruik
-    geen enkele verbinding met het internet.
+    Alles staat op het apparaat waarop je studeert, in de opslag van de
+    applicatie zelf. Er is geen server van iemand anders in het spel, geen
+    telemetrie, geen analytics en geen advertentiecode. De applicatie legt
+    tijdens gebruik geen enkele verbinding met het internet — er valt namelijk
+    niets op te halen: de vragenbank zit in het bestand en je voortgang staat
+    lokaal.
   </p>
 
-  <h3>Hoe je account beschermd is</h3>
+  <table>
+    <thead><tr><th>Wat</th><th>Waar</th></tr></thead>
+    <tbody>
+      <tr><td>Je pogingen en antwoorden</td><td>lokale opslag van de browser of de app</td></tr>
+      <tr><td>Je herhaalschema</td><td>idem</td></tr>
+      <tr><td>Je instellingen en examendatum</td><td>idem</td></tr>
+      <tr><td>De vragenbank</td><td>in het programmabestand zelf, niet te wijzigen</td></tr>
+      <tr><td>Je pincode</td><td>alleen een afgeleide ervan, nooit de code zelf</td></tr>
+    </tbody>
+  </table>
+
+  <h3>De pincode</h3>
+
+  <p>
+    Optioneel, in te stellen bij <strong>Instellingen → Beveiliging</strong>. Hij
+    wordt opgeslagen als een afgeleide via PBKDF2-SHA256 met 310.000 iteraties en
+    een willekeurig zout, en na vijf misgetikte pogingen volgt een wachttijd.
+  </p>
+
+  <div class="note note-warn">
+    <span class="label">Wat de pincode wél en niet doet</span>
+    <p>
+      Hij voorkomt dat iemand die je ontgrendelde telefoon even vasthoudt in je
+      studiegegevens kan kijken. Hij versleutelt je gegevens niet: wie het
+      toestel root of de opslag uitleest, komt er sowieso bij. Dat is eerlijker
+      om te weten dan een belofte die niet waargemaakt kan worden.
+    </p>
+  </div>
+
+  <h3>Je gegevens meenemen</h3>
+
+  <p>
+    Via <strong>Instellingen → Gegevens → Exporteren</strong> schrijft de
+    applicatie alles wat zij over je studie weet naar één leesbaar bestand: je
+    pogingen, je antwoorden en je herhaalschema. Dat bestand komt op je eigen
+    apparaat te staan en gaat alleen ergens heen als jij het zelf deelt. Je
+    pincode en je wachtwoord zitten er bewust niet in.
+  </p>
+
+  <p>
+    Alle vormen lezen elkaars export: wat je op je telefoon hebt gedaan, kun je
+    op je computer inlezen en andersom.
+  </p>
+
+  <h3>Als je de hub zelf draait</h3>
+
+  <p>
+    Dan staat er wél een database, en die staat ook op je eigen computer: één
+    bestand, <code>data/project115.db</code>. Er komt een account bij kijken, en
+    dat is als volgt beschermd.
+  </p>
 
   <table>
     <thead><tr><th>Maatregel</th><th>Wat het betekent</th></tr></thead>
@@ -922,42 +1037,84 @@ kbd {
       </tr>
     </tbody>
   </table>
-
-  <h3>Je gegevens meenemen</h3>
-
-  <p>
-    Via <strong>Instellingen → Gegevens exporteren</strong> download je alles wat
-    de hub over je studie weet als één leesbaar bestand: je pogingen, je
-    antwoorden en je herhaalschema. Je wachtwoord zit daar bewust niet in.
-  </p>
-
-  <div class="note note-warn">
-    <span class="label">Maak af en toe een back-up</span>
-    <p>
-      De hele hub is één bestand. Kopieer het regelmatig naar een andere schijf
-      of een usb-stick — bijvoorbeeld na elk proefexamen. Raak je dat bestand
-      kwijt, dan is je hele studiehistorie weg.
-    </p>
-    <p><code>cp data/project115.db ~/back-up-project115.db</code></p>
-  </div>
 </section>
 
 <!-- ====================== 6. ONDERHOUD ====================== -->
 <section>
   <h2><span class="num">6</span>Onderhoud</h2>
-  <p class="sub">Back-ups, eigen vragen en problemen oplossen</p>
+  <p class="sub">Back-ups, meerdere apparaten, eigen vragen en problemen oplossen</p>
 
   <h3>Back-up maken</h3>
 
+  <p>
+    Bij het losse bestand, de Android-app en de webversie is er geen bestand om
+    te kopiëren: je voortgang zit in de opslag van je browser of app. De back-up
+    is dus de export.
+  </p>
+
+  <div class="note note-warn">
+    <span class="label">Exporteer na elk proefexamen</span>
+    <p>
+      Het kost twee tikken en het scheelt je een keer opnieuw beginnen.
+      Studiegegevens verdwijnen wanneer je de app-gegevens wist, wanneer je de
+      sitegegevens van je browser opruimt, of wanneer je een telefoon vervangt.
+      Zonder export is dat definitief.
+    </p>
+  </div>
+
+  <p>
+    Draai je de hub zelf, dan is de hele studiehistorie één bestand en kopieer je
+    dat — bij voorkeur wanneer er geen examen loopt:
+  </p>
+
   <pre><code>cp data/project115.db "back-ups/project115-$(date +%F).db"</code></pre>
 
-  <p>Doe dit bij voorkeur wanneer er geen examen loopt.</p>
+  <h3>Op meerdere apparaten studeren</h3>
+
+  <p>
+    Dat kan, maar niet automatisch synchroon — er is geen server om dat via te
+    laten lopen. Exporteer op het ene apparaat en importeer op het andere.
+  </p>
+
+  <div class="note note-info">
+    <span class="label">Importeren vervangt, en voegt niet samen</span>
+    <p>
+      Wat er op het ontvangende apparaat stond, wordt overschreven. Dat is een
+      bewuste keuze: twee herhaalschema's samenvoegen vraagt per kaart een
+      oordeel over welk moment geldt, en elke automatische keuze daarin is een
+      gok met je planning. Vervangen is voorspelbaar.
+    </p>
+  </div>
+
+  <h3>Bijwerken naar een nieuwe versie</h3>
+
+  <table>
+    <thead><tr><th>Vorm</th><th>Wat je doet</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Los bestand</td>
+        <td>Vervang het door de nieuwe versie. Zet hem op dezelfde plek, dan blijft je voortgang staan</td>
+      </tr>
+      <tr>
+        <td>Android-app</td>
+        <td>Installeer de nieuwe APK er overheen. Je voortgang blijft bewaard</td>
+      </tr>
+      <tr>
+        <td>Webserver</td>
+        <td>Vervang de bestanden. Bezoekers krijgen de nieuwe versie bij hun volgende bezoek</td>
+      </tr>
+      <tr>
+        <td>Zelf gehost</td>
+        <td>Haal de nieuwe broncode op en start opnieuw; de database blijft staan</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h3>Eigen vragen toevoegen</h3>
 
   <p>
-    De vragenbank staat in de map <code>content/</code>. Voeg een vraag toe aan
-    een van de bestanden en draai daarna:
+    Dit vraagt de broncode. De vragenbank staat in de map <code>content/</code>.
+    Voeg een vraag toe aan een van de bestanden en draai daarna:
   </p>
 
   <pre><code>npm run test:unit   # controleert of de vraag klopt
@@ -973,42 +1130,38 @@ npm run db:seed     # laadt hem in</code></pre>
   <h3>Als er iets misgaat</h3>
 
   <table>
-    <thead><tr><th>Melding</th><th>Wat te doen</th></tr></thead>
+    <thead><tr><th>Wat je ziet</th><th>Wat te doen</th></tr></thead>
     <tbody>
       <tr>
-        <td>Node.js is niet geïnstalleerd</td>
-        <td><code>sudo apt install nodejs npm</code></td>
+        <td>Wit scherm bij het losse bestand</td>
+        <td>Open het met een andere browser. Op sommige systemen opent een dubbelklik een programma dat geen webpagina's toont</td>
       </tr>
       <tr>
-        <td>Poort was bezet</td>
-        <td>Niets — het startscript kiest zelf een vrije poort en meldt welke</td>
+        <td>Voortgang is verdwenen</td>
+        <td>Waarschijnlijk zijn de browsergegevens gewist, of is het bestand verplaatst. Importeer je laatste export</td>
       </tr>
       <tr>
-        <td>Installeren mislukt</td>
-        <td>Vrijwel altijd geen internetverbinding. Controleer je verbinding en start opnieuw</td>
+        <td>Android weigert te installeren</td>
+        <td>Sta installeren uit deze bron toe, of controleer of er al een versie met een andere handtekening op het toestel staat</td>
       </tr>
       <tr>
-        <td>De hub reageert niet</td>
-        <td>Draai <code>./stop.sh</code> en daarna <code>./start.sh</code></td>
+        <td>Pincode vergeten</td>
+        <td>Er is geen herstel. Wis de app-gegevens en importeer je laatste export</td>
       </tr>
       <tr>
-        <td>Wachtwoord vergeten</td>
+        <td>Een vraag lijkt onjuist</td>
+        <td>Laat het weten via <code>github.com/wimlee115</code>. Bij twijfel gaat het officiële cursusmateriaal voor</td>
+      </tr>
+      <tr>
+        <td>Zelf gehost: de hub reageert niet</td>
+        <td>Draai <code>./stop.sh</code> en daarna <code>./start.sh</code>. Technische details van elke start staan in <code>start.log</code></td>
+      </tr>
+      <tr>
+        <td>Zelf gehost: wachtwoord vergeten</td>
         <td>Er is geen herstelmail. Verwijder <code>data/project115.db</code> en begin opnieuw — je verliest dan wel je voortgang</td>
       </tr>
     </tbody>
   </table>
-
-  <p>
-    Technische details van elke start staan in <code>start.log</code>, naast het
-    startscript.
-  </p>
-
-  <h3>Draaien op meerdere apparaten</h3>
-
-  <p>
-    Wil je de hub ook op je telefoon of tablet gebruiken, dan kan dat met Docker
-    en HTTPS binnen je eigen netwerk. Zie <code>DOCKER.md</code> voor de stappen.
-  </p>
 </section>
 
 <!-- ====================== 7. VERANTWOORDING ====================== -->
@@ -1094,8 +1247,11 @@ npm run db:seed     # laadt hem in</code></pre>
     <p>
       <strong>Project115</strong> · Ontwikkeld door B. van Rooij ·
       Handleiding versie 1.1.1<br>
-      Uitgebreidere technische verantwoording in <code>PLAN.md</code>,
-      containeropstelling in <code>DOCKER.md</code>.
+      Wat je met de software mag, staat in <code>GEBRUIKSVOORWAARDEN.md</code>;
+      wat er met je gegevens gebeurt in <code>PRIVACY.md</code>. Technische
+      verantwoording in <code>PLAN.md</code>, containeropstelling in
+      <code>DOCKER.md</code>. Broncode en nieuwere versies:
+      <code>github.com/wimlee115</code>.
     </p>
   </div>
 </section>

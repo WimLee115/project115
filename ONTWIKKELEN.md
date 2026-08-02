@@ -12,7 +12,7 @@ lokaal; er gaat geen enkel gegeven het internet op.
 ---
 
 > **Liever een leesbare handleiding?** `Project115 - Handleiding.pdf` in deze map
-> is een opgemaakt document van 10 pagina's met alles wat je nodig hebt:
+> is een opgemaakt document van 12 pagina's met alles wat je nodig hebt:
 > opstarten, de examenwegingen, een studieaanpak in vier fasen en het oplossen
 > van problemen. Opnieuw genereren: `npm run docs`.
 
