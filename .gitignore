@@ -54,6 +54,16 @@ android/app/src/main/assets/capacitor.config.json
 android/app/src/main/assets/capacitor.plugins.json
 
 # ---------------------------------------------------------------------------
+# Correspondentie — staat wel in de projectmap, hoort niet in de repository.
+#
+# Een concept van een mail bevat een naam, een adres en meestal iets dat je
+# alleen tegen die ene persoon zegt. Dat is van hen, niet van dit project.
+# ---------------------------------------------------------------------------
+docs/mail-*.md
+docs/brief-*.md
+docs/*-persoonlijk.md
+
+# ---------------------------------------------------------------------------
 # Rommel
 # ---------------------------------------------------------------------------
 *.log
