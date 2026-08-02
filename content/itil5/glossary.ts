@@ -29,8 +29,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Service',
     objective: '1.1.2',
     definition: {
-      nl: 'Een manier om gezamenlijke waardecreatie mogelijk te maken door uitkomsten te faciliteren die klanten willen bereiken, zonder dat de klant specifieke kosten en risico’s hoeft te managen.',
-      en: 'A means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks.',
+      nl: 'Een vorm van dienstverlening waarbij aanbieder en afnemer samen waarde tot stand brengen: de afnemer bereikt de uitkomsten die hij nastreeft, terwijl het beheersen van de bijbehorende kosten en risico’s bij de aanbieder blijft liggen.',
+      en: 'A form of provision in which supplier and consumer bring about value together: the consumer reaches the outcomes it is after, while responsibility for the associated costs and risks stays with the supplier.',
     },
     note: {
       nl: 'De twee herkenningspunten: waardeco-creatie én het overnemen van kosten en risico’s.',
@@ -42,8 +42,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Product',
     objective: '1.1.2',
     definition: {
-      nl: 'Een configuratie van de middelen (resources) van een organisatie, ontworpen om waarde te bieden aan een consument.',
-      en: "A configuration of an organization's resources designed to offer value for a consumer.",
+      nl: 'Middelen van een organisatie, zo samengesteld dat die samenstelling bedoeld is om een afnemer waarde te bieden.',
+      en: 'Resources of an organization, put together in an arrangement meant to offer a consumer value.',
     },
     note: {
       nl: 'Producten bieden functionaliteiten; services maken waarderealisatie mogelijk door gebruik.',
@@ -55,8 +55,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Digitaal product',
     objective: '1.1.3',
     definition: {
-      nl: 'Een combinatie van de middelen van een organisatie, gebaseerd op digitale technologie en ontworpen om waarde te bieden aan consumenten.',
-      en: "A combination of an organization's resources, based on digital technology and designed to offer value for consumers.",
+      nl: 'Een product waarvan de samenstelling op digitale technologie berust en dat langs die weg baat oplevert voor afnemers.',
+      en: 'A product whose make-up rests on digital technology and that brings consumers benefit by that route.',
     },
   },
   {
@@ -64,8 +64,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Digitale service',
     objective: '1.1.3',
     definition: {
-      nl: 'Een service die geheel of grotendeels afhankelijk is van digitale producten.',
-      en: 'A service that fully or largely depends on digital products.',
+      nl: 'Een service die zonder digitale producten niet of nauwelijks te leveren valt.',
+      en: 'A service that could not be delivered, or barely so, without digital products.',
     },
     note: {
       nl: 'Eén product kan meerdere services mogelijk maken en één service kan op meerdere producten rusten.',
@@ -95,8 +95,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Duurzaamheid',
     objective: '1.1.7',
     definition: {
-      nl: 'De garantie dat een product of service voldoet en zal blijven voldoen aan de eisen op het gebied van rentmeesterschap van de omgeving, sociale vooruitgang en economische groei.',
-      en: 'The assurance that a product or service meets, and will continue to meet, requirements for environmental stewardship, social progress and economic growth.',
+      nl: 'De zekerheid dat een product of service nu én later blijft voldoen aan wat er op drie terreinen wordt gevraagd: zorgvuldig omgaan met de omgeving, bijdragen aan de samenleving, en economisch houdbaar blijven.',
+      en: 'The assurance that a product or service keeps meeting what is asked of it on three fronts — careful handling of the environment, contribution to society, and economic viability — now and later.',
     },
     note: {
       nl: 'Nieuw als zelfstandige component van servicewaarde in Version 5.',
@@ -108,8 +108,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Gebruikerservaring',
     objective: '1.1.7',
     definition: {
-      nl: 'De som van functionele en emotionele interacties met een service en serviceverlener, zoals ervaren door de gebruiker.',
-      en: 'The sum of functional and emotional interactions with a service and service provider, as perceived by the user.',
+      nl: 'Alles wat een gebruiker meemaakt in de omgang met een service en met de partij die hem levert, zowel het praktische als het gevoelsmatige.',
+      en: 'Everything a user goes through in dealing with a service and with the party providing it, on the practical level as well as the emotional one.',
     },
     note: {
       nl: 'Klantervaring (CX) is dezelfde definitie, maar dan zoals ervaren door de klant.',
@@ -121,8 +121,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Waarde',
     objective: '1.3.1',
     definition: {
-      nl: 'De waargenomen voordelen, bruikbaarheid en het belang van iets.',
-      en: 'The perceived benefits, usefulness and importance of something.',
+      nl: 'Het voordeel, het nut en het belang dat iemand aan iets toekent — zoals díe persoon het ervaart.',
+      en: 'The benefit, usefulness and importance someone attaches to something — as that person experiences it.',
     },
     note: {
       nl: 'Waarde is subjectief, dynamisch en wordt gezamenlijk gecreëerd.',
@@ -147,8 +147,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Uitkomst / eindresultaat',
     objective: '1.3.3',
     definition: {
-      nl: 'Een resultaat voor een belanghebbende dat mogelijk wordt gemaakt door een of meer outputs.',
-      en: 'A result for a stakeholder enabled by one or more outputs.',
+      nl: 'Wat een belanghebbende uiteindelijk bereikt doordat er een of meer outputs zijn opgeleverd.',
+      en: 'What a stakeholder ends up achieving because one or more outputs were delivered.',
     },
   },
   {
@@ -156,8 +156,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Kosten',
     objective: '1.3.2',
     definition: {
-      nl: 'De hoeveelheid geld die is uitgegeven aan een specifieke activiteit, resource, product of service.',
-      en: 'The amount of money spent on a specific activity, resource, product or service.',
+      nl: 'Het geld dat aan een bepaalde activiteit, resource, product of service is besteed.',
+      en: 'The money that has gone into a particular activity, resource, product or service.',
     },
     note: {
       nl: 'Twee soorten: verwijderd door de service (provider draagt) en opgelegd door de service (consument draagt).',
@@ -169,8 +169,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Risico',
     objective: '1.3.2',
     definition: {
-      nl: 'Een mogelijke gebeurtenis die schade of verlies kan toebrengen of het moeilijker maakt om doelstellingen te bereiken.',
-      en: 'A possible event that could cause harm or loss, or make it more difficult to achieve objectives.',
+      nl: 'Iets dat zich kan voordoen en dan schade of verlies oplevert, of het halen van doelstellingen bemoeilijkt.',
+      en: 'Something that may occur and, if it does, brings damage or loss or gets in the way of meeting objectives.',
     },
   },
   {
@@ -178,8 +178,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Serviceaanbod',
     objective: '1.2.1',
     definition: {
-      nl: 'Een formele beschrijving van een of meer services die zijn ontworpen om te voldoen aan de behoeften van een specifieke consumentengroep. Kan goederen, toegang tot middelen en serviceacties omvatten.',
-      en: 'A formal description of one or more services designed to address the needs of a target consumer group. May include goods, access to resources and service actions.',
+      nl: 'Een vastgelegde omschrijving van een of meer services, toegesneden op wat een bepaalde groep afnemers nodig heeft. Daarin kunnen goederen zitten, toegang tot middelen, en handelingen die voor de afnemer worden verricht.',
+      en: 'A documented description of one or more services, tailored to what a particular group of consumers needs. It may cover goods, access to resources, and actions carried out on the consumer’s behalf.',
     },
   },
   {
@@ -187,8 +187,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Organisatie',
     objective: '1.4.1',
     definition: {
-      nl: 'Een persoon of groep personen met eigen functies, verantwoordelijkheden, bevoegdheden en relaties om haar doelstellingen te bereiken.',
-      en: 'A person or a group of people that has its own functions with responsibilities, authorities and relationships to achieve its objectives.',
+      nl: 'Eén persoon of een groep mensen die over eigen taken, verantwoordelijkheden, bevoegdheden en onderlinge verhoudingen beschikt om de eigen doelen te halen.',
+      en: 'One person or a group of people with their own tasks, responsibilities, authorities and working relationships, aimed at meeting objectives of their own.',
     },
   },
   {
@@ -196,8 +196,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Serviceprovider',
     objective: '1.4.1',
     definition: {
-      nl: 'Een organisatie die verantwoordelijk is voor de levering en ondersteuning van services.',
-      en: 'An organization responsible for the delivery and support of services.',
+      nl: 'De organisatie die de verantwoordelijkheid draagt voor het leveren en ondersteunen van services.',
+      en: 'The organization bearing responsibility for supplying services and supporting them.',
     },
   },
   {
@@ -205,8 +205,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Serviceconsument',
     objective: '1.4.1',
     definition: {
-      nl: 'Een organisatie die verantwoordelijk is voor de inkoop (en verwerving) en het gebruik van services.',
-      en: 'An organization responsible for the procurement (and acquisition) and use of services.',
+      nl: 'De organisatie die de verantwoordelijkheid draagt voor het inkopen of anderszins verkrijgen van services, en voor het gebruik ervan.',
+      en: 'The organization bearing responsibility for buying or otherwise obtaining services, and for using them.',
     },
   },
   {
@@ -214,8 +214,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Leverancier van digitale producten',
     objective: '1.4.1',
     definition: {
-      nl: 'Een organisatie die verantwoordelijk is voor de creatie en voortdurende verbetering van digitale producten en bijbehorend serviceaanbod.',
-      en: 'An organization responsible for the creation and continual improvement of digital products and related service offerings.',
+      nl: 'De organisatie die de verantwoordelijkheid draagt voor het maken en het blijven verbeteren van digitale producten en het serviceaanbod eromheen.',
+      en: 'The organization bearing responsibility for building digital products and the service offerings around them, and for keeping both improving.',
     },
   },
   {
@@ -223,8 +223,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Sponsor',
     objective: '1.4.4',
     definition: {
-      nl: 'De rol die het budget voor het gebruik van services goedkeurt.',
-      en: 'The role that authorizes the budget for service consumption.',
+      nl: 'De rol die het budget fiatteert waaruit services worden afgenomen.',
+      en: 'The role that sanctions the budget out of which services are obtained.',
     },
   },
   {
@@ -232,8 +232,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Klant',
     objective: '1.4.4',
     definition: {
-      nl: 'De rol die de eisen voor producten en services definieert en verantwoordelijkheid draagt voor de uitkomsten door het gebruik van die services.',
-      en: 'The role that defines the requirements for products and services and takes responsibility for the outcomes of service consumption.',
+      nl: 'De rol die vastlegt wat producten en services moeten kunnen, en die aanspreekbaar is op wat het gebruik ervan oplevert.',
+      en: 'The role that lays down what products and services must be able to do, and that answers for what their use yields.',
     },
   },
   {
@@ -276,8 +276,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Servicekwaliteit',
     objective: '1.4.5',
     definition: {
-      nl: 'De som van de kenmerken van een service die relevant zijn voor het vermogen ervan om te voldoen aan de expliciet en impliciet gestelde behoeften.',
-      en: 'The sum of a service’s characteristics relevant to its ability to satisfy stated and implied needs.',
+      nl: 'Alle eigenschappen van een service bij elkaar, voor zover die bepalen of hij voorziet in wat er gevraagd is — uitgesproken of niet.',
+      en: 'All the properties of a service taken together, insofar as they determine whether it provides what was asked for, spelled out or not.',
     },
   },
   {
@@ -285,8 +285,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Serviceniveau',
     objective: '1.4.5',
     definition: {
-      nl: 'Een reeks meetwaarden (metrics) die de verwachte of behaalde servicekwaliteit definiëren.',
-      en: 'A set of metrics that define the expected or achieved quality of a service.',
+      nl: 'De meetwaarden waarmee je vastlegt welke servicekwaliteit verwacht wordt, of welke er behaald is.',
+      en: 'The metrics by which you pin down the service quality that is expected, or the one that was reached.',
     },
   },
   {
@@ -294,8 +294,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Serviceniveauovereenkomst',
     objective: '1.4.6',
     definition: {
-      nl: 'Een gedocumenteerde overeenkomst tussen een serviceverlener en een klant waarin de geleverde services en het overeengekomen niveau van elke service worden vastgelegd.',
-      en: 'A documented agreement between a service provider and a customer that identifies both the services required and the agreed level of each service.',
+      nl: 'Een vastgelegde afspraak tussen aanbieder en klant, waarin staat welke services worden geleverd en welk niveau daarbij per service is afgesproken.',
+      en: 'A written arrangement between provider and customer setting out which services are supplied and what level has been agreed for each of them.',
     },
   },
   {
@@ -303,8 +303,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Voortdurend verbeteren',
     objective: '1.1.4',
     definition: {
-      nl: 'Een terugkerende organisatorische activiteit die op alle niveaus wordt uitgevoerd om ervoor te zorgen dat de organisatie voortdurend voldoet aan de verwachtingen van de stakeholders.',
-      en: 'A recurring organizational activity performed at all levels to ensure that an organization’s performance continually meets stakeholders’ expectations.',
+      nl: 'Werk dat een organisatie steeds opnieuw en op elk niveau oppakt, om te blijven waarmaken wat belanghebbenden van haar verwachten.',
+      en: 'Work an organization takes up again and again, at every level, so that it keeps living up to what stakeholders expect of it.',
     },
     note: {
       nl: 'Let op: ‘continual’ = voortdurend, in cycli met tussenpozen. Niet ‘continu’ (ononderbroken).',
@@ -316,8 +316,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Governance / organisatiebestuur',
     objective: '4.3.1',
     definition: {
-      nl: 'Het systeem waarmee een organisatie wordt geleid en beheerst.',
-      en: 'The system by which an organization is directed and controlled.',
+      nl: 'Het geheel van sturing en toezicht waarmee een organisatie op koers wordt gehouden.',
+      en: 'The arrangement of direction and oversight that keeps an organization on course.',
     },
     note: {
       nl: 'Activiteiten: belanghebbenden betrekken, evalueren, aansturen, monitoren.',
@@ -329,8 +329,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Waardeketen',
     objective: '4.4.1',
     definition: {
-      nl: 'Een geheel van activiteiten dat waarde creëert door het leveren van een product of service.',
-      en: 'A set of activities that creates value by delivering a product or service.',
+      nl: 'De activiteiten die samen waarde opleveren doordat er een product of service uit voortkomt.',
+      en: 'The activities that jointly yield value because a product or service comes out of them.',
     },
     note: {
       nl: 'Waardeketen = zoals ontworpen. Waardestroom = zoals daadwerkelijk uitgevoerd.',
@@ -342,8 +342,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Waardestroom',
     objective: '5.1.1',
     definition: {
-      nl: 'Een reeks stappen die een organisatie gebruikt om producten en services te creëren en te leveren aan een serviceconsument.',
-      en: 'A series of steps an organization uses to create and deliver products and services to a service consumer.',
+      nl: 'De opeenvolging van stappen waarmee een organisatie producten en services tot stand brengt en bij de afnemer krijgt.',
+      en: 'The succession of steps by which an organization brings products and services into being and gets them to the consumer.',
     },
   },
   {
@@ -351,8 +351,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Kernwaardestroom',
     objective: '5.1.1',
     definition: {
-      nl: 'Een reeks stappen die waarde creëren voor consumenten in een vorm die is beoogd door het operationele model van de organisatie.',
-      en: 'A series of steps that create value for consumers in the form intended by the organization’s operating model.',
+      nl: 'Een waardestroom die afnemers precies datgene oplevert waarvoor het operationele model van de organisatie is ingericht.',
+      en: 'A value stream that yields consumers exactly what the organization’s operating model is set up to provide.',
     },
   },
   {
@@ -360,8 +360,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Ondersteunende waardestroom',
     objective: '5.1.1',
     definition: {
-      nl: 'De reeks stappen die waarde creëren voor interne klanten en zo de kernwaardestromen van de organisatie mogelijk maken.',
-      en: 'The series of steps that create value for internal customers, thereby enabling the organization’s core value streams.',
+      nl: 'Een waardestroom die intern waarde oplevert en daarmee de kernwaardestromen hun werk laat doen.',
+      en: 'A value stream that yields value internally and thereby lets the core value streams do their work.',
     },
   },
   {
@@ -382,8 +382,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Managementwerkwijze',
     objective: '4.5.1',
     definition: {
-      nl: 'Een geheel van organisatorische middelen en vermogen (capabilities), ontworpen en ingezet voor het uitvoeren van werk of het bereiken van een doelstelling.',
-      en: 'A set of organizational resources and capabilities designed and deployed for performing work or accomplishing an objective.',
+      nl: 'Middelen en vermogen (capabilities) van een organisatie, bij elkaar gebracht en ingezet om werk te verzetten of een doel te halen.',
+      en: 'An organization’s resources and capabilities, brought together and put to work to get something done or reach an objective.',
     },
     note: {
       nl: '34 werkwijzen: 22 product- en servicemanagement, 12 algemeen.',
@@ -395,8 +395,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Proces',
     objective: '4.5.1',
     definition: {
-      nl: 'Een geheel van onderling verbonden of interactieve activiteiten die input omzetten in output.',
-      en: 'A set of interrelated or interacting activities that transform inputs into outputs.',
+      nl: 'Activiteiten die op elkaar ingrijpen en samen input tot output verwerken.',
+      en: 'Activities that act on one another and together work inputs up into outputs.',
     },
   },
   {
@@ -404,8 +404,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Operationeel model / bedrijfsmodel',
     objective: '4.4.9',
     definition: {
-      nl: 'Een conceptuele en/of visuele weergave van hoe een organisatie samen met haar klanten en andere belanghebbenden waarde creëert, en hoe de organisatie functioneert.',
-      en: 'A conceptual and/or visual representation of how an organization creates value with its customers and other stakeholders, and how it operates.',
+      nl: 'Een beschrijving of schema van de manier waarop een organisatie werkt en waarop zij samen met klanten en andere belanghebbenden waarde tot stand brengt.',
+      en: 'A description or diagram of the way an organization works, and of how it brings about value together with customers and other stakeholders.',
     },
   },
   {
@@ -413,8 +413,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Incident',
     objective: '4.4.3',
     definition: {
-      nl: 'Een ongeplande onderbreking van een service of een vermindering van de kwaliteit van een service.',
-      en: 'An unplanned interruption to a service or reduction in the quality of a service.',
+      nl: 'Een onderbreking van een service die niet gepland was, of een terugval in de kwaliteit ervan.',
+      en: 'An interruption to a service that was not planned, or a drop in its quality.',
     },
   },
   {
@@ -422,8 +422,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Gebeurtenis',
     objective: '4.4.3',
     definition: {
-      nl: 'Elke statuswijziging die van belang is voor het management van een service of ander configuratie-item.',
-      en: 'Any change of state that has significance for the management of a service or other configuration item.',
+      nl: 'Een toestandsverandering die ertoe doet voor het beheer van een service of ander configuratie-item.',
+      en: 'A shift in state that matters for managing a service or other configuration item.',
     },
     note: {
       nl: 'Een event is géén onderbreking; het is een statuswijziging.',
@@ -435,8 +435,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Probleem',
     objective: '4.4.8',
     definition: {
-      nl: 'Een oorzaak, of mogelijke oorzaak, van een of meer incidenten.',
-      en: 'A cause, or potential cause, of one or more incidents.',
+      nl: 'Datgene waar een of meer incidenten uit voortkomen, of uit voort zouden kunnen komen.',
+      en: 'Whatever one or more incidents stem from, or could stem from.',
     },
   },
   {
@@ -444,8 +444,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Fout',
     objective: '4.4.8',
     definition: {
-      nl: 'Een gebrek of kwetsbaarheid die incidenten kan veroorzaken.',
-      en: 'A flaw or vulnerability that may cause incidents.',
+      nl: 'Een mankement of zwakke plek waaruit incidenten kunnen ontstaan.',
+      en: 'A defect or weak spot from which incidents can arise.',
     },
   },
   {
@@ -453,8 +453,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Bekende fout',
     objective: '4.4.8',
     definition: {
-      nl: 'Een probleem dat is geanalyseerd, maar nog niet is opgelost.',
-      en: 'A problem that has been analysed but has not been resolved.',
+      nl: 'Een probleem dat is doorgrond zonder dat het al verholpen is.',
+      en: 'A problem that has been got to the bottom of without yet being put right.',
     },
   },
   {
@@ -471,8 +471,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Wijziging',
     objective: '4.4.4',
     definition: {
-      nl: 'Het toevoegen, wijzigen of verwijderen van alles wat een direct of indirect effect kan hebben op producten en services.',
-      en: 'The addition, modification or removal of anything that could have a direct or indirect effect on products and services.',
+      nl: 'Iets erbij zetten, aanpassen of weghalen, waar producten en services rechtstreeks of langs een omweg iets van kunnen merken.',
+      en: 'Adding, adjusting or taking away anything that products and services could feel the effects of, straight away or by way of something else.',
     },
   },
   {
@@ -480,8 +480,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Release',
     objective: '4.4.4',
     definition: {
-      nl: 'Een versie van een product, service of ander configuratie-item, of een verzameling configuratie-items, die beschikbaar wordt gesteld voor gebruik.',
-      en: 'A version of a product, service or other configuration item, or a collection of configuration items, that is made available for use.',
+      nl: 'Een uitvoering van een product, een service of een of meer configuratie-items, zoals die voor gebruik wordt vrijgegeven.',
+      en: 'An edition of a product, a service or one or more configuration items, as it is released for use.',
     },
   },
   {
@@ -489,8 +489,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Uitrol / implementatie',
     objective: '4.4.4',
     definition: {
-      nl: 'Het verplaatsen van een servicecomponent naar een gecontroleerde omgeving.',
-      en: 'The movement of a service component into a controlled environment.',
+      nl: 'Een servicecomponent overbrengen naar een omgeving die onder beheer staat.',
+      en: 'Moving a service component across into an environment that is under control.',
     },
   },
   {
@@ -533,8 +533,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Betrouwbaarheid',
     objective: '4.4.6',
     definition: {
-      nl: 'Het vermogen van een product of service om gedurende een bepaalde tijd of een bepaald aantal cycli naar behoren te functioneren.',
-      en: 'The ability of a product or service to perform as required for a given time or number of cycles.',
+      nl: 'Het vermogen van een product of service om naar behoren te blijven werken, een afgesproken periode lang of een afgesproken aantal cycli achtereen.',
+      en: 'The capacity of a product or service to keep working as it should, for an agreed span of time or an agreed number of cycles in a row.',
     },
   },
   {
@@ -551,8 +551,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Observeerbaarheid',
     objective: '4.4.6',
     definition: {
-      nl: 'Het vermogen om de interne toestand van een complex systeem te begrijpen door de externe output ervan te analyseren, zoals metrics, logboeken en traces.',
-      en: 'The ability to understand the internal state of a complex system by analysing its external outputs, such as metrics, logs and traces.',
+      nl: 'Kunnen doorgronden wat er binnen in een ingewikkeld systeem gebeurt, puur op grond van wat het naar buiten afgeeft: metrics, logboeken en traces.',
+      en: 'Being able to work out what goes on inside a complicated system purely from what it gives off: metrics, logs and traces.',
     },
   },
   {
@@ -560,8 +560,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Serviceaanvraag',
     objective: '4.4.7',
     definition: {
-      nl: 'Een verzoek van een gebruiker of een door de gebruiker gemachtigde vertegenwoordiger dat leidt tot een serviceactie die volgens de overeenkomst onderdeel is van de standaard serviceverlening.',
-      en: 'A request from a user or a user’s authorized representative that initiates a service action agreed as a normal part of service delivery.',
+      nl: 'Een aanvraag van een gebruiker, of van iemand die namens hem mag optreden, waarop een serviceactie volgt die als gewoon onderdeel van de dienstverlening is afgesproken.',
+      en: 'A request from a user, or from someone entitled to act for them, that sets off a service action agreed to be a routine part of the service.',
     },
     note: {
       nl: 'Er is niets kapot: dit is normale, overeengekomen dienstverlening.',
@@ -631,8 +631,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'De wet van Conway',
     objective: '2.2.2',
     definition: {
-      nl: 'De structuur van de systemen die een organisatie ontwerpt is een kopie van de communicatiestructuur binnen die organisatie.',
-      en: 'The structure of the systems an organization designs is a copy of the communication structure within that organization.',
+      nl: 'Systemen die een organisatie ontwerpt, kopiëren de manier waarop er binnen die organisatie met elkaar wordt gecommuniceerd.',
+      en: 'Systems an organization designs copy the way people inside that organization communicate with one another.',
     },
     note: {
       nl: 'De omgekeerde aanpak: structureer teams bewust zó dat de gewenste architectuur ontstaat.',
@@ -653,8 +653,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Cultuur',
     objective: '2.2.2',
     definition: {
-      nl: 'Een geheel van waarden dat door een groep mensen wordt gedeeld en tot uiting komt in hun gedrag, ideeën, overtuigingen en gebruiken.',
-      en: 'A set of values shared by a group of people, expressed in their behaviour, ideas, beliefs and customs.',
+      nl: 'De waarden die een groep mensen met elkaar deelt, zichtbaar in hoe zij zich gedragen en in wat zij denken, geloven en gewoon zijn te doen.',
+      en: 'The values a group of people hold in common, showing in how they behave and in what they think, believe and are used to doing.',
     },
   },
   {
@@ -662,8 +662,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Veiligheidscultuur',
     objective: '2.2.2',
     definition: {
-      nl: 'Een organisatiecultuur waarin mensen zich op hun gemak voelen om zichzelf te zijn en zichzelf te uiten.',
-      en: 'An organizational culture in which people feel comfortable being and expressing themselves.',
+      nl: 'Een organisatiecultuur waarin niemand zich hoeft in te houden om te zeggen wat hij vindt of te zijn wie hij is.',
+      en: 'An organizational culture where no one has to hold back from saying what they think or being who they are.',
     },
   },
 ];
