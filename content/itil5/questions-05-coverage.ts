@@ -290,8 +290,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een ongeplande onderbreking van een service of een vermindering van de servicekwaliteit',
-          en: 'An unplanned interruption to a service or reduction in the quality of a service',
+          nl: 'Een onderbreking van een service die niet gepland was, of een terugval in de kwaliteit ervan',
+          en: 'An interruption to a service that was not planned, or a drop in its quality',
         },
         rationale: {
           nl: 'Dat is de definitie van een incident. Het onderscheid zit in de omvang en de duur van de onbeschikbaarheid van essentiële activiteiten.',
@@ -300,8 +300,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een gebrek of kwetsbaarheid die incidenten kan veroorzaken',
-          en: 'A flaw or vulnerability that may cause incidents',
+          nl: 'Een mankement of zwakke plek waaruit incidenten kunnen ontstaan',
+          en: 'A defect or weak spot from which incidents can arise',
         },
         rationale: {
           nl: 'Dat is de definitie van een fout (error).',
@@ -310,8 +310,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een oorzaak, of mogelijke oorzaak, van een of meer incidenten',
-          en: 'A cause, or potential cause, of one or more incidents',
+          nl: 'Datgene waar een of meer incidenten uit voortkomen, of uit voort zouden kunnen komen',
+          en: 'Whatever one or more incidents stem from, or could stem from',
         },
         rationale: {
           nl: 'Dat is de definitie van een probleem.',

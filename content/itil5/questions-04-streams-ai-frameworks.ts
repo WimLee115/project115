@@ -23,15 +23,15 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een reeks stappen die waarde creëren voor consumenten in een vorm die is beoogd door het operationele model van de organisatie',
-          en: 'A series of steps that create value for consumers in the form intended by the organization’s operating model',
+          nl: 'Een waardestroom die afnemers precies datgene oplevert waarvoor het operationele model van de organisatie is ingericht',
+          en: 'A value stream that yields consumers exactly what the organization’s operating model is set up to provide',
         },
         correct: true,
       },
       {
         text: {
-          nl: 'De reeks stappen die waarde creëren voor interne klanten en zo andere waardestromen mogelijk maken',
-          en: 'The series of steps that create value for internal customers and thereby enable other value streams',
+          nl: 'De stappen die intern waarde opleveren en daarmee andere waardestromen hun werk laten doen',
+          en: 'The steps that yield value internally and thereby let other value streams do their work',
         },
         rationale: {
           nl: 'Dit is een ondersteunende waardestroom (enabling value stream).',
@@ -455,8 +455,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'ITIL biedt structuur en governance voor het managen van digitale producten en services; DevOps biedt praktische technieken voor snelle, continue ontwikkeling en operations',
-          en: 'ITIL provides structure and governance for managing digital products and services; DevOps provides practical techniques for fast, continuous development and operations',
+          nl: 'ITIL levert de structuur en het bestuur om digitale producten en services te managen; DevOps levert de praktische technieken om snel en onafgebroken te ontwikkelen en te beheren',
+          en: 'ITIL supplies the structure and governance for managing digital products and services; DevOps supplies the practical techniques for developing and operating fast and without pause',
         },
         correct: true,
       },

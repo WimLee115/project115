@@ -105,6 +105,12 @@ jobs:
       - name: Vragenbank valideren
         run: npx tsx scripts/validate-content.ts
 
+      # Structuur kan kloppen terwijl een afleider inhoudelijk te dicht bij het
+      # juiste antwoord ligt. Dat is geen bouwfout maar een leerfout, en die
+      # weegt zwaarder: iemand studeert hierop voor een examen dat geld kost.
+      - name: Afleiders controleren
+        run: npx tsx scripts/check-afleiders.ts
+
   audit:
     name: Afhankelijkheden
     runs-on: ubuntu-latest
