@@ -1,0 +1,59 @@
+{
+  "name": "project115-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project115 voor Android — offline studiehub voor ITIL Foundation (Version 5) en EXIN Information Security Foundation based on ISO/IEC 27001",
+  "author": "B. van Rooij",
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx test/*.test.ts",
+    "cap:sync": "npm run build && cap sync android",
+    "android:open": "cap open android",
+    "android:debug": "npm run cap:sync && cd android && ./gradlew assembleDebug",
+    "android:release": "npm run cap:sync && cd android && ./gradlew assembleRelease",
+    "verify": "npm run typecheck && npm run test && npm run build && npm run e2e",
+    "build:web": "tsx scripts/build-web.ts",
+    "preview:web": "vite preview --outDir dist-web",
+    "android:assets": "tsx scripts/android-assets.ts",
+    "android:keystore": "tsx scripts/android-keystore.ts",
+    "e2e": "npm run build:web && tsx scripts/e2e.ts",
+    "package": "tsx scripts/package-release.ts",
+    "build:single": "tsx scripts/build-single.ts",
+    "release": "npm run verify && npm run build:single && npm run android:release && npm run package",
+    "package:mail": "tsx scripts/package-release.ts --zonder-apk"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.4.2",
+    "@capacitor/app": "8.1.1",
+    "@capacitor/core": "8.4.2",
+    "@capacitor/filesystem": "8.1.2",
+    "@capacitor/haptics": "8.0.2",
+    "@capacitor/preferences": "8.0.1",
+    "@capacitor/share": "8.0.1",
+    "@capacitor/status-bar": "8.0.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "ts-fsrs": "5.4.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.4.2",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "^22.20.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.4",
+    "playwright-core": "^1.62.0",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3",
+    "vite": "8.1.5"
+  }
+}

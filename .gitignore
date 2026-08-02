@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# Geheimen — deze bestanden verlaten deze machine nooit.
+#
+# Wie de keystore heeft, kan een update uitbrengen die Android accepteert als
+# deze app. Wie APP_SECRET heeft, kan opgeslagen tweestapsverificatie
+# ontsleutelen. Ze horen niet in een repository, niet in een zip die je
+# verstuurt en niet in een chat.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+keystore.properties
+local.properties
+*.pem
+*.key
+!**/public/**/*.key
+certs/
+
+# ---------------------------------------------------------------------------
+# Studiegegevens — jouw voortgang is van jou.
+# ---------------------------------------------------------------------------
+data/
+backups/
+*.db
+*.db-wal
+*.db-shm
+
+# ---------------------------------------------------------------------------
+# Bouwuitvoer en afhankelijkheden
+# ---------------------------------------------------------------------------
+node_modules/
+.next/
+out/
+build/
+dist/
+dist-web/
+dist-single/
+release/
+*.tsbuildinfo
+next-env.d.ts
+*.apk
+*.aab
+
+# Android/Gradle
+.gradle/
+.kotlin/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+
+# ---------------------------------------------------------------------------
+# Rommel
+# ---------------------------------------------------------------------------
+*.log
+caddy-root.crt
+.DS_Store
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,73 @@
+Project115 — Licentie
+Copyright (c) 2026 B. van Rooij
+
+Deze licentie geldt voor de software en voor de vragenbank: de broncode, de
+Android-schil, de Docker-opzet, de documentatie, en de 160 vragen met hun
+antwoordopties en toelichtingen. Zie hieronder voor wat er niet onder valt.
+
+
+TOESTEMMING
+
+Hierbij wordt kosteloos toestemming verleend aan eenieder die een kopie van
+deze software verkrijgt, om die te gebruiken, te kopiëren, te wijzigen, samen
+te voegen, te publiceren en te verspreiden, en om anderen daartoe in staat te
+stellen, onder de volgende voorwaarden.
+
+
+VOORWAARDEN
+
+1. VERMELDING
+   De vermelding "Ontwikkeld door B. van Rooij" en de verwijzing naar
+   https://github.com/wimlee115 blijven behouden in de software zelf en in de
+   bijbehorende documentatie, ook in gewijzigde versies. Deze licentietekst
+   gaat mee met elke kopie.
+
+2. NIET VERKOPEN
+   De software mag niet tegen betaling worden aangeboden en niet worden
+   verkocht als product of als onderdeel van een product of dienst. Het
+   kosteloos verstrekken van de software aan deelnemers binnen een training
+   die je zelf geeft, is uitdrukkelijk wel toegestaan, ook wanneer die
+   training zelf betaald is.
+
+3. HANDELSMERKVERMELDING
+   De vermelding over de handelsmerken van PeopleCert, EXIN, ISO/IEC en IT
+   Management Group blijft ongewijzigd aanwezig, in de software en in de
+   documentatie.
+
+
+WAAR DEZE LICENTIE NIET OVER GAAT
+
+Deze licentie kan alleen rechten verlenen op werk waarop de auteur zelf
+rechten heeft. Twee dingen vallen er daarom buiten:
+
+  a) DE BEGRIPPENLIJST
+     De definities in het ITIL-glossarium zijn de gangbare formuleringen uit
+     het officiële ITIL-materiaal. Het auteursrecht daarop ligt bij PeopleCert
+     International Ltd, niet bij de auteur van deze software. Er wordt dan ook
+     geen enkel recht op die formuleringen verleend of gepretendeerd. Wie de
+     software aanpast of verspreidt, doet er goed aan dat te weten.
+     Zie GEBRUIKSVOORWAARDEN.md, sectie "Over de inhoud".
+
+  b) HANDELSMERKEN
+     ITIL is een geregistreerd handelsmerk van PeopleCert International Ltd.
+     EXIN is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001
+     is een norm van ISO en IEC. Deze licentie verleent geen enkel recht op
+     het gebruik van die merken, anders dan het benoemen ervan om te zeggen
+     waar deze software over gaat.
+
+
+GEEN GARANTIE
+
+De software wordt geleverd "zoals hij is", zonder enige garantie, uitdrukkelijk
+of stilzwijgend, met inbegrip van maar niet beperkt tot garanties van
+verkoopbaarheid, geschiktheid voor een bepaald doel en niet-inbreuk. De auteur
+is niet aansprakelijk voor enige claim, schade of andere aansprakelijkheid,
+voortvloeiend uit of in verband met de software of het gebruik ervan.
+
+Slagen voor de proefexamens in deze software is geen voorspelling van en geen
+garantie voor het resultaat op een echt certificeringsexamen.
+
+
+Project115 is een onafhankelijk oefenhulpmiddel en is niet gelieerd aan,
+goedgekeurd door of verbonden met PeopleCert, EXIN, ISO, IEC of IT Management
+Group.

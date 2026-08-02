@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <!--
+      viewport-fit=cover in combinatie met de safe-area-insets in globals.css
+      houdt de app leesbaar op toestellen met een notch of gebarenbalk.
+      user-scalable=no is bewust weggelaten: knijpen om te zoomen is een
+      toegankelijkheidsvoorziening, geen storend gedrag.
+    -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101319" />
+    <meta
+      name="description"
+      content="Project115 — offline studiehub voor ITIL Foundation (Version 5) en EXIN Information Security Foundation based on ISO/IEC 27001"
+    />
+    <title>Project115</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

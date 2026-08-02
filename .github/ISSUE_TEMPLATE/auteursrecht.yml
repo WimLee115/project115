@@ -1,0 +1,67 @@
+name: Auteursrechtelijk bezwaar
+description: Voor rechthebbenden en voor iedereen die materiaal herkent dat hier niet hoort te staan.
+title: "[auteursrecht] "
+labels: ["auteursrecht", "prioriteit"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Meldingen via dit formulier gaan voor op al het andere werk aan dit
+        project, en worden zonder discussie afgehandeld: de passage wordt
+        aangepast of verwijderd.
+
+        **Ben je rechthebbende en wil je liever niet dat de melding openbaar
+        staat?** Stuur dan een privébericht via
+        [github.com/wimlee115](https://github.com/wimlee115), of gebruik het
+        [security advisory-formulier](../security/advisories/new) — dat is
+        privé, ook voor niet-beveiligingszaken.
+
+        Ter achtergrond: de verantwoording over de herkomst van de inhoud
+        staat in [GEBRUIKSVOORWAARDEN.md](../blob/main/GEBRUIKSVOORWAARDEN.md),
+        sectie "Over de inhoud". Van het glossarium is daar al vastgelegd dat
+        de definities uit officieel materiaal komen.
+
+  - type: textarea
+    id: waar
+    attributes:
+      label: Om welke passage gaat het?
+      description: Bestand en regelnummer, of de tekst zoals hij in de app staat.
+    validations:
+      required: true
+
+  - type: textarea
+    id: bron
+    attributes:
+      label: Uit welke bron komt dit volgens jou?
+      description: Titel, uitgever en zo mogelijk het onderdeel. Een citaat is niet nodig — de verwijzing volstaat.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: hoedanigheid
+    attributes:
+      label: In welke hoedanigheid meld je dit?
+      options:
+        - Ik ben of vertegenwoordig de rechthebbende
+        - Ik ben trainer of docent en herkende het materiaal
+        - Anders
+    validations:
+      required: true
+
+  - type: dropdown
+    id: gewenst
+    attributes:
+      label: Wat wil je dat er gebeurt?
+      options:
+        - De passage verwijderen
+        - De passage herschrijven in eigen woorden
+        - Een bronvermelding toevoegen
+        - Laat de beheerder dat beoordelen
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optioneel)
+      description: Alleen als je een reactie buiten GitHub om wilt.

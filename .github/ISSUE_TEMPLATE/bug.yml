@@ -1,0 +1,65 @@
+name: Er gaat iets mis in de app
+description: De app doet iets anders dan hij zou moeten, of doet het niet.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gaat het om een **beveiligingsprobleem**? Gebruik dan niet dit
+        formulier maar het [security
+        advisory-formulier](../security/advisories/new) — dat is privé. Zie
+        [SECURITY.md](../blob/main/SECURITY.md).
+
+  - type: dropdown
+    id: versie
+    attributes:
+      label: Welke versie gebruik je?
+      options:
+        - Het losse HTML-bestand (offline.html)
+        - De Android-app (APK)
+        - De webversie op een eigen server
+        - Zelf gebouwd uit de broncode
+    validations:
+      required: true
+
+  - type: input
+    id: omgeving
+    attributes:
+      label: Waarop draait het?
+      placeholder: "Bijv.: Windows 11 met Chrome 141, of Android 14 op een Pixel 7"
+    validations:
+      required: true
+
+  - type: textarea
+    id: wat
+    attributes:
+      label: Wat gebeurde er?
+    validations:
+      required: true
+
+  - type: textarea
+    id: verwacht
+    attributes:
+      label: Wat verwachtte je dat er zou gebeuren?
+    validations:
+      required: true
+
+  - type: textarea
+    id: stappen
+    attributes:
+      label: Hoe roep je het op?
+      placeholder: |
+        1. Proefexamen starten voor ITIL
+        2. Vraag 12 beantwoorden
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Verder nog iets?
+      description: |
+        Een schermafbeelding helpt. Let op dat er geen persoonlijke gegevens op
+        staan — je studiegegevens zijn van jou, die hoef ik niet te zien.

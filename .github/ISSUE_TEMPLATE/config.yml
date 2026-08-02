@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Beveiligingsprobleem melden
+    url: https://github.com/WimLee115/project115/security/advisories/new
+    about: Niet via een openbare issue. Dit formulier is privé; alleen de beheerder ziet het.
+
+  - name: Hulp bij installeren
+    url: https://github.com/WimLee115/project115/blob/main/INSTALLEREN.md
+    about: Lukt het downloaden of installeren niet, kijk hier eerst.
+
+  - name: Zelf draaien of aanpassen
+    url: https://github.com/WimLee115/project115/blob/main/ONTWIKKELEN.md
+    about: Voor wie de app zelf wil bouwen, uitbreiden of op een server wil zetten.

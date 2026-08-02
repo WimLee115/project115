@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Project115 — Handleiding</title>
+<style>
+/* ===========================================================================
+   Project115 — printopmaak
+   Ontworpen voor WeasyPrint. Kleuren volgen het accent van de applicatie.
+   =========================================================================== */
+
+:root {
+  --accent: #6d3fd4;
+  --accent-soft: #f2ecfd;
+  --ink: #16181d;
+  --ink-soft: #4a5260;
+  --ink-faint: #838d9c;
+  --rule: #e2e5ea;
+  --rule-soft: #eff1f4;
+  --success: #17784a;
+  --success-soft: #e6f4ec;
+  --warn: #9a5b00;
+  --warn-soft: #fdf3e2;
+  --info: #0a6398;
+  --info-soft: #e6f2fa;
+  --code-bg: #f6f7f9;
+}
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 18mm 18mm;
+
+  @bottom-center {
+    content: counter(page);
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 8.5pt;
+    color: #9aa3b0;
+    padding-top: 4mm;
+  }
+  @bottom-right {
+    content: 'Project115';
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 8pt;
+    color: #c3c9d2;
+    padding-top: 4mm;
+  }
+}
+
+/* De omslag krijgt geen paginanummer en geen marges. */
+@page cover {
+  margin: 0;
+  @bottom-center { content: none; }
+  @bottom-right { content: none; }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+body { margin: 0; }
+
+/* --- Omslag --------------------------------------------------------------- */
+
+.cover {
+  page: cover;
+  height: 297mm;
+  width: 210mm;
+  padding: 34mm 24mm 22mm 24mm;
+  background: linear-gradient(158deg, #4c2a99 0%, #6d3fd4 46%, #8b5cf6 100%);
+  color: #fff;
+  position: relative;
+  page-break-after: always;
+}
+
+.cover-mark {
+  width: 21mm;
+  height: 21mm;
+  border-radius: 5.5mm;
+  background: rgba(255, 255, 255, 0.16);
+  border: 0.5mm solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15pt;
+  font-weight: 700;
+  letter-spacing: -0.5pt;
+  margin-bottom: 16mm;
+}
+
+.cover h1 {
+  font-size: 42pt;
+  font-weight: 700;
+  letter-spacing: -1.6pt;
+  line-height: 1.02;
+  margin: 0 0 5mm 0;
+}
+
+.cover .lead {
+  font-size: 14pt;
+  font-weight: 300;
+  line-height: 1.42;
+  opacity: 0.93;
+  max-width: 128mm;
+  margin: 0 0 14mm 0;
+}
+
+.cover-exams {
+  border-top: 0.4mm solid rgba(255, 255, 255, 0.3);
+  padding-top: 7mm;
+  margin-bottom: 4mm;
+}
+
+.cover-exam {
+  margin-bottom: 6mm;
+}
+
+.cover-exam .name {
+  font-size: 12pt;
+  font-weight: 600;
+  margin-bottom: 1mm;
+}
+
+.cover-exam .meta {
+  font-size: 9.5pt;
+  opacity: 0.82;
+  letter-spacing: 0.15pt;
+}
+
+.cover-foot {
+  position: absolute;
+  bottom: 22mm;
+  left: 24mm;
+  right: 24mm;
+  border-top: 0.4mm solid rgba(255, 255, 255, 0.3);
+  padding-top: 5mm;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5pt;
+  opacity: 0.9;
+}
+
+/* --- Koppen --------------------------------------------------------------- */
+
+h2 {
+  font-size: 19pt;
+  font-weight: 700;
+  letter-spacing: -0.5pt;
+  margin: 0 0 1mm 0;
+  padding-top: 3mm;
+  color: var(--ink);
+  string-set: chapter content();
+  page-break-after: avoid;
+  page-break-before: always;
+}
+
+h2:first-of-type { page-break-before: avoid; }
+
+h2 .num {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  margin-right: 3mm;
+}
+
+h2 + .sub {
+  color: var(--ink-faint);
+  font-size: 10pt;
+  margin: 0 0 7mm 0;
+  padding-bottom: 3mm;
+  border-bottom: 0.35mm solid var(--rule);
+}
+
+h3 {
+  font-size: 12.5pt;
+  font-weight: 600;
+  letter-spacing: -0.2pt;
+  margin: 8mm 0 2.5mm 0;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  margin: 6mm 0 2mm 0;
+  page-break-after: avoid;
+}
+
+p { margin: 0 0 3.5mm 0; }
+p.tight { margin-bottom: 1.5mm; }
+
+strong { font-weight: 600; }
+
+a { color: var(--accent); text-decoration: none; }
+
+/* --- Lijsten -------------------------------------------------------------- */
+
+ul, ol { margin: 0 0 4mm 0; padding-left: 5.5mm; }
+li { margin-bottom: 1.6mm; padding-left: 1mm; }
+li::marker { color: var(--accent); }
+
+/* --- Tabellen ------------------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 5mm 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.4pt;
+  color: var(--ink-faint);
+  padding: 0 2.5mm 2mm 0;
+  border-bottom: 0.5mm solid var(--rule);
+}
+
+td {
+  padding: 2.2mm 2.5mm 2.2mm 0;
+  border-bottom: 0.25mm solid var(--rule-soft);
+  vertical-align: top;
+}
+
+td:last-child, th:last-child { padding-right: 0; }
+
+.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.accent td { background: var(--accent-soft); font-weight: 600; }
+
+/* --- Codeblokken ---------------------------------------------------------- */
+
+pre {
+  background: var(--code-bg);
+  border-left: 1mm solid var(--accent);
+  border-radius: 0 1.5mm 1.5mm 0;
+  padding: 3.5mm 4mm;
+  margin: 0 0 4mm 0;
+  font-family: 'DejaVu Sans Mono', ui-monospace, monospace;
+  font-size: 8.8pt;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  page-break-inside: avoid;
+}
+
+code {
+  font-family: 'DejaVu Sans Mono', ui-monospace, monospace;
+  font-size: 0.88em;
+  background: var(--code-bg);
+  /* Alleen verticale ruimte: horizontale padding laat 'PLAN.md' uit elkaar
+     vallen tot 'PLAN . md' in de gerenderde PDF. */
+  padding: 0.3mm 0;
+  border-radius: 0.8mm;
+  /* Voorkomt dat een bestandsnaam of commando over een regeleinde breekt. */
+  white-space: nowrap;
+}
+
+pre code { background: none; padding: 0; font-size: inherit; }
+
+kbd {
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: 0.82em;
+  border: 0.25mm solid #c8cdd6;
+  border-bottom-width: 0.6mm;
+  border-radius: 1mm;
+  padding: 0.3mm 1.2mm;
+  background: #fff;
+}
+
+/* --- Kaders --------------------------------------------------------------- */
+
+.note {
+  padding: 3.5mm 4mm;
+  border-radius: 1.5mm;
+  margin: 0 0 4.5mm 0;
+  font-size: 9.8pt;
+  page-break-inside: avoid;
+}
+
+.note p:last-child { margin-bottom: 0; }
+.note .label {
+  font-weight: 700;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.4pt;
+  display: block;
+  margin-bottom: 1.5mm;
+}
+
+.note-info { background: var(--info-soft); }
+.note-info .label { color: var(--info); }
+.note-ok { background: var(--success-soft); }
+.note-ok .label { color: var(--success); }
+.note-warn { background: var(--warn-soft); }
+.note-warn .label { color: var(--warn); }
+
+/* --- Stappen -------------------------------------------------------------- */
+
+.steps { counter-reset: step; margin-bottom: 5mm; }
+
+.step {
+  position: relative;
+  padding-left: 11mm;
+  margin-bottom: 5mm;
+  page-break-inside: avoid;
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.4mm;
+  width: 7mm;
+  height: 7mm;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 9.5pt;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step h4 { margin: 0 0 1.2mm 0; }
+.step p { margin-bottom: 2mm; }
+
+/* --- Kerncijfers ---------------------------------------------------------- */
+
+.figures {
+  display: flex;
+  gap: 4mm;
+  margin: 0 0 6mm 0;
+  page-break-inside: avoid;
+}
+
+.figure {
+  flex: 1;
+  border: 0.3mm solid var(--rule);
+  border-radius: 2mm;
+  padding: 3.5mm;
+}
+
+.figure .value {
+  font-size: 21pt;
+  font-weight: 700;
+  letter-spacing: -0.7pt;
+  color: var(--accent);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.figure .label {
+  font-size: 8.5pt;
+  color: var(--ink-faint);
+  margin-top: 1mm;
+  line-height: 1.3;
+}
+
+/* --- Weegbalken ----------------------------------------------------------- */
+
+.weights { margin-bottom: 5mm; }
+
+.weight-row {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  margin-bottom: 2.2mm;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+}
+
+.weight-name { flex: 0 0 62mm; }
+.weight-name .code { color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+
+.weight-bar {
+  flex: 1;
+  height: 4mm;
+  background: var(--rule-soft);
+  border-radius: 2mm;
+  overflow: hidden;
+  /* Geen flex-container: WeasyPrint rekent `height: 100%` van een kind binnen
+     een flex-item als nul, waardoor de vulling onzichtbaar zou blijven. */
+  display: block;
+}
+
+/* Expliciete hoogte in plaats van 100%, om diezelfde reden. */
+.weight-fill {
+  display: block;
+  height: 4mm;
+  background: var(--accent);
+  border-radius: 2mm;
+}
+
+.weight-fill.heavy { background: #4c2a99; }
+
+.weight-val {
+  flex: 0 0 20mm;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  font-size: 9pt;
+}
+
+/* --- Inhoudsopgave -------------------------------------------------------- */
+
+.toc { page-break-after: always; }
+.toc h2 { page-break-before: avoid; }
+
+.toc-list { list-style: none; padding: 0; margin: 0; }
+
+.toc-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  padding: 2mm 0;
+  border-bottom: 0.25mm solid var(--rule-soft);
+  margin: 0;
+}
+
+.toc-num {
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 7mm;
+}
+
+.toc-title { flex: 1; }
+.toc-desc { color: var(--ink-faint); font-size: 9pt; }
+
+/* --- Diversen ------------------------------------------------------------- */
+
+.two-col { display: flex; gap: 6mm; margin-bottom: 4mm; }
+.two-col > * { flex: 1; }
+
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+  padding-left: 6mm;
+  position: relative;
+  margin-bottom: 1.8mm;
+}
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 700;
+}
+
+.footer-note {
+  margin-top: 8mm;
+  padding-top: 4mm;
+  border-top: 0.35mm solid var(--rule);
+  font-size: 8.8pt;
+  color: var(--ink-faint);
+}
+
+.avoid-break { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<!-- ====================== OMSLAG ====================== -->
+<section class="cover">
+  <div class="cover-mark">115</div>
+
+  <h1>Project115</h1>
+  <p class="lead">
+    Studiehub voor twee certificeringsexamens. Volledige proefexamens onder
+    echte condities, en een overzicht dat precies aanwijst wat je nog moet
+    leren. Werkt zonder installatie en zonder internet.
+  </p>
+
+  <div class="cover-exams">
+    <div class="cover-exam">
+      <div class="name">ITIL Foundation (Version 5)</div>
+      <div class="meta">PeopleCert · 40 vragen · 60 minuten · 26 goed om te slagen</div>
+    </div>
+    <div class="cover-exam">
+      <div class="name">EXIN Information Security Foundation</div>
+      <div class="meta">ISO/IEC 27001 · 40 vragen · 60 minuten · 26 goed om te slagen</div>
+    </div>
+  </div>
+
+  <div class="cover-foot">
+    <span>Ontwikkeld door <strong>B. van Rooij</strong></span>
+    <span>Handleiding · versie 1.0.0</span>
+  </div>
+</section>
+
+<!-- ====================== INHOUD ====================== -->
+<section class="toc">
+  <h2>Inhoud</h2>
+  <p class="sub">Waar je wat vindt</p>
+
+  <ul class="toc-list">
+    <li><span class="toc-num">1</span><span class="toc-title"><strong>Beginnen</strong><br><span class="toc-desc">Drie manieren om te starten, en je eerste stappen</span></span></li>
+    <li><span class="toc-num">2</span><span class="toc-title"><strong>De twee examens</strong><br><span class="toc-desc">Waar je op wordt getoetst en hoe zwaar elk onderdeel meetelt</span></span></li>
+    <li><span class="toc-num">3</span><span class="toc-title"><strong>Wat je ermee kunt</strong><br><span class="toc-desc">Proefexamen, oefenen, herhalen, begrippen en voortgang</span></span></li>
+    <li><span class="toc-num">4</span><span class="toc-title"><strong>Een studieaanpak</strong><br><span class="toc-desc">Vier fasen van eerste kennismaking tot examendag</span></span></li>
+    <li><span class="toc-num">5</span><span class="toc-title"><strong>Je gegevens</strong><br><span class="toc-desc">Wat er waar staat, en wat er niet gebeurt</span></span></li>
+    <li><span class="toc-num">6</span><span class="toc-title"><strong>Onderhoud</strong><br><span class="toc-desc">Back-ups, meerdere apparaten en problemen oplossen</span></span></li>
+    <li><span class="toc-num">7</span><span class="toc-title"><strong>Verantwoording</strong><br><span class="toc-desc">Waar de inhoud vandaan komt en wat er is getest</span></span></li>
+  </ul>
+</section>
+
+<!-- ====================== 1. BEGINNEN ====================== -->
+<section>
+  <h2><span class="num">1</span>Beginnen</h2>
+  <p class="sub">Drie manieren, kies wat je handig vindt</p>
+
+  <p>
+    Project115 draait volledig op je eigen apparaat. Er is geen account, geen
+    abonnement en geen server. De applicatie legt tijdens gebruik geen enkele
+    verbinding met het internet, en er gaat geen gegeven naar buiten.
+  </p>
+
+  <h3>Het losse bestand — het eenvoudigst</h3>
+
+  <p>
+    Dubbelklik op <code>Project115-1.0.0-offline.html</code>. Meer is het niet.
+    De hele applicatie zit in dat ene bestand: de vragenbank, de begrippenlijst
+    en alle schermen. Het werkt in elke moderne browser, op Windows, macOS,
+    Linux en op een Chromebook.
+  </p>
+
+  <div class="note note-info">
+    <span class="label">Waar je voortgang blijft</span>
+    <p>
+      De browser waarin je het bestand opent, bewaart je voortgang. Open het dus
+      steeds met dezelfde browser en laat het bestand op zijn plek staan. Wis je
+      de gegevens van je browser, dan is je voortgang weg — tenzij je hebt
+      geëxporteerd.
+    </p>
+  </div>
+
+  <h3>Als Android-app</h3>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Zet het APK-bestand op je telefoon</h4>
+      <p>Via de mail, een link, of een usb-kabel — wat je gewend bent.</p>
+    </div>
+    <div class="step">
+      <h4>Open het bestand en sta de installatie toe</h4>
+      <p>
+        Android meldt dat installeren uit deze bron niet is toegestaan. Tik op
+        <strong>Instellingen</strong> en zet de schakelaar aan voor de app
+        waarmee je het bestand opende. Die waarschuwing is normaal bij software
+        die niet uit de Play Store komt.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Tik op Installeren</h4>
+      <p>
+        Daarna staat Project115 tussen je andere apps. Minimaal Android 7.0
+        nodig; de app is ongeveer drie megabyte.
+      </p>
+    </div>
+  </div>
+
+  <h3>Op een webserver</h3>
+
+  <p>
+    In <code>Project115-1.0.0-web.zip</code> zit dezelfde applicatie als gewone
+    website, bedoeld voor als je hem aan een groep wilt aanbieden. Pak de zip uit
+    in een map op een webserver. Er is geen database nodig en geen installatie;
+    de bestanden serveren volstaat.
+  </p>
+
+  <p>
+    Via HTTPS werkt de site daarna ook zonder internet, en kunnen bezoekers hem
+    op hun beginscherm zetten als een gewone app — via het menu van Chrome, de
+    deelknop van Safari, of het pictogram in de adresbalk op een computer.
+  </p>
+
+  <h3>De eerste stappen in de applicatie</h3>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Stel je examendatum in</h4>
+      <p>
+        Via <strong>Instellingen → Studieplan</strong>. Het beginscherm telt dan
+        af, zodat je precies weet hoeveel tijd je nog hebt.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Zet eventueel een pincode</h4>
+      <p>
+        Via <strong>Instellingen → Beveiliging</strong>. Handig als je op je
+        telefoon studeert en je toestel weleens uit handen geeft.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Begin met een proefexamen</h4>
+      <p>
+        Ook als je nog niets weet. Je nulmeting bepaalt waar je begint, en het
+        overzicht per leerdoel is pas bruikbaar als er iets in staat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 2. DE EXAMENS ====================== -->
+<section>
+  <h2><span class="num">2</span>De twee examens</h2>
+  <p class="sub">Waar je op wordt getoetst</p>
+
+  <p>
+    Beide examens zijn opgebouwd volgens hetzelfde stramien: veertig
+    meerkeuzevragen in zestig minuten, waarvan er zesentwintig goed moeten zijn.
+    Dat is een cesuur van 65 procent — je mag er dus veertien fout hebben.
+  </p>
+
+  <div class="figures">
+    <div class="figure">
+      <div class="value">40</div>
+      <div class="label">vragen per examen</div>
+    </div>
+    <div class="figure">
+      <div class="value">60</div>
+      <div class="label">minuten</div>
+    </div>
+    <div class="figure">
+      <div class="value">26</div>
+      <div class="label">goed om te slagen</div>
+    </div>
+    <div class="figure">
+      <div class="value">65%</div>
+      <div class="label">cesuur</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>ITIL Foundation (v5)</th>
+        <th>EXIN ISFS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Aanbieder</td><td>PeopleCert</td><td>EXIN</td></tr>
+      <tr><td>Examentaal</td><td>Engels</td><td>Nederlands</td></tr>
+      <tr><td>Extra tijd</td><td>+25% (15 min)</td><td>niet van toepassing</td></tr>
+      <tr><td>Boek</td><td>gesloten</td><td>gesloten</td></tr>
+      <tr><td>Vraagtypes</td><td>vier soorten</td><td>standaard meerkeuze</td></tr>
+      <tr><td>Bloom-niveau</td><td>40% niveau 1, 60% niveau 2</td><td>niveau 1 en 2</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note note-info">
+    <span class="label">Extra tijd bij ITIL</span>
+    <p>
+      PeopleCert kent 25 procent extra tijd toe wanneer het examen niet in je
+      moedertaal is. Je krijgt dan 75 minuten. In Project115 zet je dat aan bij
+      het starten van een proefexamen, zodat je oefent onder precies de
+      condities van de examendag.
+    </p>
+  </div>
+
+  <h3>ITIL Foundation — verdeling over de examengebieden</h3>
+
+  <div class="weights">
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">1</span> Kernbegrippen en definities</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:75%"></span></span>
+      <span class="weight-val">30% · 12</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">2</span> De vier dimensies</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:25%"></span></span>
+      <span class="weight-val">10% · 4</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">3</span> Product- en servicelevenscyclus</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:25%"></span></span>
+      <span class="weight-val">10% · 4</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">4</span> <strong>Het ITIL-waardesysteem</strong></span>
+      <span class="weight-bar"><span class="weight-fill heavy" style="width:100%"></span></span>
+      <span class="weight-val">40% · 16</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">5</span> Waardestromen</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:12.5%"></span></span>
+      <span class="weight-val">5% · 2</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">6</span> ITIL en AI</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:6.25%"></span></span>
+      <span class="weight-val">2,5% · 1</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">7</span> ITIL en andere frameworks</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:6.25%"></span></span>
+      <span class="weight-val">2,5% · 1</span>
+    </div>
+  </div>
+
+  <h3>EXIN ISFS — verdeling over de exameneisen</h3>
+
+  <div class="weights">
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">1</span> Informatie en beveiliging</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:52%"></span></span>
+      <span class="weight-val">27,5% · 11</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">2</span> Dreigingen en risico's</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:24%"></span></span>
+      <span class="weight-val">12,5% · 5</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">3</span> <strong>Beheersmaatregelen</strong></span>
+      <span class="weight-bar"><span class="weight-fill heavy" style="width:100%"></span></span>
+      <span class="weight-val">52,5% · 21</span>
+    </div>
+    <div class="weight-row">
+      <span class="weight-name"><span class="code">4</span> Wet- en regelgeving en normen</span>
+      <span class="weight-bar"><span class="weight-fill" style="width:14%"></span></span>
+      <span class="weight-val">7,5% · 3</span>
+    </div>
+  </div>
+
+  <div class="note note-warn">
+    <span class="label">Waar je studietijd naartoe moet</span>
+    <p>
+      Bij ITIL zit <strong>40 procent</strong> van je examen in het
+      waardesysteem: de zeven leidende principes, governance, de waardeketen, de
+      managementwerkwijzen en het model voor voortdurend verbeteren. Bij ISFS zit
+      <strong>meer dan de helft</strong> in de beheersmaatregelen. Daar ligt je
+      zwaartepunt.
+    </p>
+  </div>
+
+  <p>
+    Elk proefexamen dat je start volgt exact deze verdeling. Je oefent dus nooit
+    met een scheve steekproef die je een verkeerd beeld geeft.
+  </p>
+</section>
+
+<!-- ====================== 3. FUNCTIES ====================== -->
+<section>
+  <h2><span class="num">3</span>Wat je ermee kunt</h2>
+  <p class="sub">Vijf manieren om te studeren</p>
+
+  <h3>Proefexamen</h3>
+
+  <p>
+    Veertig vragen, de klok loopt, en je krijgt <em>geen</em> enkele
+    terugkoppeling tot je inlevert — net als op de examendag. Je kunt vragen
+    markeren om er later op terug te komen, en een overzichtsraster laat zien
+    wat je al beantwoord hebt.
+  </p>
+
+  <table>
+    <thead><tr><th>Sneltoets</th><th>Wat het doet</th></tr></thead>
+    <tbody>
+      <tr><td><kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd></td><td>antwoord kiezen</td></tr>
+      <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>vorige of volgende vraag</td></tr>
+      <tr><td><kbd>F</kbd></td><td>markeren voor later</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note note-ok">
+    <span class="label">De klok loopt op de server</span>
+    <p>
+      Je tabblad sluiten, de pagina herladen of je computer in slaap zetten
+      levert geen extra tijd op. Je antwoorden worden direct opgeslagen, dus een
+      onderbroken examen hervat precies waar je gebleven was.
+    </p>
+  </div>
+
+  <h3>Oefenen</h3>
+
+  <p>
+    Het omgekeerde van een proefexamen: geen tijdsdruk, en na elk antwoord zie
+    je meteen of het klopt, met de toelichting erbij. Bij elke fout optie staat
+    <em>waarom</em> die niet klopt. Dat is waar je het meest van leert — drie
+    keer begrijpen waarom iets fout is, is meer waard dan één keer het goede
+    antwoord onthouden.
+  </p>
+
+  <h3>Zwakke plekken</h3>
+
+  <p>
+    Een gerichte sessie met alleen vragen uit de onderwerpen waarop je onder de
+    cesuur scoort. De hub houdt per leerdoel bij hoe je ervoor staat, dus die
+    selectie is exact.
+  </p>
+
+  <h3>Herhalen</h3>
+
+  <p>
+    Elke vraag die je beantwoordt komt in een herhaalschema. Dat schema plant
+    wanneer je iets terugziet: op het moment dat je het bijna zou vergeten. Fout
+    beantwoord betekent snel terug, moeiteloos goed betekent pas over weken.
+  </p>
+
+  <p class="tight">
+    Je hoeft daar zelf niets voor te doen. Wel loont het om de wachtrij
+    dagelijks leeg te maken — vijftien minuten per dag doet meer voor je
+    slagingskans dan drie uur in het weekend.
+  </p>
+
+  <h3>Begrippen</h3>
+
+  <p>
+    Honderdtwintig begrippen in het Nederlands en het Engels, doorzoekbaar en
+    met ezelsbruggetjes bij de begrippen die vaak verward worden. Je kunt ze als
+    flashcards aan je herhaalwachtrij toevoegen.
+  </p>
+
+  <div class="note note-info">
+    <span class="label">Waarom tweetalig</span>
+    <p>
+      Het ITIL-examen is Engelstalig terwijl je cursusmateriaal Nederlands is.
+      Bij sommige begrippen lopen die talen verraderlijk uiteen:
+      <em>continual improvement</em> is <em>voortdurend</em> verbeteren, niet
+      <em>continu</em>. In elke vraag kun je met één klik de andere taal erbij
+      halen.
+    </p>
+  </div>
+
+  <h3>Voortgang</h3>
+
+  <p>
+    Eén cijfer voor je examengereedheid, je scoreverloop over de tijd, en je
+    score per examengebied en per afzonderlijk leerdoel. Dat laatste is het
+    nuttigst: niet <em>“je scoorde 62 procent”</em>, maar <em>“je zakt op
+    leerdoel 4.2.4 — iteratieve voortgang met feedback”</em>. Alleen het tweede
+    vertelt je wat je moet doen.
+  </p>
+</section>
+
+<!-- ====================== 4. STUDIEAANPAK ====================== -->
+<section>
+  <h2><span class="num">4</span>Een studieaanpak</h2>
+  <p class="sub">Een suggestie, geen voorschrift</p>
+
+  <div class="steps">
+    <div class="step">
+      <h4>Oriëntatie — week 1</h4>
+      <p>
+        Lees je cursusmateriaal door en gebruik de oefenmodus met twintig vragen
+        per sessie. Nog geen proefexamens: die zijn nu alleen demotiverend, en je
+        verbrandt vragen die je later nodig hebt voor een eerlijke meting.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Opbouw — week 2 en 3</h4>
+      <p>
+        Dagelijks je herhaalwachtrij leegmaken, plus één oefensessie. Zet ook de
+        begrippen in de wachtrij; bij ISFS is de begrippenlijst letterlijk
+        examenstof. Aan het eind van week 2 je eerste proefexamen als nulmeting.
+      </p>
+    </div>
+    <div class="step">
+      <h4>Bijsturen — week 4 en verder</h4>
+      <p>
+        Proefexamen, dan het dashboard erbij en gericht oefenen op de leerdoelen
+        onder de 65 procent. Herhaal. Wat telt is niet je gemiddelde, maar of je
+        laatste scores stabiel boven de 26 liggen.
+      </p>
+    </div>
+    <div class="step">
+      <h4>De laatste week</h4>
+      <p>
+        Twee tot drie volledige proefexamens onder echte condities: timer aan,
+        geen naslag, in één keer uitzitten. Oefen ITIL in het Engels — dat is de
+        examentaal.
+      </p>
+    </div>
+  </div>
+
+  <div class="note note-ok">
+    <span class="label">Wanneer ben je er klaar voor</span>
+    <p>
+      Drie opeenvolgende proefexamens met dertig of meer goed, oftewel 75
+      procent. Dan heb je genoeg marge voor een slechte dag, een lastige vraag of
+      een moment van blackout.
+    </p>
+  </div>
+
+  <h3>Twee dingen die het verschil maken</h3>
+
+  <p>
+    <strong>Spreiden werkt beter dan stapelen.</strong> Vier keer een half uur
+    verdeeld over de week levert meer op dan één keer twee uur. Het
+    herhaalschema is daar precies op gebouwd.
+  </p>
+
+  <p>
+    <strong>Lees de vraag twee keer.</strong> Vooral bij ITIL: negatieve vragen
+    (<em>welke is NIET…</em>) en vragen waarbij je twee van vier stellingen moet
+    kiezen zijn de vragen waarop mensen struikelen — niet omdat ze de stof niet
+    kennen, maar omdat ze te snel lazen.
+  </p>
+</section>
+
+<!-- ====================== 5. BEVEILIGING ====================== -->
+<section>
+  <h2><span class="num">5</span>Je gegevens</h2>
+  <p class="sub">Wat er waar staat, en wat er niet gebeurt</p>
+
+  <p>
+    Alles staat op het apparaat waarop je studeert, in de opslag van de
+    applicatie zelf. Er is geen server van iemand anders in het spel, geen
+    telemetrie, geen analytics en geen advertentiecode. De applicatie legt
+    tijdens gebruik geen enkele verbinding met het internet — er valt namelijk
+    niets op te halen: de vragenbank zit in het bestand en je voortgang staat
+    lokaal.
+  </p>
+
+  <table>
+    <thead><tr><th>Wat</th><th>Waar</th></tr></thead>
+    <tbody>
+      <tr><td>Je pogingen en antwoorden</td><td>lokale opslag van de browser of de app</td></tr>
+      <tr><td>Je herhaalschema</td><td>idem</td></tr>
+      <tr><td>Je instellingen en examendatum</td><td>idem</td></tr>
+      <tr><td>De vragenbank</td><td>in het programmabestand zelf, niet te wijzigen</td></tr>
+      <tr><td>Je pincode</td><td>alleen een afgeleide ervan, nooit de code zelf</td></tr>
+    </tbody>
+  </table>
+
+  <h3>De pincode</h3>
+
+  <p>
+    Optioneel, in te stellen bij <strong>Instellingen → Beveiliging</strong>. Hij
+    wordt opgeslagen als een afgeleide via PBKDF2-SHA256 met 310.000 iteraties en
+    een willekeurig zout, en na vijf misgetikte pogingen volgt een wachttijd.
+  </p>
+
+  <div class="note note-warn">
+    <span class="label">Wat de pincode wél en niet doet</span>
+    <p>
+      Hij voorkomt dat iemand die je ontgrendelde telefoon even vasthoudt in je
+      studiegegevens kan kijken. Hij versleutelt je gegevens niet: wie het
+      toestel root of de opslag uitleest, komt er sowieso bij. Dat is eerlijker
+      om te weten dan een belofte die niet waargemaakt kan worden.
+    </p>
+  </div>
+
+  <h3>Je gegevens meenemen</h3>
+
+  <p>
+    Via <strong>Instellingen → Gegevens → Exporteren</strong> schrijft de
+    applicatie alles wat zij over je studie weet naar één leesbaar bestand: je
+    pogingen, je antwoorden en je herhaalschema. Dat bestand komt op je eigen
+    apparaat te staan en gaat alleen ergens heen als jij het zelf deelt.
+  </p>
+
+  <p>
+    Hetzelfde formaat wordt gelezen door de webversie van Project115 en
+    andersom, zodat je op je computer verder kunt waar je op je telefoon was
+    gebleven.
+  </p>
+</section>
+
+<!-- ====================== 6. ONDERHOUD ====================== -->
+<section>
+  <h2><span class="num">6</span>Onderhoud</h2>
+  <p class="sub">Back-ups, meerdere apparaten en problemen oplossen</p>
+
+  <h3>Back-up maken</h3>
+
+  <p>
+    Er is geen bestand om te kopiëren: je voortgang zit in de opslag van je
+    browser of app. De back-up is dus de export.
+  </p>
+
+  <div class="note note-warn">
+    <span class="label">Exporteer na elk proefexamen</span>
+    <p>
+      Het kost twee tikken en het scheelt je een keer opnieuw beginnen.
+      Studiegegevens verdwijnen wanneer je de app-gegevens wist, wanneer je de
+      sitegegevens van je browser opruimt, of wanneer je een telefoon vervangt.
+      Zonder export is dat definitief.
+    </p>
+  </div>
+
+  <h3>Op meerdere apparaten studeren</h3>
+
+  <p>
+    Dat kan, maar niet automatisch synchroon — er is geen server om dat via te
+    laten lopen. Exporteer op het ene apparaat en importeer op het andere.
+  </p>
+
+  <div class="note note-info">
+    <span class="label">Importeren vervangt, en voegt niet samen</span>
+    <p>
+      Wat er op het ontvangende apparaat stond, wordt overschreven. Dat is een
+      bewuste keuze: twee herhaalschema's samenvoegen vraagt per kaart een
+      oordeel over welk moment geldt, en elke automatische keuze daarin is een
+      gok met je planning. Vervangen is voorspelbaar.
+    </p>
+  </div>
+
+  <h3>Bijwerken naar een nieuwe versie</h3>
+
+  <table>
+    <thead><tr><th>Vorm</th><th>Wat je doet</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Los bestand</td>
+        <td>Vervang het door de nieuwe versie. Zet hem op dezelfde plek, dan blijft je voortgang staan</td>
+      </tr>
+      <tr>
+        <td>Android-app</td>
+        <td>Installeer de nieuwe APK er overheen. Je voortgang blijft bewaard</td>
+      </tr>
+      <tr>
+        <td>Webserver</td>
+        <td>Vervang de bestanden. Bezoekers krijgen de nieuwe versie bij hun volgende bezoek</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Als er iets misgaat</h3>
+
+  <table>
+    <thead><tr><th>Wat je ziet</th><th>Wat te doen</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Wit scherm bij het losse bestand</td>
+        <td>Open het met een andere browser. Op sommige systemen opent een dubbelklik een programma dat geen webpagina's toont</td>
+      </tr>
+      <tr>
+        <td>Voortgang is verdwenen</td>
+        <td>Waarschijnlijk zijn de browsergegevens gewist, of is het bestand verplaatst. Importeer je laatste export</td>
+      </tr>
+      <tr>
+        <td>Android weigert te installeren</td>
+        <td>Sta installeren uit deze bron toe, of controleer of er al een versie met een andere handtekening op het toestel staat</td>
+      </tr>
+      <tr>
+        <td>Pincode vergeten</td>
+        <td>Er is geen herstel. Wis de app-gegevens en importeer je laatste export</td>
+      </tr>
+      <tr>
+        <td>Een vraag lijkt onjuist</td>
+        <td>Laat het weten via <code>github.com/wimlee115</code>. Bij twijfel gaat het officiële cursusmateriaal voor</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ====================== 7. VERANTWOORDING ====================== -->
+<section>
+  <h2><span class="num">7</span>Verantwoording</h2>
+  <p class="sub">Waar de inhoud vandaan komt</p>
+
+  <p>
+    De vragen zijn <strong>origineel geschreven</strong> op basis van de
+    officiële leerdoelen. Er zijn geen examenvragen overgenomen. Gebruikte
+    bronnen:
+  </p>
+
+  <ul>
+    <li><em>ITIL Foundation (Version 5) — Syllabus</em>, PeopleCert</li>
+    <li><em>ITIL Foundation (Version 5) — Nederlandstalig Reference Manual</em>, ITMG</li>
+    <li><em>Preparation guide EXIN Information Security Foundation based on ISO/IEC 27001</em>, editie 202305</li>
+    <li><em>Basiskennis informatiebeveiliging op basis van ISO 27001 en ISO 27002</em>, Hintzbergen e.a., vierde herziene druk</li>
+  </ul>
+
+  <p>
+    Elke vraag verwijst naar het leerdoel waarop hij toetst, zodat je bij twijfel
+    zelf kunt nakijken.
+  </p>
+
+  <h3>Omvang van de vragenbank</h3>
+
+  <table>
+    <thead>
+      <tr><th>&nbsp;</th><th class="num-col">ITIL 5</th><th class="num-col">EXIN ISFS</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Vragen</td><td class="num-col">100</td><td class="num-col">60</td></tr>
+      <tr><td>Leerdoelen gedekt</td><td class="num-col">95 / 95</td><td class="num-col">31 / 31</td></tr>
+      <tr><td>Begrippen</td><td class="num-col">62</td><td class="num-col">58</td></tr>
+      <tr class="accent"><td>Totaal</td><td class="num-col">160 vragen</td><td class="num-col">120 begrippen</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Elk afzonderlijk leerdoel uit beide syllabi wordt door minstens één vraag
+    getoetst.
+  </p>
+
+  <h3>Wat er is getest</h3>
+
+  <ul class="checklist">
+    <li>18 controles op de inhoud en de examenspecificaties</li>
+    <li>9 controles op de examengeneratie tegen een echte database</li>
+    <li>50 controles op de volledige gebruikersreis over HTTP</li>
+    <li>50 dezelfde controles over HTTPS tegen de containers</li>
+    <li>41 controles op de containeropstelling en de beveiliging daarvan</li>
+    <li>Het startscript, zowel vanaf nul als bij hergebruik</li>
+  </ul>
+
+  <p>
+    Alles is te herhalen met <code>npm run verify</code>.
+  </p>
+
+  <div class="note note-warn">
+    <span class="label">Twee dingen om te weten</span>
+    <p>
+      De vragenbank is <strong>niet</strong> gevalideerd door PeopleCert of EXIN.
+      Wijkt een vraag af van wat je in je cursusmateriaal leest, ga dan uit van
+      het cursusmateriaal.
+    </p>
+    <p>
+      ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert. EXIN®
+      is een geregistreerd handelsmerk van EXIN Holding B.V. Project115 is niet
+      gelieerd aan of goedgekeurd door een van beide.
+    </p>
+  </div>
+
+  <div class="footer-note">
+    <p>
+      <strong>Project115</strong> · Ontwikkeld door B. van Rooij ·
+      Handleiding versie 1.0.0<br>
+      Wat je met de software mag, staat in
+      <code>GEBRUIKSVOORWAARDEN.md</code>; wat er met je gegevens gebeurt in
+      <code>PRIVACY.md</code>. Broncode en nieuwere versies:
+      <code>github.com/wimlee115</code>.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

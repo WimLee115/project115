@@ -1,0 +1,125 @@
+name: CI
+
+# Draait op elke push naar main en op elk pull request. Dit is meteen de
+# statuscheck die je bij branch protection kunt verplichten, zodat een
+# Dependabot-PR pas te mergen is als de app er nog van bouwt.
+#
+# De actions staan vastgezet op hun commit-SHA, niet op een tag. Een tag als
+# `v7` kan door de eigenaar naar een andere commit worden verplaatst; een SHA
+# niet. Dat scheelt een aanvalsroute die de laatste jaren vaker is misbruikt.
+# Dependabot houdt ze bij en zet de nieuwe SHA in een pull request.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Niets in deze workflow hoeft te schrijven.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  webhub:
+    name: Webhub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Afhankelijkheden installeren
+        run: npm ci
+
+      - name: Typecontrole
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests
+        run: npm test
+
+      - name: Productiebuild
+        run: npm run build
+
+  android:
+    name: Android-schil
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: android-app/package-lock.json
+
+      - name: Afhankelijkheden installeren
+        working-directory: android-app
+        run: npm ci
+
+      - name: Typecontrole
+        working-directory: android-app
+        run: npm run typecheck
+
+      - name: Tests
+        working-directory: android-app
+        run: npm test
+
+      - name: Webbuild
+        working-directory: android-app
+        run: npm run build
+
+  content:
+    name: Vragenbank
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Afhankelijkheden installeren
+        run: npm ci
+
+      # De vragenbank valideert zichzelf: dekt elk assessment-criterium een
+      # vraag, tellen de wegingen op tot 100%, heeft elke vraag precies vier
+      # opties en precies één juist antwoord. Dat hoort te falen vóór een
+      # uitgave, niet erna.
+      - name: Vragenbank valideren
+        run: npx tsx scripts/validate-content.ts
+
+  audit:
+    name: Afhankelijkheden
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 20
+          cache: npm
+
+      # Alleen wat daadwerkelijk wordt uitgeleverd. Een kwetsbaarheid in een
+      # bouwgereedschap staat niet in de app die je installeert; die volgt
+      # Dependabot apart op.
+      - name: npm audit (uitgeleverde afhankelijkheden)
+        run: npm audit --omit=dev --audit-level=moderate

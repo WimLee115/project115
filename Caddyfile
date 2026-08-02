@@ -1,0 +1,57 @@
+# Project115 — Caddy-configuratie
+#
+# Caddy regelt TLS zelf. Voor een adres in je eigen netwerk (een .local-naam of
+# een IP) maakt Caddy een interne certificaatautoriteit aan en tekent daarmee
+# een certificaat. Je browser kent die CA niet, dus je krijgt eenmalig een
+# waarschuwing; je kunt het CA-certificaat vertrouwen om die kwijt te raken.
+# Zie README.md voor de stappen.
+
+{
+	# Geen automatische Let's Encrypt-aanvraag: deze hub staat niet op internet
+	# en een publiek certificaat is hier niet aan te vragen én niet nodig.
+	auto_https disable_redirects
+	admin off
+}
+
+{$SITE_ADDRESS} {
+	# Interne CA voor een lokaal adres.
+	tls internal
+
+	encode zstd gzip
+
+	# Beveiligingsheaders die de applicatie niet zelf kan zetten omdat ze op
+	# transportniveau horen. De CSP wordt door de app zelf gezet, met een
+	# nonce per request.
+	header {
+		Strict-Transport-Security "max-age=63072000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+
+	# Beperkt de hoeveelheid data die één client kan opsturen.
+	request_body {
+		max_size 2MB
+	}
+
+	reverse_proxy app:3000 {
+		# De applicatie leest deze headers om het echte client-IP te bepalen
+		# voor rate limiting en het auditlog.
+		header_up X-Real-IP {remote_host}
+		header_up X-Forwarded-Proto {scheme}
+
+		# Een eigen endpoint dat altijd 200 geeft. De gewone pagina's redirecten
+		# afhankelijk van de sessie, en Caddy ziet alles buiten 2xx als een
+		# ongezonde upstream — dat leverde eerder 503's op.
+		health_uri /api/health
+		health_interval 10s
+		health_timeout 5s
+	}
+
+	log {
+		output stdout
+		format console
+		level INFO
+	}
+}

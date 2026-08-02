@@ -1,0 +1,27 @@
+# Wat níét de build-context in gaat.
+#
+# Let op: node_modules staat hier bewust NIET tussen. De image wordt netwerkloos
+# gebouwd (zie de toelichting in de Dockerfile), dus de al geïnstalleerde
+# modules van de host zijn nodig. Alleen de standalone output belandt
+# uiteindelijk in de runtime-image, niet de volledige installatie.
+
+.next
+.git
+.gitignore
+data
+backups
+certs
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.local
+.env.production
+README.md
+PLAN.md
+DOCKER.md
+test
+*.log
+.vscode
+.idea
+tsconfig.tsbuildinfo

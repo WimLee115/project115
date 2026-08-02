@@ -1,0 +1,34 @@
+# Bouwuitvoer
+dist/
+dist-web/
+release/
+node_modules/
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Ondertekening — deze twee mogen nergens anders terechtkomen dan op deze
+# machine en op je eigen back-up.
+#
+# Wie ze heeft, kan een update uitbrengen die Android accepteert als deze app.
+# Ze horen dus niet in een repository, niet in een zip die je verstuurt en niet
+# in een chat.
+# ---------------------------------------------------------------------------
+release-key.jks
+android/keystore.properties
+
+# Android-bouwsel en lokale paden
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+android/local.properties
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+*.apk
+*.aab
+*.keystore
+
+# Redactie-artefacten
+.DS_Store
+*.log

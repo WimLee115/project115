@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+/*
+ * Ondertekening van de uitgave.
+ *
+ * De sleutel en zijn wachtwoord staan in keystore.properties, dat niet
+ * meegaat in wat er verspreid wordt (zie .gitignore en
+ * scripts/package-release.ts). Ontbreekt dat bestand, dan bouwt een
+ * uitgave-APK gewoon zonder handtekening; hij is dan alleen niet te
+ * installeren. Dat is beter dan een build die met een onbekende sleutel
+ * ondertekent en pas bij de eerste update stukloopt.
+ */
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+def hasKeystore = keystorePropertiesFile.exists()
+if (hasKeystore) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace = "nl.vanrooij.project115"
+    compileSdk = rootProject.ext.compileSdkVersion
+
+    signingConfigs {
+        if (hasKeystore) {
+            release {
+                storeFile rootProject.file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+
+    defaultConfig {
+        applicationId "nl.vanrooij.project115"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        // Verhoog versionCode bij elke uitgave: Android installeert een APK
+        // alleen over een bestaande heen als dit getal hoger is.
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    buildTypes {
+        release {
+            if (hasKeystore) {
+                signingConfig signingConfigs.release
+            }
+            // De app is een WebView om een JavaScript-bundel heen; er valt in de
+            // Java-laag vrijwel niets te verkleinen, en R8 aanzetten levert
+            // vooral een kans op dat een Capacitor-plugin via reflectie zijn
+            // eigen klasse niet meer vindt.
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}

@@ -1,0 +1,57 @@
+name: Inhoudelijke fout in een vraag of begrip
+description: Een antwoord dat niet klopt, een toelichting die de stof verkeerd uitlegt, of een begrip dat achterloopt op de syllabus.
+title: "[inhoud] "
+labels: ["inhoud"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dit type melding weegt het zwaarst. Wie op verkeerde informatie
+        studeert, gaat een examen in dat geld kost.
+
+        **Plak geen tekst uit cursusmateriaal of officiële examens in dit
+        formulier.** Verwijs ernaar in je eigen woorden. Zie
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+
+  - type: dropdown
+    id: certificering
+    attributes:
+      label: Welke certificering?
+      options:
+        - ITIL Foundation (Version 5)
+        - EXIN ISFS (ISO/IEC 27001)
+        - Allebei / weet ik niet
+    validations:
+      required: true
+
+  - type: textarea
+    id: waar
+    attributes:
+      label: Om welke vraag of welk begrip gaat het?
+      description: De vraagtekst, of het bestand en regelnummer als je die bij de hand hebt.
+      placeholder: |
+        content/itil5/questions-01-terms.ts, rond regel 640
+        of: de vraag "Wat is een service level agreement?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: wat
+    attributes:
+      label: Wat klopt er niet?
+      validations:
+        required: true
+
+  - type: textarea
+    id: hoe
+    attributes:
+      label: Wat zou er volgens jou moeten staan?
+      description: In je eigen woorden graag, met een verwijzing naar de bron in plaats van een citaat eruit.
+    validations:
+      required: true
+
+  - type: input
+    id: bron
+    attributes:
+      label: Waar baseer je dat op?
+      placeholder: "Bijv.: syllabus 3.2.5, of de EXIN preparation guide hoofdstuk 2"

@@ -1,0 +1,96 @@
+version: 2
+
+# ---------------------------------------------------------------------------
+# Project115 draait offline en heeft bij runtime geen externe afhankelijkheden.
+# De bouwketen heeft die wel, en daar komen kwetsbaarheden vandaan. Dependabot
+# houdt die keten bij en opent een pull request zodra er iets te patchen valt.
+#
+# Beveiligingsupdates komen altijd binnen, ook buiten het onderstaande schema.
+# ---------------------------------------------------------------------------
+
+updates:
+  # De webhub: Next.js, Drizzle, Argon2id, de hele serverkant.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    commit-message:
+      prefix: deps
+      prefix-development: deps-dev
+    groups:
+      # Patch- en minor-updates in een enkele pull request, zodat de inbox
+      # niet volloopt met losse bumps.
+      routine:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+      # Beveiligingsupdates ook gegroepeerd, maar apart zichtbaar.
+      beveiliging:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  # De Android-schil: Capacitor, Vite en de bouwscripts.
+  - package-ecosystem: npm
+    directory: /android-app
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - android
+    commit-message:
+      prefix: deps
+      prefix-development: deps-dev
+    groups:
+      routine:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+      beveiliging:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  # Gradle-afhankelijkheden van de Android-build.
+  - package-ecosystem: gradle
+    directory: /android-app/android
+    schedule:
+      interval: monthly
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - android
+
+  # De basisimage van de container.
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - docker
+
+  # Acties in eigen workflows — die draaien met repotoegang, dus die tellen mee.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: Europe/Amsterdam
+    labels:
+      - dependencies
+      - ci

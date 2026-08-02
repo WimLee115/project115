@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gegenereerd door scripts/android-assets.ts; ontleend aan globals.css. -->
+<resources>
+    <color name="colorPrimary">#6D3FD4</color>
+    <color name="colorPrimaryDark">#5A2FB8</color>
+    <color name="colorAccent">#6D3FD4</color>
+    <color name="splash_background">#F4F5F7</color>
+</resources>

@@ -1,0 +1,81 @@
+# Project115 — lokale, versleutelde opstelling voor je eigen netwerk.
+#
+# Twee containers:
+#   app   — de Next.js-server, luistert alleen intern op het Docker-netwerk
+#   caddy — reverse proxy die TLS afhandelt en als enige naar buiten praat
+#
+# De applicatie is bewust niet direct benaderbaar: alle verkeer loopt via
+# Caddy, zodat er geen onversleutelde route naar de app bestaat.
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # Docker's eigen init als PID 1: geeft signalen correct door en ruimt
+    # zombie-processen op, zonder dat we tini hoeven te installeren.
+    init: true
+    environment:
+      # Verplicht. Genereer met: openssl rand -base64 48
+      APP_SECRET: ${APP_SECRET:?APP_SECRET ontbreekt — zie .env.example}
+      DATABASE_PATH: /data/project115.db
+      NODE_ENV: production
+      PORT: 3000
+    volumes:
+      # De database als named volume: overleeft het opnieuw bouwen van de image.
+      - project115-data:/data
+    # Geen `ports:` — de app is alleen bereikbaar via Caddy.
+    expose:
+      - '3000'
+    networks:
+      - internal
+    security_opt:
+      - no-new-privileges:true
+    # Alleen /data en /tmp hoeven schrijfbaar te zijn.
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - '443:443'
+      - '80:80'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # Caddy genereert en bewaart hier zijn certificaten en interne CA.
+      - caddy-data:/data
+      - caddy-config:/config
+    environment:
+      # De hostnaam waarop je de hub benadert, bijvoorbeeld project115.local
+      # of het IP-adres van deze machine.
+      SITE_ADDRESS: ${SITE_ADDRESS:-https://localhost}
+    depends_on:
+      - app
+    networks:
+      - internal
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
+
+volumes:
+  project115-data:
+  caddy-data:
+  caddy-config:
+
+networks:
+  internal:
+    driver: bridge

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Project115
+GenericName=Studiehub
+Comment=Oefenen voor ITIL Foundation (Version 5) en EXIN ISO/IEC 27001 Foundation
+Icon=/home/wimlee/Desktop/eigenstudie hub/public/icon.svg
+Exec=/home/wimlee/Desktop/eigenstudie hub/start.sh
+Path=/home/wimlee/Desktop/eigenstudie hub
+Terminal=true
+Categories=Education;Science;
+Keywords=ITIL;ISO27001;EXIN;examen;studie;leren;
+StartupNotify=true

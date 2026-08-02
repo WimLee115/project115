@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Android 12 en hoger regelt cloudback-up en toestel-naar-toestel-overdracht
+    apart. Beide staan hier volledig uit.
+
+    Project115 bewaart je voortgang, je antwoorden en je herhaalschema in een
+    IndexedDB op het toestel zelf. Dat is de hele opzet: geen account, geen
+    server, geen synchronisatie. Een back-up die dat stilletjes naar Google
+    kopieert zou die opzet ongedaan maken zonder dat je het merkt.
+
+    Wil je je gegevens meenemen naar een ander toestel, gebruik dan
+    Instellingen › Gegevens exporteren. Dan gaat het jouw kant op, op jouw
+    moment, in een bestand dat je kunt lezen.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="file" />
+        <exclude domain="external" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" />
+        <exclude domain="database" />
+        <exclude domain="sharedpref" />
+        <exclude domain="file" />
+        <exclude domain="external" />
+    </device-transfer>
+</data-extraction-rules>
