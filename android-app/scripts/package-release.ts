@@ -52,16 +52,17 @@ const sources = {
   apk: join(root, 'android/app/build/outputs/apk/release/app-release.apk'),
   single: join(root, `dist-single/Project115-${APP_VERSION}-offline.html`),
   web: join(root, 'dist-web'),
-  docs: join(root, 'docs'),
   /*
-   * De handleiding staat één map hoger. Hij stond ooit hier ook, als tweede
-   * exemplaar naast dat van de webhub, en die twee liepen uit elkaar: op het
-   * laatst scheelden ze 285 regels en beschreven ze een andere versie. Nu is
-   * er één bron — `docs/handleiding.html` in de hoofdmap, waar `npm run docs`
-   * de PDF van maakt — en die behandelt alle vier de manieren om Project115
-   * te draaien.
+   * De begeleidende teksten staan in de hoofdmap van het project.
+   *
+   * Ze stonden ooit ook hier, in `android-app/docs/`, als tweede set naast die
+   * van de webhub. Die twee liepen uit elkaar: de handleidingen scheelden op
+   * het laatst 285 regels en telden een verschillend aantal pagina's, en de
+   * gebruiksvoorwaarden die daadwerkelijk werden meegestuurd misten de
+   * vermelding van IT Management Group — precies de vermelding die voorwaarde
+   * 3 van de licentie verplicht stelt. Eén set voorkomt dat.
    */
-  handleiding: join(root, '..', 'Project115 - Handleiding.pdf'),
+  docs: join(root, '..'),
 };
 
 /** Namen die nooit in het pakket mogen belanden, wat er verder ook gebeurt. */
@@ -102,23 +103,22 @@ execFileSync(
 /* --- 2. De begeleidende teksten ------------------------------------------- */
 
 /*
- * Wat de ontvanger nodig heeft, en niets meer. De conceptmail in `../docs/`
- * hoort hier uitdrukkelijk niet bij: die is voor de afzender geschreven en
- * staat vol overwegingen die de ontvanger niet aangaan. Daarom wordt hij
- * hieronder ook nog nagelopen.
+ * Wat de ontvanger nodig heeft, en niets meer. Bij naam opgesomd en niet 'de
+ * map met documentatie': daar staan ook stukken die voor de afzender zijn
+ * geschreven, zoals de conceptmail in `../../docs/`, en die gaan de ontvanger
+ * niets aan. Wat hier niet staat, gaat niet mee — en het resultaat wordt
+ * onderaan nog nagelopen.
  */
 const DOCS = [
+  'Project115 - Handleiding.pdf',
   'INSTALLEREN.md',
   'GEBRUIKSVOORWAARDEN.md',
   'PRIVACY.md',
 ];
 
-require(sources.handleiding, 'Draai eerst `npm run docs` in de hoofdmap.');
-copyFileSync(sources.handleiding, join(staging, 'Project115 - Handleiding.pdf'));
-
 for (const doc of DOCS) {
   const path = join(sources.docs, doc);
-  require(path, 'Ontbrekende documentatie; zie android-app/docs/.');
+  require(path, 'Ontbreekt in de hoofdmap; de handleiding maak je met `npm run docs`.');
 
   if (doc === 'INSTALLEREN.md' && withoutApk) {
     writeFileSync(join(staging, doc), stripAndroid(readFileSync(path, 'utf8')), 'utf8');

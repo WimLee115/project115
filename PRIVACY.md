@@ -66,7 +66,7 @@ iets.
 ## Wie hierachter zit
 
 Project115 is gemaakt door B. van Rooij als studiehulpmiddel, en gedeeld met
-docenten. Er zit geen bedrijf achter, geen verdienmodel en geen
+collega-docenten. Er zit geen bedrijf achter, geen verdienmodel en geen
 verwerkersovereenkomst — er worden namelijk geen gegevens verwerkt buiten je
 eigen apparaat.
 

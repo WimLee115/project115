@@ -32,7 +32,11 @@ alleen mijn naam erin staan en verkoop hem niet.
 
 ## Over de inhoud
 
-Het is de moeite waard om precies te zijn over wat hier van mij is en wat niet.
+Alle vragen, antwoorden, toelichtingen en begrippen zijn origineel geschreven
+aan de hand van de openbaar gepubliceerde examenspecificaties van PeopleCert en
+EXIN. Er zijn geen examenvragen overgenomen en er is geen cursustekst opgenomen.
+
+Het is de moeite waard om preciezer te zijn over wat dat betekent.
 
 **De vragen zijn van mij.** Alle 160 vragen, de antwoordopties en de
 toelichtingen daarbij heb ik zelf geschreven, aan de hand van de assessment
