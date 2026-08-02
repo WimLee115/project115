@@ -1,0 +1,62 @@
+name: CodeQL
+
+# Statische analyse van de eigen code. SECURITY.md belooft dit; deze workflow
+# maakt het waar.
+#
+# Twee talen. `javascript-typescript` dekt alles wat er echt draait: de webhub,
+# de Android-schil, de vragenbank en de bouwscripts. `actions` scant de
+# workflows zelf — die draaien met repotoegang, dus een fout daarin weegt
+# zwaarder dan een fout in de app.
+#
+# De Java van de Android-schil zit er bewust niet bij: dat is één door
+# Capacitor gegenereerde MainActivity, en het scannen ervan vraagt een
+# volledige Gradle-build in de CI.
+#
+# Ook hier staan de actions op hun commit-SHA en niet op een tag, om dezelfde
+# reden als in ci.yml: een tag kan door de eigenaar worden verplaatst.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # CodeQL krijgt regelmatig nieuwe regels. Een wekelijkse scan vindt daarmee
+  # dingen in code die zelf niet is veranderd.
+  schedule:
+    - cron: '0 5 * * 1'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyse:
+    name: Analyse (${{ matrix.language }})
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Nodig om de bevindingen naar het beveiligingstabblad te schrijven.
+      security-events: write
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript-typescript, actions]
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: CodeQL klaarzetten
+        uses: github/codeql-action/init@bce182f857edf1feab116e9795a3393d21977282 # v4
+        with:
+          languages: ${{ matrix.language }}
+          # De uitgebreide set: trager, maar vindt meer dan de standaardset.
+          queries: security-and-quality
+
+      - name: Analyseren
+        uses: github/codeql-action/analyze@bce182f857edf1feab116e9795a3393d21977282 # v4
+        with:
+          category: /language:${{ matrix.language }}

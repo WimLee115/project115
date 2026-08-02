@@ -15,11 +15,12 @@ Wat overblijft is wél de moeite waard om te melden. Zie hieronder.
 
 | Versie | Ondersteund |
 | ------ | ----------- |
-| 1.0.x  | ja          |
+| 1.1.x  | ja          |
+| 1.0.x  | nee         |
 
-Er is één uitgave. Komt er een opvolger, dan wordt deze tabel bijgewerkt en
-krijgt de vorige versie geen losse patches — de bedoeling is dat je overstapt op
-de nieuwste.
+Alleen de nieuwste uitgave krijgt oplossingen; oudere versies krijgen geen losse
+patches. De bedoeling is dat je overstapt, en dat kost je niets: je voortgang
+blijft staan als je bijwerkt.
 
 ## Iets gevonden?
 
@@ -80,7 +81,12 @@ oplossing:
 
 ## Wat er al aan gedaan is
 
-- Afhankelijkheden worden bewaakt door Dependabot, de code door CodeQL.
+- Afhankelijkheden worden bewaakt door Dependabot: de npm-ketens van de webhub
+  en de Android-schil, de Gradle-afhankelijkheden, de basisimage van de
+  container, en de actions in de workflows.
+- De code wordt bij elke wijziging door CodeQL geanalyseerd, met de uitgebreide
+  regelset, en daarnaast wekelijks — die regelset groeit, en een nieuwe regel
+  vindt soms iets in code die zelf niet is veranderd.
 - Geheimen staan nergens in de code: de keystore krijgt bij aanmaken een
   willekeurig wachtwoord van 24 bytes, en `.env` gaat nooit mee in wat er
   verspreid wordt.
