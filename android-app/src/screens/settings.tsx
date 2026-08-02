@@ -27,7 +27,7 @@ import {
 } from '@/lib/store';
 import { exportToFile, importFromJson } from '@/lib/transfer';
 import { useAsync } from '@/lib/use-async';
-import { APP_VERSION, SOURCE_URL } from '@/lib/version';
+import { APP_VERSION, SOURCE_URL, REPORT_URL } from '@/lib/version';
 
 /**
  * Instellingen.
@@ -438,6 +438,48 @@ export function SettingsScreen() {
             <span className="block text-[0.9375rem] font-medium">GitHub</span>
             <span className="mt-0.5 block text-xs" style={{ color: 'var(--text-muted)' }}>
               {SOURCE_URL.replace('https://', '')}
+            </span>
+          </span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+            className="flex-shrink-0"
+            style={{ color: 'var(--text-subtle)' }}
+          >
+            <path
+              d="M14 5h5v5M19 5l-8 8M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
+      </Section>
+
+      {/*
+        De uitnodiging staat vlak onder de broncode-link, want dat is waar
+        iemand die net gezien heeft dat de app open is, zich afvraagt of hij
+        er zelf iets mee kan. Een docent die een fout in een vraag ziet is de
+        beste corrector die dit project heeft: hij kent de stof en hij merkt
+        het meteen.
+      */}
+      <Section title={t('about.contribute')} description={t('about.contributeBody')}>
+        <a
+          className="flex w-full items-center gap-3 px-4 py-3.5 text-left no-underline"
+          href={REPORT_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <span className="min-w-0 flex-1">
+            <span className="block text-[0.9375rem] font-medium">
+              {t('about.contributeCta')}
+            </span>
+            <span className="mt-0.5 block text-xs" style={{ color: 'var(--text-muted)' }}>
+              github.com/WimLee115/project115
             </span>
           </span>
           <svg

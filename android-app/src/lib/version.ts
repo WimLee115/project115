@@ -8,7 +8,16 @@
  * Deze waarde hoort ook gelijk te zijn aan `versionName` in
  * `android/app/build.gradle` zodra de Android-map is gegenereerd.
  */
-export const APP_VERSION = '1.0.0';
+export const APP_VERSION = '1.1.0';
 
 /** Waar de nieuwste versie en de broncode staan. */
 export const SOURCE_URL = 'https://github.com/wimlee115';
+
+/**
+ * Waar een gebruiker een fout of een voorstel kwijt kan.
+ *
+ * Rechtstreeks naar het formulier voor een nieuwe melding, niet naar de lijst
+ * met bestaande. Wie een fout in een vraag ziet, wil die melden en niet eerst
+ * door andermans issues bladeren.
+ */
+export const REPORT_URL = 'https://github.com/WimLee115/project115/issues/new/choose';

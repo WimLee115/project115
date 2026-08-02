@@ -104,6 +104,37 @@ Kom je een vraag tegen die inhoudelijk niet klopt, of iets dat te dicht bij
 beschermd lesmateriaal komt? Open een issue — dan wordt het aangepast of
 verwijderd.
 
+## Help mee
+
+Deze app is gemaakt door één persoon die de stof zelf aan het leren was. Dat
+betekent dat er fouten in zullen zitten die ik niet zie, en dat er vragen
+tussen staan die scherper kunnen.
+
+**Als je de app gebruikt, ben je precies de persoon die dat merkt.** Een docent
+die een vraag verkeerd gemarkeerd ziet staan, een cursist die een toelichting
+niet snapt omdat hij krom is, iemand die weet dat de syllabus op een punt is
+gewijzigd — dat is waardevoller dan wat ik er in mijn eentje aan kan doen.
+
+Wat helpt:
+
+- **Een vraag die niet klopt.** Verkeerd gemarkeerd antwoord, een toelichting
+  die de stof verkeerd uitlegt, een begrip dat achterloopt. Dit weegt het
+  zwaarst: wie op verkeerde informatie studeert, gaat een examen in dat geld
+  kost.
+- **Een vraag die beter kan.** Een afleider die te makkelijk weg te strepen is,
+  een vraagstelling die twee kanten op te lezen valt.
+- **Taal.** De app is tweetalig; kromme zinnen in een van beide talen mogen
+  gemeld worden.
+- **Nieuwe vragen**, zelf geschreven aan de hand van een assessment-criterium.
+
+Je hoeft geen programmeur te zijn. [Een issue
+openen](https://github.com/WimLee115/project115/issues/new/choose) kan met een
+GitHub-account en verder niets; er staat een formulier klaar dat je door de
+vragen leidt. Wie wél code wil aanraken, vindt in
+[CONTRIBUTING.md](CONTRIBUTING.md) hoe het project in elkaar zit.
+
+Wat je meldt wordt aangepast, en je krijgt vermelding bij de wijziging.
+
 ## Met dank aan
 
 De ITIL-cursus die aan deze app ten grondslag ligt, volgde ik bij **[IT

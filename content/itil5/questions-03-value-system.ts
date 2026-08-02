@@ -786,8 +786,8 @@ export const questions: QuestionSeed[] = [
       {
         text: { nl: 'Een incident', en: 'An incident' },
         rationale: {
-          nl: 'Een incident is een ongeplande onderbreking of kwaliteitsvermindering van een service — het zichtbare symptoom, niet de geanalyseerde oorzaak.',
-          en: 'An incident is an unplanned interruption or reduction in quality of a service — the visible symptom, not the analysed cause.',
+          nl: 'Een incident is een onderbreking van een service die niet gepland was, of een terugval in de kwaliteit — het zichtbare symptoom, niet de doorgronde oorzaak.',
+          en: 'An incident is an interruption to a service that was not planned, or a drop in its quality — the visible symptom, not the cause that was got to the bottom of.',
         },
       },
       {
@@ -800,14 +800,14 @@ export const questions: QuestionSeed[] = [
       {
         text: { nl: 'Een event', en: 'An event' },
         rationale: {
-          nl: 'Een event is elke statuswijziging die van belang is voor het management van een service of configuratie-item.',
-          en: 'An event is any change of state significant for the management of a service or configuration item.',
+          nl: 'Een event is een toestandsverandering die ertoe doet voor het beheer van een service of configuratie-item.',
+          en: 'An event is a shift in state that matters for managing a service or configuration item.',
         },
       },
     ],
     explanation: {
-      nl: 'De keten: een fout (error) is een gebrek of kwetsbaarheid die incidenten kan veroorzaken. Een probleem is een oorzaak, of mogelijke oorzaak, van een of meer incidenten. Een bekende fout is een probleem dat is geanalyseerd, maar nog niet is opgelost. Een incident is een ongeplande onderbreking of vermindering van de kwaliteit van een service.',
-      en: 'The chain: an error is a flaw or vulnerability that may cause incidents. A problem is a cause, or potential cause, of one or more incidents. A known error is a problem that has been analysed but not yet resolved. An incident is an unplanned interruption or reduction in the quality of a service.',
+      nl: 'De keten: een fout (error) is een mankement of zwakke plek waaruit incidenten kunnen ontstaan. Een probleem is datgene waar een of meer incidenten uit voortkomen. Een bekende fout is een probleem dat is doorgrond zonder dat het al verholpen is. Een incident is een onderbreking van een service die niet gepland was, of een terugval in de kwaliteit ervan.',
+      en: 'The chain: an error is a defect or weak spot from which incidents can arise. A problem is whatever one or more incidents stem from. A known error is a problem that has been got to the bottom of without yet being put right. An incident is an interruption to a service that was not planned, or a drop in its quality.',
     },
     source: 'Syllabus 4.4.8, 4.4.10',
   },
@@ -824,8 +824,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een event is elke statuswijziging die van belang is voor het management van een service of configuratie-item; een incident is een ongeplande onderbreking of kwaliteitsvermindering van een service',
-          en: 'An event is any change of state significant for the management of a service or configuration item; an incident is an unplanned interruption or reduction in the quality of a service',
+          nl: 'Een event is een toestandsverandering die ertoe doet voor het beheer van een service of configuratie-item; een incident is een onderbreking van een service die niet gepland was of een terugval in de kwaliteit',
+          en: 'An event is a shift in state that matters for managing a service or configuration item; an incident is an interruption to a service that was not planned or a drop in its quality',
         },
         correct: true,
       },
@@ -851,8 +851,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een event is een geplande onderbreking; een incident is een ongeplande onderbreking',
-          en: 'An event is a planned interruption; an incident is an unplanned interruption',
+          nl: 'Een event is een onderbreking die wél gepland is; een incident een die dat niet is',
+          en: 'An event is an interruption that was planned; an incident one that was not',
         },
         rationale: {
           nl: 'Een event is geen onderbreking maar een statuswijziging. Dit is een veelvoorkomende verwarring.',
@@ -1106,8 +1106,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een melding van een ongeplande onderbreking van een service',
-          en: 'A report of an unplanned interruption to a service',
+          nl: 'Een melding van een serviceonderbreking die niet gepland was',
+          en: 'A report of a service interruption that was not planned',
         },
         rationale: {
           nl: 'Dat is een incident. Het onderscheid is essentieel: een serviceaanvraag is normaal en gepland, een incident is een verstoring.',

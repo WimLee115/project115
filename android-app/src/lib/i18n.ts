@@ -266,7 +266,11 @@ const nl = {
     'Deze app verzamelt niets, verstuurt niets en heeft geen internetverbinding nodig. Je studiegegevens staan alleen op dit toestel en verlaten het pas wanneer je zelf exporteert.',
   'about.content': 'Herkomst van de vragen',
   'about.contentBody':
-    'Alle vragen, antwoorden en toelichtingen zijn origineel geschreven aan de hand van de openbaar gepubliceerde examenspecificaties. Er zijn geen officiële examenvragen overgenomen.',
+    'Alle vragen, antwoorden, toelichtingen en begrippen zijn origineel geschreven aan de hand van de openbaar gepubliceerde examenspecificaties. Er zijn geen officiële examenvragen overgenomen en er staat geen cursustekst in.',
+  'about.contribute': 'Help mee verbeteren',
+  'about.contributeBody':
+    'Deze app is beter geworden van iedereen die iets terugmeldde. Kom je een vraag tegen die niet klopt, een toelichting die de stof verkeerd uitlegt, of een begrip dat achterloopt op de syllabus? Meld het op GitHub — het wordt aangepast en je krijgt vermelding bij de wijziging. Ook een kromme zin, een idee voor een betere vraag of een vertaalfout is welkom. Je hoeft geen programmeur te zijn: een issue openen kan met een GitHub-account en verder niets.',
+  'about.contributeCta': 'Iets melden of voorstellen',
   'about.trademarks': 'Handelsmerken',
   'about.trademarksBody':
     'ITIL® is een geregistreerd handelsmerk van PeopleCert International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001 is een norm van ISO en IEC. Deze app is een onafhankelijk oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een van deze organisaties.',
@@ -518,7 +522,11 @@ const en: Record<Key, string> = {
     'This app collects nothing, sends nothing and needs no internet connection. Your study data stays on this device and only leaves it when you export it yourself.',
   'about.content': 'Where the questions come from',
   'about.contentBody':
-    'All questions, answers and explanations were written from scratch against the publicly published exam specifications. No official exam questions have been reproduced.',
+    'All questions, answers, explanations and glossary entries were written from scratch against the publicly published exam specifications. No official exam questions have been reproduced and no course text is included.',
+  'about.contribute': 'Help make it better',
+  'about.contributeBody':
+    'This app got better through everyone who reported something back. Come across a question that is wrong, an explanation that teaches the material incorrectly, or a term that has fallen behind the syllabus? Report it on GitHub — it gets fixed and you are credited with the change. An awkward sentence, an idea for a better question or a translation error is just as welcome. You need not be a programmer: opening an issue takes a GitHub account and nothing else.',
+  'about.contributeCta': 'Report or suggest something',
   'about.trademarks': 'Trade marks',
   'about.trademarksBody':
     'ITIL® is a registered trade mark of PeopleCert International Ltd. EXIN® is a registered trade mark of EXIN Holding B.V. ISO/IEC 27001 is a standard published by ISO and IEC. This app is an independent practice tool and is not affiliated with, endorsed by or connected to any of these organisations.',
