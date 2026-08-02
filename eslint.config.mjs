@@ -12,16 +12,25 @@ import reactHooks from 'eslint-plugin-react-hooks';
  */
 export default tseslint.config(
   {
+    // Let op de `**/` ervoor: zonder dat matcht `dist/**` alleen de map in de
+    // hoofdmap, en niet android-app/dist. Die staat er pas na een build, dus
+    // in de CI valt dat niet op — daar is de checkout schoon. Lokaal, na
+    // `npm run build`, loopt de lint dan vast op geminificeerde bundels.
     ignores: [
-      '.next/**',
-      'node_modules/**',
-      'dist/**',
-      'dist-web/**',
-      'dist-single/**',
-      'release/**',
-      'drizzle/**',
-      'android-app/android/**',
-      'next-env.d.ts',
+      '**/.next/**',
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/dist-web/**',
+      '**/dist-single/**',
+      '**/out/**',
+      '**/build/**',
+      '**/release/**',
+      '**/drizzle/**',
+      '**/android/**',
+      '**/e2e-screenshots/**',
+      '**/*.min.js',
+      '**/sw.js',
+      '**/next-env.d.ts',
       '**/*.tsbuildinfo',
     ],
   },
