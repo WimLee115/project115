@@ -10,14 +10,20 @@ import type { GlossarySeed } from '../types';
  *
  * HERKOMST — lees dit voordat je hier iets aan verandert.
  *
- * De definities in dit bestand zijn niet origineel. Het zijn de gangbare
- * formuleringen uit het officiële ITIL-materiaal; het auteursrecht daarop ligt
- * bij PeopleCert International Ltd. Ze staan hier omdat het examen precies die
- * formuleringen toetst — bij een 'missing word'-vraag moet je de officiële zin
- * herkennen, niet een parafrase ervan.
+ * De definities zijn eigen formuleringen. In 1.0.0 waren ze woordelijk
+ * overgenomen uit het officiële materiaal; in 1.1.0 zijn ze herschreven met de
+ * betekenis als uitgangspunt. Schrijf een nieuwe definitie dus in eigen
+ * bewoording, en neem er geen over uit een reference manual of preparation
+ * guide.
  *
- * Dat maakt dit glossarium een verwijzing naar het bronmateriaal, geen
- * vervanging ervan. De toelichtingen in het veld `note` zijn wél van de auteur.
+ * Eén uitzondering, en die is belangrijk: de benamingen blijven staan. De vier
+ * dimensies, de acht levenscyclusactiviteiten, de vijf componenten van het
+ * waardesysteem, en de losse woorden waar het examen op toetst — vermogen,
+ * verantwoordelijk, waargenomen. Bij een 'missing word'-vraag is precies dat
+ * woord het antwoord; parafraseren maakt de vraag onbeantwoordbaar.
+ *
+ * Dit glossarium toetst of je de stof kent; het is geen vervanging van het
+ * cursusmateriaal.
  *
  * Zie GEBRUIKSVOORWAARDEN.md, sectie 'Over de inhoud'. Meent een rechthebbende
  * dat een passage hier weg moet, dan gebeurt dat zonder discussie.

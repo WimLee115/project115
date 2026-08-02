@@ -213,6 +213,22 @@ De vragen zijn **origineel geschreven** op basis van de leerdoelen uit:
 Er zijn geen examenvragen overgenomen. Elke vraag verwijst via het veld `source`
 naar het criterium waarop hij toetst, zodat je bij twijfel zelf kunt nakijken.
 
+**Het glossarium is in 1.1.0 herschreven.** In de eerste versie waren de
+definities woordelijk uit het cursusmateriaal overgenomen. Een vergelijking van
+de hele inhoud tegen de bronnen wees 65 definities aan die voor meer dan de
+helft letterlijk gelijk waren, 57 daarvan uit het Nederlandstalige reference
+manual. Ze zijn opnieuw geschreven met de betekenis als uitgangspunt; daarna
+zat geen enkele definitie nog boven de 50% overlap en hadden 215 van de 238
+geen enkele woordgroep van acht woorden gemeen met welke bron dan ook. De 53
+antwoordopties die naar de oude formuleringen verwezen, zijn meegetrokken.
+
+Onveranderd bleven de benamingen: de vier dimensies, de acht
+levenscyclusactiviteiten, de vijf componenten van het waardesysteem, en de
+losse woorden waar het examen letterlijk op toetst. Die anders noemen zou de
+app onbruikbaar maken voor waar hij voor is. Daarmee valt de begrippenlijst nu
+onder dezelfde licentie als de rest; alleen op die benamingen wordt geen recht
+gepretendeerd.
+
 ### Omvang
 
 | | ITIL 5 | ISFS |

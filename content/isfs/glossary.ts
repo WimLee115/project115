@@ -18,8 +18,9 @@ import type { GlossarySeed } from '../types';
  * daargelaten, de omschrijving van informatiebeveiliging, die zo standaard is
  * dat er weinig aan te variëren valt.
  *
- * Vergelijk itil5/glossary.ts: dáár zijn de definities zelf overgenomen. Zie
- * GEBRUIKSVOORWAARDEN.md, sectie 'Over de inhoud'.
+ * Vergelijk itil5/glossary.ts: dáár waren de definities aanvankelijk wél
+ * overgenomen, en zijn ze in 1.1.0 herschreven. Zie GEBRUIKSVOORWAARDEN.md,
+ * sectie 'Over de inhoud'.
  */
 
 export const glossary: GlossarySeed[] = [

@@ -1,6 +1,6 @@
 # Gebruiksvoorwaarden — Project115
 
-Versie 1.0.0 · Ontwikkeld door B. van Rooij · <https://github.com/wimlee115>
+Versie 1.1.1 · Ontwikkeld door B. van Rooij · <https://github.com/wimlee115>
 
 ## Kort
 
@@ -40,15 +40,22 @@ criteria uit de openbaar gepubliceerde examenspecificaties van PeopleCert en
 EXIN. **Er is geen enkele examenvraag overgenomen** — niet uit een officieel
 oefenexamen, niet uit een echt examen.
 
-**De begrippenlijst niet.** Het glossarium geeft de gangbare definities van de
-vakterminologie weer. Die formuleringen zijn niet van mij: ze horen bij het
-officiële ITIL-materiaal en het auteursrecht daarop ligt bij PeopleCert. Voor de
-Nederlandse begrippen uit ISFS geldt hetzelfde ten opzichte van EXIN. Ze staan
-erin omdat het examen nu juist die definities toetst — een oefenhulpmiddel dat
-ze zou omschrijven in eigen woorden, bereidt slechter voor.
+**De begrippenlijst inmiddels ook.** In 1.0.0 was dat anders. De definities
+waren toen woordelijk overgenomen uit cursusmateriaal: een vergelijking van de
+hele inhoud tegen het bronmateriaal wees 65 definities aan die voor meer dan de
+helft letterlijk gelijk waren. Die zijn in 1.1.0 herschreven met de betekenis
+als uitgangspunt, en de antwoordopties die ernaar verwezen zijn meegetrokken.
 
-Het glossarium is dus een verwijzing naar het bronmateriaal, geen vervanging
-ervan. Wie deze stof echt wil leren, heeft het officiële cursusmateriaal nodig.
+**Wat bewust onveranderd is gebleven**, zijn de benamingen: de vaktermen zelf en
+de namen van de onderdelen van het model — de vier dimensies, de acht
+levenscyclusactiviteiten, de vijf componenten van het waardesysteem. Het examen
+toetst daar letterlijk op; ze anders noemen zou de app slechter maken en niets
+oplossen. Die namen komen uit het officiële materiaal en staan er om te
+benoemen waar de stof over gaat, niet als eigen werk.
+
+Het glossarium blijft daarmee een oefenhulpmiddel en geen vervanging van het
+cursusmateriaal. Het toetst of je de stof kent; het legt hem niet voor het
+eerst uit.
 
 **Kom je iets tegen dat te dicht bij beschermd lesmateriaal komt**, laat het
 weten via GitHub — dan wordt het aangepast of verwijderd. Dat geldt ook voor een

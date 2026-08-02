@@ -43,10 +43,11 @@ Kies wat bij je past:
 
 | Bestand | Voor wie |
 |---|---|
-| `Project115-1.0.0-offline.html` | **Het eenvoudigst.** Eén bestand, dubbelklikken, werkt in elke browser op Windows, macOS, Linux en Chromebook. Geen installatie. |
-| `Project115-1.0.0.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
-| `Project115-1.0.0-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
-| `Project115 - Handleiding.pdf` | Handleiding van elf pagina's. |
+| `Project115-1.1.1-offline.html` | **Het eenvoudigst.** Eén bestand, dubbelklikken, werkt in elke browser op Windows, macOS, Linux en Chromebook. Geen installatie. |
+| `Project115-1.1.1.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
+| `Project115-1.1.1-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
+| `Project115-1.1.1.zip` | De volledige uitgave in één bestand: alle drie de vormen plus de documentatie. |
+| `Project115-1.1.1-Handleiding.pdf` | Handleiding van elf pagina's. |
 
 Uitgebreidere instructies staan in [INSTALLEREN.md](INSTALLEREN.md).
 
@@ -87,12 +88,16 @@ toelichtingen daarbij zijn zelf geschreven aan de hand van de assessment
 criteria uit de openbaar gepubliceerde examenspecificaties. Er is geen enkele
 examenvraag overgenomen, niet uit een oefenexamen en niet uit een echt examen.
 
-**De begrippenlijst is dat niet.** Het glossarium geeft de gangbare definities
-van de vakterminologie weer, en die formuleringen horen bij het officiële
-ITIL-materiaal — het auteursrecht daarop ligt bij PeopleCert. Ze staan erin
-omdat het examen precies die formuleringen toetst. Het glossarium is dus een
-verwijzing naar het bronmateriaal, geen vervanging ervan; voor deze stof heb je
-het officiële cursusmateriaal nodig.
+**De begrippenlijst inmiddels ook.** In 1.0.0 was dat anders: de definities
+waren toen woordelijk overgenomen uit cursusmateriaal. Sinds 1.1.0 zijn ze
+herschreven met de betekenis als uitgangspunt. Onveranderd zijn alleen de
+benamingen gebleven — de vier dimensies, de acht levenscyclusactiviteiten, de
+vijf componenten van het waardesysteem, en de vaktermen zelf — omdat het examen
+daar letterlijk op toetst.
+
+Het glossarium blijft daarmee een oefenhulpmiddel en geen vervanging van het
+cursusmateriaal: het toetst of je de stof kent, het legt hem niet voor het
+eerst uit.
 
 De volledige verantwoording staat in
 [GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md).
@@ -151,8 +156,9 @@ Gebruiken, aanpassen en doorgeven mag; de vermelding van de maker blijft staan
 en de software wordt niet verkocht. Zie [LICENSE](LICENSE) voor de tekst en
 [GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md) voor de uitleg.
 
-Let op: de licentie geldt voor de software en de vragenbank, niet voor de
-definities in het ITIL-glossarium — die zijn niet van mij om weg te geven.
+De licentie dekt de software, de vragenbank en de begrippenlijst. Niet de
+vaktermen en de namen uit het model zelf: die komen uit het officiële materiaal
+en zijn niet van mij om weg te geven.
 
 ## Handelsmerken
 

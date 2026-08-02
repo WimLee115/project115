@@ -2,7 +2,7 @@
 
 Ontwikkeld door B. van Rooij — <https://github.com/wimlee115>
 
-Versie 1.0.0
+Versie 1.1.1
 
 ## Kort
 

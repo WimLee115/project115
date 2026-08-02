@@ -1,9 +1,10 @@
 Project115 — Licentie
 Copyright (c) 2026 B. van Rooij
 
-Deze licentie geldt voor de software en voor de vragenbank: de broncode, de
-Android-schil, de Docker-opzet, de documentatie, en de 160 vragen met hun
-antwoordopties en toelichtingen. Zie hieronder voor wat er niet onder valt.
+Deze licentie geldt voor de software en voor de volledige inhoud: de broncode,
+de Android-schil, de Docker-opzet, de documentatie, de 160 vragen met hun
+antwoordopties en toelichtingen, en de begrippenlijst. Zie hieronder voor wat
+er niet onder valt.
 
 
 TOESTEMMING
@@ -40,12 +41,14 @@ WAAR DEZE LICENTIE NIET OVER GAAT
 Deze licentie kan alleen rechten verlenen op werk waarop de auteur zelf
 rechten heeft. Twee dingen vallen er daarom buiten:
 
-  a) DE BEGRIPPENLIJST
-     De definities in het ITIL-glossarium zijn de gangbare formuleringen uit
-     het officiële ITIL-materiaal. Het auteursrecht daarop ligt bij PeopleCert
-     International Ltd, niet bij de auteur van deze software. Er wordt dan ook
-     geen enkel recht op die formuleringen verleend of gepretendeerd. Wie de
-     software aanpast of verspreidt, doet er goed aan dat te weten.
+  a) DE VAKTERMINOLOGIE
+     De definities in de begrippenlijst zijn eigen formuleringen en vallen
+     wél onder deze licentie. De benamingen niet: de vaktermen zelf en de
+     namen van de onderdelen van het model — de vier dimensies, de acht
+     levenscyclusactiviteiten, de vijf componenten van het waardesysteem —
+     staan er onveranderd in omdat het examen ze letterlijk toetst. Die komen
+     uit het officiële materiaal. Deze licentie verleent er geen recht op; ze
+     worden gebruikt om te benoemen waar de stof over gaat.
      Zie GEBRUIKSVOORWAARDEN.md, sectie "Over de inhoud".
 
   b) HANDELSMERKEN

@@ -1,6 +1,6 @@
 # Gebruiksvoorwaarden — Project115
 
-Versie 1.0.0 · Ontwikkeld door B. van Rooij · <https://github.com/wimlee115>
+Versie 1.1.1 · Ontwikkeld door B. van Rooij · <https://github.com/wimlee115>
 
 ## Kort
 
@@ -36,6 +36,12 @@ Alle vragen, antwoorden, toelichtingen en begrippen zijn origineel geschreven
 aan de hand van de openbaar gepubliceerde examenspecificaties van PeopleCert en
 EXIN. Er zijn geen examenvragen overgenomen en er is geen cursustekst
 opgenomen.
+
+De benamingen zijn wel onveranderd: de vaktermen zelf en de namen van de
+onderdelen van het model — de vier dimensies, de acht levenscyclusactiviteiten,
+de vijf componenten van het waardesysteem. Daar toetst het examen letterlijk
+op. Die namen komen uit het officiële materiaal en staan er om te benoemen waar
+de stof over gaat, niet als eigen werk.
 
 Kom je toch iets tegen dat te dicht bij beschermd lesmateriaal komt, laat het
 weten via GitHub — dan wordt het aangepast.
