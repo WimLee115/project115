@@ -23,15 +23,15 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een manier om gezamenlijke waardecreatie mogelijk te maken door uitkomsten te faciliteren die klanten willen bereiken, zonder dat de klant specifieke kosten en risico’s hoeft te managen',
-          en: 'A means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks',
+          nl: 'Een vorm van dienstverlening waarbij aanbieder en afnemer samen waarde tot stand brengen: de afnemer bereikt de uitkomsten die hij nastreeft, terwijl het beheersen van de bijbehorende kosten en risico’s bij de aanbieder blijft liggen',
+          en: 'A form of provision in which supplier and consumer bring about value together: the consumer reaches the outcomes it is after, while responsibility for the associated costs and risks stays with the supplier',
         },
         correct: true,
       },
       {
         text: {
-          nl: 'Een configuratie van de middelen van een organisatie, ontworpen om waarde te bieden aan een consument',
-          en: "A configuration of an organization's resources designed to offer value for a consumer",
+          nl: 'Middelen van een organisatie, zo samengesteld dat die samenstelling bedoeld is om een afnemer waarde te bieden',
+          en: 'Resources of an organization, put together in an arrangement meant to offer a consumer value',
         },
         rationale: {
           nl: 'Dit is de definitie van een product, niet van een service. Een product biedt functionaliteit; een service maakt waarderealisatie mogelijk door gebruik.',
@@ -40,8 +40,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een formele beschrijving van een of meer services die zijn ontworpen om te voldoen aan de behoeften van een specifieke consumentengroep',
-          en: 'A formal description of one or more services designed to address the needs of a target consumer group',
+          nl: 'Een vastgelegde omschrijving van een of meer services, toegesneden op wat een bepaalde groep afnemers nodig heeft',
+          en: 'A documented description of one or more services, tailored to what a particular group of consumers needs',
         },
         rationale: {
           nl: 'Dit is de definitie van een serviceaanbod (service offering). Het aanbod beschrijft de potentiële waarde; de service is het middel zelf.',
@@ -133,8 +133,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'De zekerheid dat een product of service aan de overeengekomen eisen voldoet — ‘geschikt voor gebruik’',
-          en: "The assurance that a product or service will meet agreed requirements — 'fit for use'",
+          nl: 'De waarborg dat een product of service haalt wat er is afgesproken — ‘geschikt voor gebruik’',
+          en: 'The guarantee that a product or service delivers what was agreed — ‘fit for use’',
         },
         correct: true,
       },
@@ -425,8 +425,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Digitale services zijn altijd gebaseerd op digitale producten',
-          en: 'Digital services are always based on digital products',
+          nl: 'Een digitale service kan niet bestaan zonder digitale producten eronder',
+          en: 'A digital service cannot exist without digital products underneath it',
         },
         rationale: {
           nl: 'Dit is juist: een digitale service is per definitie geheel of grotendeels afhankelijk van digitale producten.',
@@ -445,8 +445,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Wanneer klanten het aanbod accepteren, begint de levering en het gebruik van de service',
-          en: 'When customers accept the offering, delivery and use of the service begin',
+          nl: 'Zodra de klant het aanbod aanvaardt, gaat de service in gebruik en wordt hij geleverd',
+          en: 'As soon as the customer accepts the offering, the service goes into use and is delivered',
         },
         rationale: {
           nl: 'Dit is juist: acceptatie van het serviceaanbod is het startpunt van de serviceverlening.',
@@ -473,8 +473,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een reeks meetwaarden (metrics) die de verwachte of behaalde servicekwaliteit definiëren',
-          en: 'A set of metrics that define the expected or achieved quality of a service',
+          nl: 'De meetwaarden waarmee je vastlegt welke servicekwaliteit verwacht wordt, of welke er behaald is',
+          en: 'The metrics by which you pin down the service quality that is expected, or the one that was reached',
         },
         correct: true,
       },
@@ -490,8 +490,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'De som van de kenmerken van een service die relevant zijn voor het vermogen te voldoen aan gestelde behoeften',
-          en: 'The sum of the characteristics of a service relevant to its ability to meet stated needs',
+          nl: 'Alle eigenschappen van een service bij elkaar, voor zover die bepalen of hij voorziet in wat er gevraagd is',
+          en: 'All the properties of a service taken together, insofar as they determine whether it provides what was asked for',
         },
         rationale: {
           nl: 'Dit is servicekwaliteit. Servicekwaliteit wordt gemanaged door verwachtingen om te zetten in meetwaarden — en die meetwaarden vormen het serviceniveau.',
@@ -583,8 +583,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'De waargenomen voordelen, bruikbaarheid en het belang van iets',
-          en: 'The perceived benefits, usefulness and importance of something',
+          nl: 'Het voordeel, het nut en het belang dat iemand aan iets toekent — zoals díe persoon het ervaart',
+          en: 'The benefit, usefulness and importance someone attaches to something — as that person experiences it',
         },
         correct: true,
       },
@@ -638,8 +638,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een reeks gespecialiseerde organisatorische mogelijkheden (capabilities) om waarde te creëren voor klanten in de vorm van digitale producten en services',
-          en: 'A set of specialized organizational capabilities for creating value for customers in the form of digital products and services',
+          nl: 'Gespecialiseerd vermogen (capabilities) van een organisatie, gericht op het voortbrengen van waarde voor klanten in de vorm van digitale producten en services',
+          en: 'Specialized organizational capabilities aimed at bringing forth value for customers in the shape of digital products and services',
         },
         correct: true,
       },
@@ -916,8 +916,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'De inkoop (en verwerving) en het gebruik van services',
-          en: 'Procuring (and acquiring) and using services',
+          nl: 'Het inkopen of anderszins verkrijgen van services, en het gebruik ervan',
+          en: 'Buying or otherwise obtaining services, and using them',
         },
         correct: true,
       },
@@ -933,8 +933,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'De creatie en voortdurende verbetering van digitale producten',
-          en: 'Creating and continually improving digital products',
+          nl: 'Het maken en blijven verbeteren van digitale producten',
+          en: 'Building digital products and keeping them improving',
         },
         rationale: {
           nl: 'Dit is de verantwoordelijkheid van de leverancier van digitale producten (vendor).',
@@ -971,8 +971,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een terugkerende organisatorische activiteit op alle niveaus, om ervoor te zorgen dat de organisatie voortdurend voldoet aan de verwachtingen van de stakeholders',
-          en: 'A recurring organizational activity performed at all levels to ensure the organization continually meets stakeholder expectations',
+          nl: 'Werk dat een organisatie steeds opnieuw en op elk niveau oppakt, om te blijven waarmaken wat belanghebbenden van haar verwachten',
+          en: 'Work an organization takes up again and again, at every level, so that it keeps living up to what stakeholders expect of it',
         },
         correct: true,
       },
@@ -1088,8 +1088,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een organisatie kan een volledige rechtspersoon zijn, zoals een bedrijf',
-          en: 'An organization can be a full legal entity, such as a company',
+          nl: 'Een organisatie kan een zelfstandige rechtspersoon zijn, bijvoorbeeld een onderneming',
+          en: 'An organization may be a legal person in its own right, a company for instance',
         },
         rationale: {
           nl: 'Dit is juist en het meest voorkomende geval.',
@@ -1320,7 +1320,7 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een gedocumenteerde overeenkomst tussen een serviceverlener en een klant waarin de geleverde services en het overeengekomen niveau van elke service worden vastgelegd',
+          nl: 'Een vastgelegde afspraak tussen aanbieder en klant, waarin staat welke services worden geleverd en welk niveau daarbij per service is afgesproken',
           en: 'A documented agreement between a service provider and a customer that identifies the services delivered and the agreed level of each service',
         },
         correct: true,

@@ -96,8 +96,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Informatiebeveiliging',
     objective: '1.1.2',
     definition: {
-      nl: 'De bescherming van de vertrouwelijkheid, integriteit en beschikbaarheid van informatie.',
-      en: 'The protection of the confidentiality, integrity and availability of information.',
+      nl: 'Het waarborgen dat informatie vertrouwelijk blijft, klopt, en beschikbaar is op het moment dat je haar nodig hebt.',
+      en: 'Safeguarding that information stays confidential, remains correct, and is there at the moment you need it.',
     },
   },
   {

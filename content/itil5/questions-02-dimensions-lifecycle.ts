@@ -456,8 +456,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Ervoor zorgen dat de productroadmap en het bijbehorende serviceaanbod continu aansluiten op de behoeften van serviceconsumenten en op de organisatiestrategie',
-          en: 'Ensuring the product roadmap and related service offerings continuously align with service consumer needs and the organizational strategy',
+          nl: 'Zorgen dat de productroadmap en het serviceaanbod eromheen blijven aansluiten op wat afnemers nodig hebben en op waar de organisatie heen wil',
+          en: 'Keeping the product roadmap and the service offerings around it in step with what consumers need and where the organization is headed',
         },
         correct: true,
       },
@@ -528,8 +528,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Digitale producten en ondersteunende systemen onderhouden en bewaken',
-          en: 'Maintaining and monitoring digital products and supporting systems',
+          nl: 'Digitale producten en de systemen eromheen onderhouden en in de gaten houden',
+          en: 'Keeping digital products and the systems around them maintained and watched over',
         },
         rationale: {
           nl: "Dit is het doel van 'beheren' (operate).",
@@ -573,8 +573,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'De activiteiten worden in de juiste context gecombineerd om waardestromen te vormen',
-          en: 'The activities are combined in the appropriate context to form value streams',
+          nl: 'De activiteiten worden per situatie samengevoegd tot waardestromen',
+          en: 'The activities are put together per situation into value streams',
         },
         rationale: {
           nl: 'Dit is juist en verklaart waarom een vaste volgorde niet nodig is.',
@@ -621,8 +621,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Incidenten identificeren en oplossen, procedures voor noodherstel uitvoeren en feedback van consumenten verzamelen',
-          en: 'Identifying and resolving incidents, executing disaster recovery procedures and collecting consumer feedback',
+          nl: 'Incidenten opsporen en verhelpen, noodherstelprocedures uitvoeren, en ophalen wat afnemers terugmelden',
+          en: 'Tracking down and clearing incidents, running disaster recovery procedures, and gathering what consumers report back',
         },
         correct: true,
       },
@@ -798,8 +798,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Het extern inkopen of intern herverdelen van middelen',
-          en: 'Externally procuring or internally reallocating resources',
+          nl: 'Middelen van buiten betrekken of binnen de organisatie anders verdelen',
+          en: 'Sourcing resources from outside or redistributing them within the organization',
         },
         rationale: {
           nl: "Dit hoort bij 'verwerven' (acquire).",

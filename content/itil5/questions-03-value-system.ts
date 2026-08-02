@@ -282,8 +282,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een situatie waarbij een deel van de output van een activiteit wordt gebruikt als nieuwe input',
-          en: 'A situation where part of the output of an activity is used as new input',
+          nl: 'Het geval dat een deel van wat een activiteit oplevert er weer als invoer in teruggaat',
+          en: 'The case where part of what an activity produces goes back into it as input',
         },
         correct: true,
       },
@@ -672,8 +672,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Het systeem waarmee een organisatie wordt geleid en beheerst',
-          en: 'The system by which an organization is directed and controlled',
+          nl: 'Het geheel van sturing en toezicht waarmee een organisatie op koers wordt gehouden',
+          en: 'The arrangement of direction and oversight that keeps an organization on course',
         },
         correct: true,
       },
@@ -934,8 +934,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Het vermogen om de interne toestand van een complex systeem te begrijpen door de externe output ervan te analyseren, zoals metrics, logboeken en traces',
-          en: 'The ability to understand the internal state of a complex system by analysing its external outputs, such as metrics, logs and traces',
+          nl: 'Kunnen doorgronden wat er binnen in een ingewikkeld systeem gebeurt, puur op grond van wat het naar buiten afgeeft: metrics, logboeken en traces',
+          en: 'Being able to work out what goes on inside a complicated system purely from what it gives off: metrics, logs and traces',
         },
         correct: true,
       },
@@ -996,8 +996,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een geheel van activiteiten dat waarde creëert door het leveren van een product of service',
-          en: 'A set of activities that creates value by delivering a product or service',
+          nl: 'De activiteiten die samen waarde opleveren doordat er een product of service uit voortkomt',
+          en: 'The activities that jointly yield value because a product or service comes out of them',
         },
         rationale: {
           nl: 'Dit is de definitie van de waardeketen (value chain), het centrale onderdeel van het waardesysteem.',
@@ -1006,8 +1006,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Wat een organisatie doet voor haar klanten en andere stakeholders en waarom',
-          en: 'What an organization does for its customers and other stakeholders, and why',
+          nl: 'Waar een organisatie voor haar klanten en andere belanghebbenden mee bezig is, en met welke reden',
+          en: 'What an organization is engaged in for its customers and other stakeholders, and for what reason',
         },
         rationale: {
           nl: 'Dit is het doel (purpose) van de organisatie. Het doel bepaalt de intentie; het operationeel model brengt die intentie tot leven.',
@@ -1016,8 +1016,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een reeks stappen die een organisatie gebruikt om producten en services te leveren aan een consument',
-          en: 'A series of steps an organization uses to create and deliver products and services to a consumer',
+          nl: 'De opeenvolging van stappen waarmee een organisatie producten en services bij de afnemer krijgt',
+          en: 'The succession of steps by which an organization gets products and services to the consumer',
         },
         rationale: {
           nl: 'Dit is de definitie van een waardestroom (value stream).',
@@ -1099,8 +1099,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een verzoek van een gebruiker of gemachtigde vertegenwoordiger dat leidt tot een serviceactie die volgens de overeenkomst onderdeel is van de standaard serviceverlening',
-          en: 'A request from a user or authorized representative that initiates a service action agreed as a normal part of service delivery',
+          nl: 'Een aanvraag van een gebruiker, of van iemand die namens hem mag optreden, waarop een serviceactie volgt die als gewoon onderdeel van de dienstverlening is afgesproken',
+          en: 'A request from a user, or from someone entitled to act for them, that sets off a service action agreed to be a routine part of the service',
         },
         correct: true,
       },
@@ -1154,8 +1154,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Negatieve impact van de overgang op de beschikbaarheid en prestaties van de service',
-          en: 'Negative impact of the transition on service availability and performance',
+          nl: 'Hoezeer de overgang de beschikbaarheid en de prestaties van de service schaadt',
+          en: 'How far the transition harms the availability and performance of the service',
         },
         correct: true,
       },
@@ -1171,8 +1171,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Snelheid van het herstel van de normale serviceverlening',
-          en: 'Speed of restoring normal service delivery',
+          nl: 'Hoe snel de gewone dienstverlening weer op gang is',
+          en: 'How quickly ordinary service delivery is back up',
         },
         rationale: {
           nl: 'Dit is een succesindicator van ‘ondersteunen’ (support).',
@@ -1266,15 +1266,15 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een geheel van organisatorische middelen en vermogen (capabilities), ontworpen en ingezet voor het uitvoeren van werk of het bereiken van een doelstelling',
-          en: 'A set of organizational resources and capabilities designed and deployed for performing work or accomplishing an objective',
+          nl: 'Middelen en vermogen (capabilities) van een organisatie, bij elkaar gebracht en ingezet om werk te verzetten of een doel te halen',
+          en: 'An organization’s resources and capabilities, brought together and put to work to get something done or reach an objective',
         },
         correct: true,
       },
       {
         text: {
           nl: 'Een geheel van onderling verbonden activiteiten die input omzetten in output',
-          en: 'A set of interrelated or interacting activities that transform inputs into outputs',
+          en: 'Activities that act on one another and together work inputs up into outputs',
         },
         rationale: {
           nl: 'Dit is de definitie van een proces. Elke managementwerkwijze omvat meerdere processen.',
@@ -1641,8 +1641,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een geheel van activiteiten dat waarde creëert door het leveren van een product of service',
-          en: 'A set of activities that creates value by delivering a product or service',
+          nl: 'De activiteiten die samen waarde opleveren doordat er een product of service uit voortkomt',
+          en: 'The activities that jointly yield value because a product or service comes out of them',
         },
         correct: true,
       },
@@ -1668,8 +1668,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'De daadwerkelijke opeenvolging van activiteiten zoals die worden uitgevoerd',
-          en: 'The actual sequence of activities as they are performed',
+          nl: 'De volgorde waarin activiteiten in de praktijk daadwerkelijk plaatsvinden',
+          en: 'The order in which activities actually take place in practice',
         },
         rationale: {
           nl: 'Dit beschrijft een waardestroom (value stream): ‘zoals uitgevoerd’, tegenover de waardeketen ‘zoals ontworpen’.',
