@@ -18,7 +18,7 @@
 # een eigen deps-stage de nettere route. Zie DOCKER.md.
 
 # --- Stage 1: build --------------------------------------------------------
-FROM node:24-bookworm-slim AS builder
+FROM node:25-bookworm-slim AS builder
 
 WORKDIR /app
 
@@ -34,7 +34,7 @@ ENV NODE_ENV=production
 RUN APP_SECRET="build-time-placeholder-not-used-at-runtime-000" npm run build
 
 # --- Stage 2: runtime ------------------------------------------------------
-FROM node:24-bookworm-slim AS runner
+FROM node:25-bookworm-slim AS runner
 
 WORKDIR /app
 
