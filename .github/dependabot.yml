@@ -6,6 +6,17 @@ version: 2
 # houdt die keten bij en opent een pull request zodra er iets te patchen valt.
 #
 # Beveiligingsupdates komen altijd binnen, ook buiten het onderstaande schema.
+# De opties schedule, cooldown en open-pull-requests-limit gelden volgens de
+# documentatie van GitHub uitsluitend voor versie-updates: een pull request die
+# uit een beveiligingsalarm voortkomt wordt er niet door uitgesteld, niet door
+# geblokkeerd en telt niet mee voor het maximum.
+#
+# De volgorde van de groepen doet ertoe. Dependabot plaatst een pakket in de
+# eerste groep waarop het past, dus de specifieke groepen staan boven de brede.
+# Onderaan elke npm-sectie staan twee vangnetten: een groep voor alle overige
+# minor- en patch-updates, en een groep voor alle overige major-updates. Zonder
+# die tweede groep valt elke major buiten alle groepen en krijgt hij een eigen
+# pull request; dat is precies wat er op maandag 3 augustus 2026 gebeurde.
 # ---------------------------------------------------------------------------
 
 updates:
@@ -23,14 +34,74 @@ updates:
     commit-message:
       prefix: deps
       prefix-development: deps-dev
+    # Een uitgave moet hebben kunnen bezinken voordat wij hem overnemen. Een
+    # versie die binnen een dag wordt teruggetrokken of gerepareerd bereikt de
+    # repository daardoor nooit. Een major krijgt de langste wachttijd, omdat
+    # daar de meeste haast in zit en de minste noodzaak. Deze wachttijden
+    # gelden niet voor beveiligingsupdates.
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+    ignore:
+      # De engines-sleutel in package.json en de CI staan allebei op node 20.
+      # Typen voor een nieuwere node beschrijven een omgeving die hier niet
+      # draait. Deze regel vervalt zodra node zelf meegaat; hij houdt alleen de
+      # major tegen, dus patches op de huidige reeks komen gewoon binnen.
+      - dependency-name: "@types/node"
+        update-types:
+          - version-update:semver-major
+      # TypeScript 7 is de Go-herschrijving en levert de compiler-API pas in
+      # 7.1. typescript-eslint weigert hem expliciet en Next.js kan er niet
+      # mee bouwen. Deze regel vervalt zodra beide 7.x ondersteunen.
+      - dependency-name: "typescript"
+        update-types:
+          - version-update:semver-major
     groups:
-      # Patch- en minor-updates in een enkele pull request, zodat de inbox
-      # niet volloopt met losse bumps.
+      # React en zijn typedefinities horen bij elkaar. Een losse bump van
+      # @types/react beschrijft een React die nog niet geïnstalleerd is.
+      react:
+        applies-to: version-updates
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+      # ESLint, zijn regelsets en de TypeScript-koppeling stellen peer-eisen aan
+      # elkaar. Los bijwerken levert een installatie op die npm niet meer kan
+      # oplossen: @eslint/js 10 eist eslint 10, terwijl eslint op 9 blijft staan.
+      typecontrole-en-linting:
+        applies-to: version-updates
+        patterns:
+          - eslint
+          - "@eslint/*"
+          - "eslint-plugin-*"
+          - "eslint-config-*"
+          - typescript-eslint
+          - "@typescript-eslint/*"
+          - typescript
+      # De overige typedefinities. Die van React zijn hierboven al weggevangen.
+      typedefinities:
+        applies-to: version-updates
+        patterns:
+          - "@types/*"
+      # Alles wat hierboven niet is opgevangen, per week in één pull request.
       routine:
         applies-to: version-updates
+        patterns:
+          - "*"
         update-types:
           - minor
           - patch
+      # Het vangnet voor major-updates. Deze pull request verdient een eigen
+      # avond; hij komt hooguit een paar keer per jaar langs.
+      ingrijpend:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - major
       # Beveiligingsupdates ook gegroepeerd, maar apart zichtbaar.
       beveiliging:
         applies-to: security-updates
@@ -52,18 +123,80 @@ updates:
     commit-message:
       prefix: deps
       prefix-development: deps-dev
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+    ignore:
+      # Zelfde reden als in de webhub: de schil bouwt op node 20.
+      - dependency-name: "@types/node"
+        update-types:
+          - version-update:semver-major
+      # De schil bouwt met Vite en heeft geen linter, dus TypeScript 7 valt
+      # hier niet om. Beide werkmappen typecheckt wel dezelfde vragenbank in
+      # content/, en die hoort niet door twee compilergeneraties te gaan.
+      - dependency-name: "typescript"
+        update-types:
+          - version-update:semver-major
     groups:
+      # Capacitor is een stel pakketten met een gedeeld versienummer. Een schil
+      # waarin @capacitor/core en @capacitor/android niet gelijk lopen, bouwt
+      # wel maar draait niet betrouwbaar.
+      capacitor:
+        applies-to: version-updates
+        patterns:
+          - "@capacitor/*"
+      react:
+        applies-to: version-updates
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+      # Vite, zijn React-plugin en TypeScript vormen samen de bouwketen van de
+      # schil. Ze breken in elkaars gezelschap, dus ze reizen samen.
+      bouwketen:
+        applies-to: version-updates
+        patterns:
+          - vite
+          - "@vitejs/*"
+          - typescript
+          - tsx
+          - tailwindcss
+          - "@tailwindcss/*"
+      typedefinities:
+        applies-to: version-updates
+        patterns:
+          - "@types/*"
       routine:
         applies-to: version-updates
+        patterns:
+          - "*"
         update-types:
           - minor
           - patch
+      ingrijpend:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - major
       beveiliging:
         applies-to: security-updates
         patterns:
           - "*"
 
   # Gradle-afhankelijkheden van de Android-build.
+  #
+  # Wat Dependabot hier kan zien is beperkt. Volgens de documentatie leest hij
+  # build.gradle, build.gradle.kts, gradle/libs.versions.toml, gradle.lockfile
+  # en bestanden die via apply worden ingeladen en het woord "dependencies" in
+  # hun naam hebben. android-app/android/variables.gradle voldoet aan geen van
+  # die voorwaarden, dus de androidx-, junit- en espresso-versies die daar in
+  # het ext-blok staan blijven buiten beeld. In de praktijk gaat deze sectie
+  # dus over de twee classpath-regels in android-app/android/build.gradle en
+  # over de Gradle-wrapper.
   - package-ecosystem: gradle
     directory: /android-app/android
     schedule:
@@ -73,8 +206,38 @@ updates:
     labels:
       - dependencies
       - android
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+    groups:
+      gradle:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+      gradle-ingrijpend:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - major
+      beveiliging:
+        applies-to: security-updates
+        patterns:
+          - "*"
 
-  # De basisimage van de container.
+  # De basisimage van de container: node:20-bookworm-slim, twee keer in de
+  # Dockerfile in de hoofdmap.
+  #
+  # Let op: Dependabot doet voor het docker-ecosysteem alleen versie-updates,
+  # geen beveiligingsupdates. Een kwetsbaarheid in de basisimage komt hier dus
+  # niet vanzelf binnen. Daar komt bij dat node 20 sinds 30 april 2026 uit
+  # onderhoud is; de image hoort naar een reeks te gaan die nog patches krijgt.
+  # Dat is een eigen beslissing en geen bump die je blind samenvoegt.
   - package-ecosystem: docker
     directory: /
     schedule:
@@ -84,13 +247,66 @@ updates:
     labels:
       - dependencies
       - docker
+    # Het docker-ecosysteem ondersteunt alleen default-days, geen aparte
+    # wachttijden per semver-niveau.
+    cooldown:
+      default-days: 7
+    groups:
+      basisimages:
+        applies-to: version-updates
+        patterns:
+          - "*"
 
-  # Acties in eigen workflows — die draaien met repotoegang, dus die tellen mee.
-  - package-ecosystem: github-actions
+  # De images die docker-compose.yml erbij haalt, op dit moment caddy:2-alpine.
+  # Dat is een eigen ecosysteem: het docker-ecosysteem hierboven leest de
+  # Dockerfile, niet de compose-bestanden.
+  - package-ecosystem: docker-compose
     directory: /
     schedule:
       interval: monthly
       timezone: Europe/Amsterdam
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - docker
+    cooldown:
+      default-days: 7
+    groups:
+      compose-images:
+        applies-to: version-updates
+        patterns:
+          - "*"
+
+  # Acties in eigen workflows. Die draaien met repotoegang, dus die tellen mee.
+  # De waarde / is hier voorgeschreven: Dependabot zoekt zelf in
+  # .github/workflows en in een action.yml in de hoofdmap.
+  #
+  # Wekelijks in plaats van maandelijks. Een gecompromitteerde action is het
+  # soort probleem waarbij drie weken wachten het verschil maakt, en omdat alles
+  # in een groep valt kost het hooguit één pull request per week.
+  #
+  # De actions staan op hun commit-SHA met de tag als commentaar erachter. Die
+  # vorm werkt Dependabot bij, inclusief het commentaar, mits het op dezelfde
+  # regel staat.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 3
     labels:
       - dependencies
       - ci
+    cooldown:
+      default-days: 7
+    groups:
+      acties:
+        applies-to: version-updates
+        patterns:
+          - "*"
+      beveiliging:
+        applies-to: security-updates
+        patterns:
+          - "*"
