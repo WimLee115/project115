@@ -102,8 +102,9 @@ werkt betrouwbaar omdat de base-image daarop is afgestemd:
 
 - **Debian bookworm** (glibc), net als Kali. `@node-rs/argon2` levert hier de
   `linux-x64-gnu`-binary; op Alpine zou de musl-variant nodig zijn.
-- **Node 20**, gelijk aan de host, zodat de gecompileerde `better-sqlite3`
-  dezelfde ABI-versie heeft. Onder Node 22 weigert die binary te laden.
+- **Node 24**, gelijk aan de host, zodat de gecompileerde `better-sqlite3`
+  dezelfde ABI-versie heeft. Onder een andere hoofdversie weigert die binary te
+  laden, dus host en base-image horen samen bijgewerkt te worden.
 
 Resultaat: 302 MB, geen build-tools in de image, en een build die in seconden
 klaar is in plaats van minuten.
@@ -111,7 +112,7 @@ klaar is in plaats van minuten.
 **Draait jouw omgeving wél met netwerk?** Dan is een eigen deps-stage netter:
 
 ```dockerfile
-FROM node:20-bookworm-slim AS deps
+FROM node:24-bookworm-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci

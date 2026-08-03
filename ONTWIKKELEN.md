@@ -214,4 +214,4 @@ of goedgekeurd door PeopleCert of EXIN.
 Next.js 16 (App Router) · React 19 · TypeScript strict · Tailwind CSS 4 ·
 Drizzle ORM · SQLite · Zod 4 · ts-fsrs · Argon2id · Caddy 2
 
-Node.js 20.9 of hoger.
+Node.js 24 of hoger.
