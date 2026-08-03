@@ -13,7 +13,7 @@ wat je het prettigst vindt.
 
 ## Het losse bestand — het eenvoudigst
 
-Dubbelklik op **Project115-1.1.1-offline.html**.
+Dubbelklik op **Project115-1.1.2-offline.html**.
 
 Dat is alles. De hele app zit in dat ene bestand: geen installatie, geen server,
 geen internet. Werkt in elke moderne browser op Windows, macOS en Linux, en ook
@@ -30,7 +30,7 @@ steeds met dezelfde browser en laat het bestand op zijn plek staan.
 Voor wie hem liever als echte app op zijn telefoon heeft, met een eigen
 pictogram en zonder adresbalk.
 
-1. Zet `Project115-1.1.1.apk` op je telefoon (mailen, WeTransfer, USB — wat je
+1. Zet `Project115-1.1.2.apk` op je telefoon (mailen, WeTransfer, USB — wat je
    handig vindt).
 2. Open het bestand, bijvoorbeeld vanuit je map *Downloads*.
 3. Android meldt dat installeren uit deze bron niet is toegestaan. Tik op
@@ -49,7 +49,7 @@ Minimaal Android 7.0. De app is ongeveer 3 MB.
 
 ## Op een webserver
 
-`Project115-1.1.1-web.zip` bevat dezelfde app als gewone website, bedoeld voor
+`Project115-1.1.2-web.zip` bevat dezelfde app als gewone website, bedoeld voor
 als je hem aan cursisten wilt aanbieden. Pak de zip uit in een map op een
 webserver; er is geen database en geen installatie nodig.
 
@@ -92,9 +92,12 @@ De vragen zijn **origineel geschreven** aan de hand van de openbaar
 gepubliceerde examenspecificaties. Het zijn geen echte examenvragen, en slagen
 voor deze proefexamens is geen garantie dat je voor het echte examen slaagt.
 
-ITIL® is een geregistreerd handelsmerk van PeopleCert International Ltd. EXIN®
-is een geregistreerd handelsmerk van EXIN Holding B.V. Deze app is niet gelieerd
-aan, goedgekeurd door of verbonden met een van beide organisaties.
+ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert
+International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V.
+ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van
+het Nederlandstalige cursusmateriaal. Deze app is een onafhankelijk
+oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een
+van deze organisaties.
 
 Zie `PRIVACY.md` voor wat de app met je gegevens doet — kort gezegd: niets
 versturen, niets verzamelen — en `GEBRUIKSVOORWAARDEN.md` voor wat je met de

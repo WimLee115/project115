@@ -206,9 +206,12 @@ PeopleCert-syllabus en de EXIN preparation guide, en inhoudelijk geverifieerd
 tegen het cursusmateriaal en de voorgeschreven examenliteratuur. Er zijn geen
 examenvragen overgenomen.
 
-ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert. EXIN® is een
-geregistreerd handelsmerk van EXIN Holding B.V. Dit project is niet gelieerd aan
-of goedgekeurd door PeopleCert of EXIN.
+ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert
+International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V.
+ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van
+het Nederlandstalige cursusmateriaal. Dit project is een onafhankelijk
+oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een
+van deze organisaties.
 
 ---
 

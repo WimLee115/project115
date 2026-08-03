@@ -43,11 +43,11 @@ Kies wat bij je past:
 
 | Bestand | Voor wie |
 |---|---|
-| `Project115-1.1.1-offline.html` | **Het eenvoudigst.** Eén bestand, dubbelklikken, werkt in elke browser op Windows, macOS, Linux en Chromebook. Geen installatie. |
-| `Project115-1.1.1.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
-| `Project115-1.1.1-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
-| `Project115-1.1.1.zip` | De volledige uitgave in één bestand: alle drie de vormen plus de documentatie. |
-| `Project115-1.1.1-Handleiding.pdf` | Handleiding van twaalf pagina's. |
+| `Project115-1.1.2-offline.html` | **Het eenvoudigst.** Eén bestand, dubbelklikken, werkt in elke browser op Windows, macOS, Linux en Chromebook. Geen installatie. |
+| `Project115-1.1.2.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
+| `Project115-1.1.2-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
+| `Project115-1.1.2.zip` | De volledige uitgave in één bestand: alle drie de vormen plus de documentatie. |
+| `Project115-1.1.2-Handleiding.pdf` | Handleiding van twaalf pagina's. |
 
 Uitgebreidere instructies staan in [INSTALLEREN.md](INSTALLEREN.md).
 
@@ -77,9 +77,10 @@ niet een gewone issue.
 
 ## Gebruiksvoorwaarden
 
-Gebruiken en doorgeven mag — aan cursisten, aan collega's, hoe je wilt. Twee
-voorwaarden: de vermelding van de maker blijft staan, en de software wordt niet
-verkocht. Zie [GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md).
+Gebruiken en doorgeven mag — aan cursisten, aan collega's, hoe je wilt. Drie
+voorwaarden: de vermelding van de maker blijft staan, de software wordt niet
+verkocht, en de handelsmerkvermelding blijft ongewijzigd meegaan. Zie
+[GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md).
 
 ## Over de inhoud
 
@@ -92,10 +93,13 @@ uit een oefenexamen en niet uit een echt examen.
 
 **De begrippenlijst inmiddels ook.** In 1.0.0 was dat anders: de definities
 waren toen woordelijk overgenomen uit cursusmateriaal. Sinds 1.1.0 zijn ze
-herschreven met de betekenis als uitgangspunt. Onveranderd zijn alleen de
-benamingen gebleven — de vier dimensies, de acht levenscyclusactiviteiten, de
-vijf componenten van het waardesysteem, en de vaktermen zelf — omdat het examen
-daar letterlijk op toetst.
+herschreven met de betekenis als uitgangspunt. Die eerste ronde keek alleen naar
+de begrippenlijst en de antwoordopties; in 1.1.2 zijn ook de vraagteksten en
+toelichtingen nagelopen, en bewaakt een controle in de CI dat er geen
+formulering terugkeert. Onveranderd zijn alleen de benamingen gebleven — de vier
+dimensies, de acht levenscyclusactiviteiten, de vijf componenten van het
+waardesysteem, en de vaktermen zelf — omdat het examen daar letterlijk op
+toetst.
 
 Het glossarium blijft daarmee een oefenhulpmiddel en geen vervanging van het
 cursusmateriaal: het toetst of je de stof kent, het legt hem niet voor het
@@ -154,9 +158,11 @@ verantwoordelijk voor.
 
 ## Licentie
 
-Gebruiken, aanpassen en doorgeven mag; de vermelding van de maker blijft staan
-en de software wordt niet verkocht. Zie [LICENSE](LICENSE) voor de tekst en
-[GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md) voor de uitleg.
+Gebruiken, aanpassen en doorgeven mag, onder drie voorwaarden: de vermelding van
+de maker blijft staan, de software wordt niet verkocht, en de
+handelsmerkvermelding hieronder gaat ongewijzigd mee. Zie [LICENSE](LICENSE)
+voor de tekst en [GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md) voor de
+uitleg.
 
 De licentie dekt de software, de vragenbank en de begrippenlijst. Niet de
 vaktermen en de namen uit het model zelf: die komen uit het officiële materiaal
@@ -164,11 +170,12 @@ en zijn niet van mij om weg te geven.
 
 ## Handelsmerken
 
-ITIL® is een geregistreerd handelsmerk van PeopleCert International Ltd. EXIN®
-is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001 is een norm
-van ISO en IEC. Project115 is een onafhankelijk oefenhulpmiddel en is niet
-gelieerd aan, goedgekeurd door of verbonden met een van deze organisaties, en
-evenmin met IT Management Group.
+ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert
+International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V.
+ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van
+het Nederlandstalige cursusmateriaal. Project115 is een onafhankelijk
+oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een
+van deze organisaties.
 
 ---
 
