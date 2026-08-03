@@ -34,10 +34,13 @@ gewone taal in plaats van een foutspoor.
 Afsluiten: `Ctrl+C` in het venster. Is dat venster per ongeluk gesloten, dan
 stopt `./stop.sh` de hub alsnog.
 
-Wil je Project115 in je programmamenu? Kopieer het snelkoppelingsbestand:
+Wil je Project115 in je programmamenu? Het snelkoppelingsbestand bevat een
+plaatshouder in plaats van een vast pad, zodat het op elke machine werkt. Dit
+commando vult het pad van deze map in en zet het resultaat op zijn plek:
 
 ```bash
-cp Project115.desktop ~/.local/share/applications/
+sed "s|/pad/naar/project115|$PWD|g" Project115.desktop \
+  > ~/.local/share/applications/Project115.desktop
 ```
 
 De eerste keer duurt het opstarten enkele minuten (onderdelen installeren en het
@@ -66,7 +69,7 @@ sudo systemctl start docker
 cp .env.example .env
 echo "APP_SECRET=$(openssl rand -base64 48)" >> .env
 # Pas SITE_ADDRESS aan naar het adres van deze machine, bijvoorbeeld:
-#   SITE_ADDRESS=https://192.168.2.5
+#   SITE_ADDRESS=https://192.168.1.50
 #   SITE_ADDRESS=https://project115.local
 
 docker compose up -d --build

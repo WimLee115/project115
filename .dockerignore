@@ -15,8 +15,19 @@ certs
 *.db-wal
 *.db-shm
 .env
+.env.*
 .env.local
 .env.production
+
+# De ondertekeningssleutel van de Android-app en zijn wachtwoord. Die horen in
+# geen enkele laag van de image, ook niet in een tussenlaag die je nooit
+# uitlevert: `docker save` van de builder of een cache-export naar een register
+# neemt die laag gewoon mee. scripts/package-project.ts sluit deze drie al uit
+# bij het inpakken; dit trekt de build daarmee gelijk.
+*.jks
+*.keystore
+keystore.properties
+
 README.md
 PLAN.md
 DOCKER.md

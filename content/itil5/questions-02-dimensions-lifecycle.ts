@@ -438,8 +438,8 @@ export const questions: QuestionSeed[] = [
       },
     ],
     explanation: {
-      nl: 'De acht activiteiten worden niet in een vaste volgorde uitgevoerd. Ze worden in de juiste context gecombineerd tot waardestromen: reeksen stappen die een organisatie gebruikt om producten en services te creëren en te leveren.',
-      en: 'The eight activities are not performed in a fixed order. They are combined in context to form value streams: sequences of steps an organization uses to create and deliver products and services.',
+      nl: 'De acht activiteiten kennen geen vaste volgorde. Per situatie rijg je ze aan elkaar tot een waardestroom: de route die het werk aflegt van vraag tot geleverd product of geleverde service, met precies die stappen die daarvoor nodig zijn.',
+      en: 'The eight activities have no fixed order. For each situation you string them together into a value stream: the route the work takes from request to delivered product or service, with exactly the steps that are needed for it.',
     },
     source: 'Syllabus 3.1.1',
   },

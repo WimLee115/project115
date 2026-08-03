@@ -163,6 +163,16 @@ jobs:
       - name: Afleiders controleren
         run: npx tsx scripts/check-afleiders.ts
 
+      # In 1.0.0 stonden er definities in die grotendeels letterlijk uit het
+      # bronmateriaal kwamen. Die zijn herschreven, maar die operatie keek
+      # alleen naar het glossarium en naar de antwoordopties; in stem,
+      # explanation en rationale bleven dezelfde zinnen staan. Deze controle
+      # kijkt naar alle vijf en vergelijkt tegen vingerafdrukken van wat er
+      # destijds is weggehaald, zodat een herschreven formulering niet
+      # ongemerkt terugkeert via een vraag die niemand meer nakijkt.
+      - name: Overgenomen formuleringen controleren
+        run: npx tsx scripts/check-overname.ts
+
   audit:
     name: Afhankelijkheden
     runs-on: ubuntu-latest
