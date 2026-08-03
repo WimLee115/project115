@@ -8,7 +8,7 @@
  * Deze waarde hoort ook gelijk te zijn aan `versionName` in
  * `android/app/build.gradle` zodra de Android-map is gegenereerd.
  */
-export const APP_VERSION = '1.1.1';
+export const APP_VERSION = '1.1.2';
 
 /** Waar de nieuwste versie en de broncode staan. */
 export const SOURCE_URL = 'https://github.com/wimlee115';

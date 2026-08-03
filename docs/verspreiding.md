@@ -32,8 +32,8 @@ npm run package         # → release/
 In `release/` staat dan:
 
 ```
-Project115-1.1.1.apk           de Android-app
-Project115-1.1.1-web.zip       de browserversie, uit te pakken op een webserver
+Project115-1.1.2.apk           de Android-app
+Project115-1.1.2-web.zip       de browserversie, uit te pakken op een webserver
 INSTALLEREN.md                 instructie voor de ontvanger
 PRIVACY.md                     wat de app met gegevens doet
 ```

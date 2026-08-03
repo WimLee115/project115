@@ -13,7 +13,7 @@ wat je het prettigst vindt.
 
 ## Het losse bestand — het eenvoudigst
 
-Dubbelklik op **Project115-1.1.1-offline.html**.
+Dubbelklik op **Project115-1.1.2-offline.html**.
 
 Dat is alles. De hele app zit in dat ene bestand: geen installatie, geen server,
 geen internet. Werkt in elke moderne browser op Windows, macOS en Linux, en ook
@@ -30,7 +30,7 @@ steeds met dezelfde browser en laat het bestand op zijn plek staan.
 Voor wie hem liever als echte app op zijn telefoon heeft, met een eigen
 pictogram en zonder adresbalk.
 
-1. Zet `Project115-1.1.1.apk` op je telefoon (mailen, WeTransfer, USB — wat je
+1. Zet `Project115-1.1.2.apk` op je telefoon (mailen, WeTransfer, USB — wat je
    handig vindt).
 2. Open het bestand, bijvoorbeeld vanuit je map *Downloads*.
 3. Android meldt dat installeren uit deze bron niet is toegestaan. Tik op
@@ -49,7 +49,7 @@ Minimaal Android 7.0. De app is ongeveer 3 MB.
 
 ## Op een webserver
 
-`Project115-1.1.1-web.zip` bevat dezelfde app als gewone website, bedoeld voor
+`Project115-1.1.2-web.zip` bevat dezelfde app als gewone website, bedoeld voor
 als je hem aan cursisten wilt aanbieden. Pak de zip uit in een map op een
 webserver; er is geen database en geen installatie nodig.
 

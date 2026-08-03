@@ -43,11 +43,11 @@ Kies wat bij je past:
 
 | Bestand | Voor wie |
 |---|---|
-| `Project115-1.1.1-offline.html` | **Het eenvoudigst.** Eén bestand, dubbelklikken, werkt in elke browser op Windows, macOS, Linux en Chromebook. Geen installatie. |
-| `Project115-1.1.1.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
-| `Project115-1.1.1-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
-| `Project115-1.1.1.zip` | De volledige uitgave in één bestand: alle drie de vormen plus de documentatie. |
-| `Project115-1.1.1-Handleiding.pdf` | Handleiding van twaalf pagina's. |
+| `Project115-1.1.2-offline.html` | **Het eenvoudigst.** Eén bestand, dubbelklikken, werkt in elke browser op Windows, macOS, Linux en Chromebook. Geen installatie. |
+| `Project115-1.1.2.apk` | Android 7.0 of hoger. Ondertekend; Android vraagt eenmalig om installatie uit deze bron toe te staan. |
+| `Project115-1.1.2-web.zip` | Om op een webserver te zetten, bijvoorbeeld voor een groep cursisten. |
+| `Project115-1.1.2.zip` | De volledige uitgave in één bestand: alle drie de vormen plus de documentatie. |
+| `Project115-1.1.2-Handleiding.pdf` | Handleiding van twaalf pagina's. |
 
 Uitgebreidere instructies staan in [INSTALLEREN.md](INSTALLEREN.md).
 

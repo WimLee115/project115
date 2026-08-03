@@ -1,6 +1,6 @@
 # Gebruiksvoorwaarden — Project115
 
-Versie 1.1.1 · Ontwikkeld door B. van Rooij · <https://github.com/wimlee115>
+Versie 1.1.2 · Ontwikkeld door B. van Rooij · <https://github.com/wimlee115>
 
 ## Kort
 
