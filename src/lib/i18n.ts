@@ -165,6 +165,9 @@ const nl = {
   'settings.saved': 'Opgeslagen.',
   'settings.exportData': 'Gegevens exporteren',
   'settings.exportDesc': 'Download al je studiegegevens als JSON-bestand.',
+  'about.trademarks': 'Handelsmerken',
+  'about.trademarksBody':
+    'ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van het Nederlandstalige cursusmateriaal. Project115 is een onafhankelijk oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een van deze organisaties.',
   'settings.sessions': 'Actieve sessies',
   'settings.logoutAll': 'Overal uitloggen',
 
@@ -328,6 +331,9 @@ const en: Record<Key, string> = {
   'settings.saved': 'Saved.',
   'settings.exportData': 'Export data',
   'settings.exportDesc': 'Download all your study data as a JSON file.',
+  'about.trademarks': 'Trade marks',
+  'about.trademarksBody':
+    'ITIL® and PRINCE2® are registered trade marks of PeopleCert International Ltd. EXIN® is a registered trade mark of EXIN Holding B.V. ISO/IEC 27001 is a standard published by ISO and IEC. IT Management Group publishes the Dutch-language course material. Project115 is an independent practice tool and is not affiliated with, endorsed by or connected to any of these organisations.',
   'settings.sessions': 'Active sessions',
   'settings.logoutAll': 'Log out everywhere',
 

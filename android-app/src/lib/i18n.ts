@@ -273,7 +273,7 @@ const nl = {
   'about.contributeCta': 'Iets melden of voorstellen',
   'about.trademarks': 'Handelsmerken',
   'about.trademarksBody':
-    'ITIL® is een geregistreerd handelsmerk van PeopleCert International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001 is een norm van ISO en IEC. Deze app is een onafhankelijk oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een van deze organisaties.',
+    'ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van het Nederlandstalige cursusmateriaal. Deze app is een onafhankelijk oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een van deze organisaties.',
   'about.disclaimer':
     'Slagen voor de proefexamens in deze app is geen garantie voor slagen voor het echte examen.',
   'about.source': 'Broncode en updates',
@@ -529,7 +529,7 @@ const en: Record<Key, string> = {
   'about.contributeCta': 'Report or suggest something',
   'about.trademarks': 'Trade marks',
   'about.trademarksBody':
-    'ITIL® is a registered trade mark of PeopleCert International Ltd. EXIN® is a registered trade mark of EXIN Holding B.V. ISO/IEC 27001 is a standard published by ISO and IEC. This app is an independent practice tool and is not affiliated with, endorsed by or connected to any of these organisations.',
+    'ITIL® and PRINCE2® are registered trade marks of PeopleCert International Ltd. EXIN® is a registered trade mark of EXIN Holding B.V. ISO/IEC 27001 is a standard published by ISO and IEC. IT Management Group publishes the Dutch-language course material. This app is an independent practice tool and is not affiliated with, endorsed by or connected to any of these organisations.',
   'about.disclaimer':
     'Passing the mock exams in this app is no guarantee of passing the real exam.',
   'about.source': 'Source code and updates',

@@ -33,16 +33,24 @@ alleen mijn naam erin staan en verkoop hem niet.
 ## Over de inhoud
 
 Alle vragen, antwoorden, toelichtingen en begrippen zijn origineel geschreven
-aan de hand van de openbaar gepubliceerde examenspecificaties van PeopleCert en
-EXIN. Er zijn geen examenvragen overgenomen en er is geen cursustekst opgenomen.
+aan de hand van de examenspecificaties van PeopleCert en EXIN, en van het
+cursusmateriaal dat bij die examens hoort. Er zijn geen examenvragen
+overgenomen en er is geen cursustekst opgenomen.
 
 Het is de moeite waard om preciezer te zijn over wat dat betekent.
 
 **De vragen zijn van mij.** Alle 160 vragen, de antwoordopties en de
 toelichtingen daarbij heb ik zelf geschreven, aan de hand van de assessment
-criteria uit de openbaar gepubliceerde examenspecificaties van PeopleCert en
-EXIN. **Er is geen enkele examenvraag overgenomen** — niet uit een officieel
-oefenexamen, niet uit een echt examen.
+criteria uit de examenspecificaties van PeopleCert en EXIN. **Er is geen enkele
+examenvraag overgenomen** — niet uit een officieel oefenexamen, niet uit een
+echt examen.
+
+**Welke bronnen ik heb gebruikt** staat op naam in PLAN.md, onder "Herkomst".
+Dat zijn de PeopleCert-syllabus en de EXIN preparation guide, maar ook het
+Nederlandstalige reference manual van ITMG en het examenboek van Hintzbergen.
+Die laatste twee zijn geen openbare specificaties maar cursusmateriaal, en juist
+daaruit kwamen de definities die hieronder aan de orde komen. Het leek me beter
+dat hier te zeggen dan het bij "openbaar gepubliceerd" te laten.
 
 **De begrippenlijst inmiddels ook.** In 1.0.0 was dat anders. De definities
 waren toen woordelijk overgenomen uit cursusmateriaal: een vergelijking van de

@@ -18,8 +18,10 @@ body:
 
         Ter achtergrond: de verantwoording over de herkomst van de inhoud
         staat in [GEBRUIKSVOORWAARDEN.md](../blob/main/GEBRUIKSVOORWAARDEN.md),
-        sectie "Over de inhoud". Van het glossarium is daar al vastgelegd dat
-        de definities uit officieel materiaal komen.
+        sectie "Over de inhoud". Daar staat ook wat er in 1.0.0 misging met de
+        begrippenlijst en wat daaraan sinds 1.1.0 is gedaan. Een melding over
+        een passage die daar al onder valt is nog steeds welkom: het betekent
+        dat er iets is blijven staan.
 
   - type: textarea
     id: waar
