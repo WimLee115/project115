@@ -50,13 +50,13 @@ jobs:
           persist-credentials: false
 
       - name: CodeQL klaarzetten
-        uses: github/codeql-action/init@bce182f857edf1feab116e9795a3393d21977282 # v4
+        uses: github/codeql-action/init@f205ea1c3313d32999d8d6a48b4f6530d4437b38 # v4
         with:
           languages: ${{ matrix.language }}
           # De uitgebreide set: trager, maar vindt meer dan de standaardset.
           queries: security-and-quality
 
       - name: Analyseren
-        uses: github/codeql-action/analyze@bce182f857edf1feab116e9795a3393d21977282 # v4
+        uses: github/codeql-action/analyze@f205ea1c3313d32999d8d6a48b4f6530d4437b38 # v4
         with:
           category: /language:${{ matrix.language }}
