@@ -421,7 +421,7 @@ Eerlijk is eerlijk:
    `--network=host`, met `--dns=1.1.1.1` en met DNS-over-TCP: geen enkele
    variant kan namen resolven. De Dockerfile gebruikt daarom de `node_modules`
    van de host, met een base-image die daarop is afgestemd (Debian bookworm voor
-   glibc, Node 20 voor de ABI van `better-sqlite3`). Werkt jouw omgeving wél met
+   glibc, Node 24 voor de ABI van `better-sqlite3`). Werkt jouw omgeving wél met
    netwerk, dan staat de nettere `npm ci`-variant in `DOCKER.md`.
 2. **De vragenbank is niet door PeopleCert of EXIN gevalideerd.** Hij is
    geschreven op basis van de officiële leerdoelen en het cursusmateriaal, en

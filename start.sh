@@ -67,12 +67,12 @@ if ! command -v node >/dev/null 2>&1; then
 fi
 
 NODE_MAJOR=$(node -v | sed 's/^v//' | cut -d. -f1)
-NODE_MINOR=$(node -v | sed 's/^v//' | cut -d. -f2)
 
-# Next.js vereist minimaal Node 20.9.
-if [ "$NODE_MAJOR" -lt 20 ] || { [ "$NODE_MAJOR" -eq 20 ] && [ "$NODE_MINOR" -lt 9 ]; }; then
+# Node 20 kreeg zijn laatste beveiligingspatch op 30 april 2026. Project115
+# draait daarom op 24, de reeks die tot april 2028 onderhouden wordt.
+if [ "$NODE_MAJOR" -lt 24 ]; then
   fout "Je Node.js-versie ($(node -v)) is te oud." \
-"Project115 heeft versie 20.9 of nieuwer nodig.
+"Project115 heeft versie 24 of nieuwer nodig.
 
   Bijwerken op Debian, Ubuntu of Kali:
       sudo apt update && sudo apt install nodejs"

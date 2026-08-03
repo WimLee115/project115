@@ -10,14 +10,15 @@
 # als de host:
 #   - Debian bookworm (glibc), net als Kali — @node-rs/argon2 levert hier de
 #     linux-x64-*gnu* binary, niet de musl-variant die Alpine nodig zou hebben;
-#   - Node 20, gelijk aan de host, zodat de gecompileerde better-sqlite3 dezelfde
-#     ABI-versie heeft. Bij Node 22 zou die binary weigeren te laden.
+#   - Node 24, gelijk aan de host, zodat de gecompileerde better-sqlite3 dezelfde
+#     ABI-versie heeft. Onder een andere hoofdversie weigert die binary te laden.
+#     Werk de host en deze twee FROM-regels dus altijd samen bij.
 #
 # Werkt je omgeving wél met netwerk in de build, dan is `npm ci --omit=dev` in
 # een eigen deps-stage de nettere route. Zie DOCKER.md.
 
 # --- Stage 1: build --------------------------------------------------------
-FROM node:20-bookworm-slim AS builder
+FROM node:24-bookworm-slim AS builder
 
 WORKDIR /app
 
@@ -33,7 +34,7 @@ ENV NODE_ENV=production
 RUN APP_SECRET="build-time-placeholder-not-used-at-runtime-000" npm run build
 
 # --- Stage 2: runtime ------------------------------------------------------
-FROM node:20-bookworm-slim AS runner
+FROM node:24-bookworm-slim AS runner
 
 WORKDIR /app
 
