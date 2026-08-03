@@ -189,14 +189,21 @@ updates:
 
   # Gradle-afhankelijkheden van de Android-build.
   #
-  # Wat Dependabot hier kan zien is beperkt. Volgens de documentatie leest hij
-  # build.gradle, build.gradle.kts, gradle/libs.versions.toml, gradle.lockfile
-  # en bestanden die via apply worden ingeladen en het woord "dependencies" in
-  # hun naam hebben. android-app/android/variables.gradle voldoet aan geen van
-  # die voorwaarden, dus de androidx-, junit- en espresso-versies die daar in
-  # het ext-blok staan blijven buiten beeld. In de praktijk gaat deze sectie
-  # dus over de twee classpath-regels in android-app/android/build.gradle en
-  # over de Gradle-wrapper.
+  # Wat Dependabot hier kan zien is beperkt. Hij leest build.gradle en de
+  # kts-variant, de settings-bestanden, gradle.properties, gradle.lockfile,
+  # gradle/libs.versions.toml, gradle/wrapper/gradle-wrapper.properties, de
+  # buildbestanden van de subprojecten uit settings.gradle, en bestanden die
+  # via apply worden ingeladen en het woord "dependencies" in hun naam hebben.
+  # android-app/android/variables.gradle voldoet aan geen van die voorwaarden,
+  # dus de androidx-, junit- en espresso-versies die daar in het ext-blok staan
+  # blijven buiten beeld. Hetzelfde geldt voor de map
+  # capacitor-cordova-android-plugins, want die wordt door cap sync gegenereerd
+  # en staat niet in git.
+  #
+  # In de praktijk gaat deze sectie daarmee over precies twee dingen: de
+  # classpath-regel com.android.tools.build:gradle in build.gradle, en de
+  # Gradle-wrapper. De tweede classpath-regel, com.google.gms:google-services,
+  # is uit build.gradle verwijderd omdat die plugin hier nooit werd toegepast.
   - package-ecosystem: gradle
     directory: /android-app/android
     schedule:
@@ -211,6 +218,38 @@ updates:
       semver-major-days: 30
       semver-minor-days: 7
       semver-patch-days: 3
+    ignore:
+      # De Gradle-wrapper. Dependabot noemt die letterlijk "gradle-wrapper";
+      # dat is geen maven-coordinaat maar een naam die de gradle-parser zelf
+      # verzint voor de distributionUrl in gradle-wrapper.properties.
+      #
+      # Gradle 9.6.0 heeft org.gradle.api.problems.internal.InternalProblems
+      # verwijderd. Android Gradle Plugin 8.13.0 leunt daarop, en de build valt
+      # daardoor al in de configuratiefase om. Nagebouwd met JDK en Android
+      # SDK: 9.5.0 werkt wel met AGP 8.13.0, 9.6.0 en hoger niet.
+      #
+      # Bewust een versiegrens en geen ignore op semver-major. Een major-ignore
+      # rekent vanaf de versie die er nu staat, dus zodra de wrapper ooit op
+      # 9.x zou staan houdt die 9.6 niet meer tegen. Deze grens blijft gelden
+      # waar de wrapper ook staat, en werkt als enige vorm ook door in
+      # beveiligingsupdates. Alles onder 9.6 komt gewoon binnen en wordt door
+      # de stap Gradle-configuratie controleren in ci.yml getoetst.
+      #
+      # Deze regel mag weg zodra Capacitor AGP 9 ondersteunt, want pas dan mag
+      # de wrapper naar 9.6 of hoger.
+      - dependency-name: "gradle-wrapper"
+        versions:
+          - ">= 9.6"
+      # De Android Gradle Plugin zelf: dezelfde klem, van de andere kant. AGP 9
+      # is uit, maar de zeven Capacitor-modules onder node_modules staan op
+      # 8.13.0 en het gegenereerde capacitor-cordova-android-plugins ook. Een
+      # bump van deze ene zichtbare classpath-regel zet de hoofdmap op een
+      # andere AGP dan de rest van de build; getest met 9.3.1 en dat faalt.
+      # Vervalt op hetzelfde moment als de regel hierboven. Minors en patches
+      # binnen 8.x komen gewoon binnen.
+      - dependency-name: "com.android.tools.build:gradle"
+        update-types:
+          - version-update:semver-major
     groups:
       gradle:
         applies-to: version-updates
