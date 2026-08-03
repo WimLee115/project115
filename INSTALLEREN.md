@@ -92,9 +92,12 @@ De vragen zijn **origineel geschreven** aan de hand van de openbaar
 gepubliceerde examenspecificaties. Het zijn geen echte examenvragen, en slagen
 voor deze proefexamens is geen garantie dat je voor het echte examen slaagt.
 
-ITIL® is een geregistreerd handelsmerk van PeopleCert International Ltd. EXIN®
-is een geregistreerd handelsmerk van EXIN Holding B.V. Deze app is niet gelieerd
-aan, goedgekeurd door of verbonden met een van beide organisaties.
+ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert
+International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V.
+ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van
+het Nederlandstalige cursusmateriaal. Deze app is een onafhankelijk
+oefenhulpmiddel en is niet gelieerd aan, goedgekeurd door of verbonden met een
+van deze organisaties.
 
 Zie `PRIVACY.md` voor wat de app met je gegevens doet — kort gezegd: niets
 versturen, niets verzamelen — en `GEBRUIKSVOORWAARDEN.md` voor wat je met de

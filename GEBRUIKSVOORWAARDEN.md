@@ -85,9 +85,10 @@ zeggenschap over en is er niet verantwoordelijk voor.
 
 ## Handelsmerken
 
-ITIL® is een geregistreerd handelsmerk van PeopleCert International Ltd. EXIN®
-is een geregistreerd handelsmerk van EXIN Holding B.V. ISO/IEC 27001 is een norm
-van ISO en IEC.
+ITIL® en PRINCE2® zijn geregistreerde handelsmerken van PeopleCert
+International Ltd. EXIN® is een geregistreerd handelsmerk van EXIN Holding B.V.
+ISO/IEC 27001 is een norm van ISO en IEC. IT Management Group is de uitgever van
+het Nederlandstalige cursusmateriaal.
 
 Project115 is een onafhankelijk oefenhulpmiddel en is niet gelieerd aan,
 goedgekeurd door of verbonden met een van deze organisaties, en evenmin met IT
