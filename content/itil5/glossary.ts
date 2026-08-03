@@ -92,8 +92,8 @@ export const glossary: GlossarySeed[] = [
     termNl: 'Garantie / zekerheid',
     objective: '1.1.7',
     definition: {
-      nl: 'De zekerheid dat een product of service aan de overeengekomen eisen voldoet. Het ‘hoe’: geschikt voor gebruik (fit for use). Betreft beschikbaarheid, capaciteit, beveiliging en continuïteit.',
-      en: 'The assurance that a product or service will meet agreed requirements. The ‘how’: fit for use. Covers availability, capacity, security and continuity.',
+      nl: 'De toezegging dat een service zich in het gebruik gedraagt zoals afgesproken. Het ‘hoe’: geschikt voor gebruik (fit for use). Gaat over beschikbaarheid, capaciteit, beveiliging en continuïteit.',
+      en: 'The undertaking that a service will behave in use as agreed. The ‘how’: fit for use. Concerns availability, capacity, security and continuity.',
     },
   },
   {

@@ -989,8 +989,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een conceptuele en/of visuele weergave van hoe een organisatie samen met klanten en stakeholders waarde creëert, en hoe de organisatie functioneert',
-          en: 'A conceptual and/or visual representation of how an organization creates value together with customers and stakeholders, and how the organization operates',
+          nl: 'Een schets, in begrippen of in beeld, van de manier waarop een organisatie werkt en waarmee zij in samenspel met klanten en andere belanghebbenden waarde tot stand brengt',
+          en: 'A sketch, in concepts or in pictures, of the way an organization works and how it brings about value in concert with customers and other stakeholders',
         },
         correct: true,
       },
@@ -1690,8 +1690,8 @@ export const questions: QuestionSeed[] = [
     bloom: 1,
     difficulty: 2,
     stem: {
-      nl: 'Identificeer het ontbrekende woord in de volgende zin.\n\nEen [ ? ] is een versie van een product, service of ander configuratie-item, of een verzameling configuratie-items, die beschikbaar wordt gesteld voor gebruik.',
-      en: 'Identify the missing word in the following sentence.\n\nA [ ? ] is a version of a product, service or other configuration item, or a collection of configuration items, that is made available for use.',
+      nl: 'Identificeer het ontbrekende woord in de volgende zin.\n\nEen [ ? ] is het pakket wijzigingen dat als geheel voor gebruik wordt vrijgegeven: een bepaalde versie van een of meer configuratie-items, die vanaf dat moment beschikbaar is.',
+      en: 'Identify the missing word in the following sentence.\n\nA [ ? ] is the package of changes handed over for use as a whole: a particular version of one or more configuration items, available from that moment on.',
     },
     options: [
       { text: { nl: 'release', en: 'release' }, correct: true },

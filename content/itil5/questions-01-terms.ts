@@ -115,8 +115,8 @@ export const questions: QuestionSeed[] = [
       },
     ],
     explanation: {
-      nl: 'Output is een tastbaar of niet-tastbaar op te leveren resultaat van een activiteit (de portal). Outcome is een resultaat voor een belanghebbende dat mogelijk wordt gemaakt door een of meer outputs (minder telefoontjes). Ezelsbrug: output is wat je oplevert, outcome is wat er verandert.',
-      en: 'Output is a tangible or intangible deliverable of an activity (the portal). Outcome is a result for a stakeholder enabled by one or more outputs (fewer calls). Memory aid: output is what you deliver, outcome is what changes.',
+      nl: 'De output is wat er uit het werk rolt en aanwijsbaar is, tastbaar of niet: hier de portal zelf. De outcome is de verandering die een belanghebbende daardoor merkt, en die kan pas ontstaan als er een of meer outputs liggen: hier de daling van het aantal telefoontjes. Ezelsbrug: output is wat je oplevert, outcome is wat er verandert.',
+      en: 'The output is what the work produces and what you can point at, tangible or not: here the portal itself. The outcome is the change a stakeholder notices because of it, and it can only arise once one or more outputs exist: here the drop in calls. Memory aid: output is what you deliver, outcome is what changes.',
     },
     source: 'Syllabus 1.3.3, 1.3.4',
   },
@@ -160,8 +160,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'De garantie dat een product voldoet aan eisen op het gebied van rentmeesterschap van de omgeving, sociale vooruitgang en economische groei',
-          en: 'The assurance that a product meets requirements for environmental stewardship, social progress and economic growth',
+          nl: 'De belofte dat een product op lange termijn verantwoord blijft voor omgeving, samenleving en economie',
+          en: 'The promise that a product stays responsible over the long term for the environment, society and the economy',
         },
         rationale: {
           nl: 'Dit is duurzaamheid (sustainability), in ITIL Version 5 een zelfstandige component van servicewaarde.',
@@ -204,8 +204,8 @@ export const questions: QuestionSeed[] = [
       {
         text: { nl: 'Serviceprovider', en: 'Service provider' },
         rationale: {
-          nl: 'De serviceprovider is een organisatie die verantwoordelijk is voor de levering en ondersteuning van services, geen rol aan de consumentenkant.',
-          en: 'The service provider is an organization responsible for delivering and supporting services, not a role on the consumer side.',
+          nl: 'De serviceprovider staat aan de leverende kant: die brengt de service en houdt hem draaiend. Het is geen rol bij de afnemer.',
+          en: 'The service provider sits on the supplying side: it brings the service and keeps it running. It is not a role on the consumer side.',
         },
       },
     ],
@@ -480,8 +480,8 @@ export const questions: QuestionSeed[] = [
       },
       {
         text: {
-          nl: 'Een gedocumenteerde overeenkomst tussen serviceverlener en klant over de geleverde services',
-          en: 'A documented agreement between a service provider and a customer about the services delivered',
+          nl: 'Een op schrift gestelde afspraak tussen serviceverlener en klant over wat er geleverd wordt',
+          en: 'A written arrangement between provider and customer covering what gets delivered',
         },
         rationale: {
           nl: 'Dat is de Service Level Agreement (SLA). De SLA legt serviceniveaus vast; het serviceniveau zelf is de set meetwaarden.',
@@ -861,8 +861,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Formeel beschrijven welke services zijn ontworpen om te voldoen aan de behoeften van een specifieke consumentengroep, inclusief de potentiële waarde',
-          en: 'To formally describe which services are designed to address the needs of a target consumer group, including the potential value',
+          nl: 'Op papier zetten welke services zijn toegesneden op één afgebakende groep afnemers, en wat die groep eraan kan hebben',
+          en: 'Setting out on paper which services are tailored to one defined group of consumers, and what that group stands to gain from them',
         },
         correct: true,
       },
@@ -1118,8 +1118,8 @@ export const questions: QuestionSeed[] = [
       },
     ],
     explanation: {
-      nl: 'Een organisatie is een persoon of groep personen met eigen functies, verantwoordelijkheden, bevoegdheden en relaties om haar doelstellingen te bereiken. Dat kan een volledige rechtspersoon zijn, een onderdeel daarvan, een groep rechtspersonen, of zelfs één individu. Een minimum van twee rechtspersonen bestaat niet.',
-      en: 'An organization is a person or group of people with its own functions, responsibilities, authorities and relationships to achieve its objectives. That can be a full legal entity, a part of one, a group of entities, or even a single individual. There is no minimum of two legal entities.',
+      nl: 'Wat een organisatie tot organisatie maakt is niet haar omvang maar haar inrichting: er zijn taken belegd, iemand is ergens verantwoordelijk voor, er is bevoegdheid om te beslissen, en er lopen verhoudingen tussen die onderdelen, gericht op een gezamenlijk doel. Dat kan een heel bedrijf zijn, een afdeling, een samenwerkingsverband, of één persoon. Een ondergrens van twee rechtspersonen bestaat niet.',
+      en: 'What makes an organization is not its size but its arrangement: tasks are assigned, someone is accountable for something, there is authority to decide, and relations run between those parts towards a shared goal. That can be a whole company, a department, a partnership, or a single person. There is no lower bound of two legal entities.',
     },
     source: 'Syllabus 1.4.1, 1.4.7',
   },
@@ -1231,23 +1231,23 @@ export const questions: QuestionSeed[] = [
     bloom: 1,
     difficulty: 2,
     stem: {
-      nl: 'Identificeer het ontbrekende woord in de volgende zin.\n\n[ ? ] is de garantie dat een product of service voldoet aan, en zal blijven voldoen aan, de eisen op het gebied van rentmeesterschap van de omgeving, sociale vooruitgang en economische groei.',
-      en: 'Identify the missing word in the following sentence.\n\n[ ? ] is the assurance that a product or service meets, and will continue to meet, requirements for environmental stewardship, social progress and economic growth.',
+      nl: 'Identificeer het ontbrekende woord in de volgende zin.\n\n[ ? ] is de belofte dat een product of service ook op lange termijn verantwoord blijft, gemeten langs drie lijnen: de zorg voor de omgeving, de gevolgen voor de samenleving en de economische houdbaarheid.',
+      en: 'Identify the missing word in the following sentence.\n\n[ ? ] is the promise that a product or service stays responsible over the long term, measured along three lines: care for the environment, the effect on society and economic viability.',
     },
     options: [
       { text: { nl: 'Duurzaamheid', en: 'Sustainability' }, correct: true },
       {
         text: { nl: 'Garantie', en: 'Warranty' },
         rationale: {
-          nl: 'Garantie is de zekerheid dat een product of service aan de overeengekomen eisen voldoet — beschikbaarheid, capaciteit, beveiliging, continuïteit.',
-          en: 'Warranty is the assurance that a product or service meets agreed requirements — availability, capacity, security, continuity.',
+          nl: 'Garantie gaat over de vraag of een service doet wat is afgesproken op punten als beschikbaarheid, capaciteit, beveiliging en continuïteit. Dat zegt niets over de houdbaarheid op termijn.',
+          en: 'Warranty is about whether a service performs as agreed on points such as availability, capacity, security and continuity. That says nothing about how well it holds up over time.',
         },
       },
       {
         text: { nl: 'Betrouwbaarheid', en: 'Reliability' },
         rationale: {
-          nl: 'Betrouwbaarheid is het vermogen van een product of service om gedurende een bepaalde tijd of aantal cycli naar behoren te functioneren.',
-          en: 'Reliability is the ability of a product or service to function as required for a given time or number of cycles.',
+          nl: 'Betrouwbaarheid zegt hoe lang iets storingvrij blijft werken, uitgedrukt in tijd of in aantal keren gebruik. Over de gevolgen voor omgeving, samenleving of economie gaat het niet.',
+          en: 'Reliability says how long something keeps working without failing, expressed in time or in number of uses. It says nothing about effects on the environment, society or the economy.',
         },
       },
       {
@@ -1320,8 +1320,8 @@ export const questions: QuestionSeed[] = [
     options: [
       {
         text: {
-          nl: 'Een vastgelegde afspraak tussen aanbieder en klant, waarin staat welke services worden geleverd en welk niveau daarbij per service is afgesproken',
-          en: 'A documented agreement between a service provider and a customer that identifies the services delivered and the agreed level of each service',
+          nl: 'Een op schrift gestelde afspraak waarin aanbieder en klant vastleggen wélke services er komen en welk niveau daarbij per stuk geldt',
+          en: 'A written arrangement in which provider and customer set down which services are coming and what level applies to each of them',
         },
         correct: true,
       },
@@ -1470,8 +1470,8 @@ export const questions: QuestionSeed[] = [
       },
     ],
     explanation: {
-      nl: 'Output is een tastbaar of niet-tastbaar op te leveren resultaat van een activiteit: een release, documentatie, een workflow. Outcome is een resultaat voor een belanghebbende dat door een of meer outputs mogelijk wordt gemaakt: sneller werken, minder incidenten, lagere doorlooptijd. ITIL stuurt op doorvragen: wat leverde dit op, voor wie, en helpt het bij de doelen?',
-      en: 'Output is a tangible or intangible deliverable of an activity: a release, documentation, a workflow. Outcome is a result for a stakeholder enabled by one or more outputs: working faster, fewer incidents, shorter lead times. ITIL encourages probing: what did this deliver, for whom, and does it help achieve the goals?',
+      nl: 'De output is wat het werk aanwijsbaar oplevert, tastbaar of niet: een release, documentatie, een workflow. De outcome is de verandering die een belanghebbende daardoor merkt, en die kan pas ontstaan als die outputs er zijn: sneller werken, minder incidenten, lagere doorlooptijd. ITIL stuurt op doorvragen: wat leverde dit op, voor wie, en helpt het bij de doelen?',
+      en: 'The output is what the work demonstrably produces, tangible or not: a release, documentation, a workflow. The outcome is the change a stakeholder notices because of it, and it can only arise once those outputs exist: working faster, fewer incidents, shorter lead times. ITIL encourages probing: what did this deliver, for whom, and does it help achieve the goals?',
     },
     source: 'Syllabus 1.3.3, 1.3.4',
   },
