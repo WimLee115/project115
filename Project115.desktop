@@ -4,9 +4,16 @@ Version=1.0
 Name=Project115
 GenericName=Studiehub
 Comment=Oefenen voor ITIL Foundation (Version 5) en EXIN ISO/IEC 27001 Foundation
-Icon=/home/wimlee/Desktop/eigenstudie hub/public/icon.svg
-Exec=/home/wimlee/Desktop/eigenstudie hub/start.sh
-Path=/home/wimlee/Desktop/eigenstudie hub
+# De drie paden hieronder wijzen naar de map waarin dit project staat. Vul ze in
+# met het commando uit ONTWIKKELEN.md; dat zet het juiste pad erin en schrijft
+# het resultaat naar je programmamenu, zodat dit bestand zelf algemeen blijft.
+#
+# Exec staat tussen dubbele aanhalingstekens omdat dat veld volgens de Desktop
+# Entry-specificatie op spaties wordt gesplitst. Icon en Path nemen de hele
+# waarde zoals hij er staat en hebben ze niet nodig.
+Icon=/pad/naar/project115/public/icon.svg
+Exec="/pad/naar/project115/start.sh"
+Path=/pad/naar/project115
 Terminal=true
 Categories=Education;Science;
 Keywords=ITIL;ISO27001;EXIN;examen;studie;leren;

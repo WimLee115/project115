@@ -15,7 +15,7 @@ sudo systemctl start docker
 # Geheim en adres
 cp .env.example .env
 echo "APP_SECRET=$(openssl rand -base64 48)" >> .env
-# Pas SITE_ADDRESS aan, bijvoorbeeld https://192.168.2.5
+# Pas SITE_ADDRESS aan, bijvoorbeeld https://192.168.1.50
 
 docker compose up -d --build
 ```
