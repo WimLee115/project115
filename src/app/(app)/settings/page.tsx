@@ -250,6 +250,16 @@ export default async function SettingsPage() {
             {t('settings.exportData')}
           </a>
         </Card>
+
+        {/* Handelsmerken. Voorwaarde 3 van de licentie vraagt deze vermelding
+            in de software, niet alleen in de documentatie. De Android-schil
+            heeft hem onder Instellingen > Over; dit is de tegenhanger daarvan. */}
+        <Card>
+          <h2 className="mb-2 font-semibold">{t('about.trademarks')}</h2>
+          <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+            {t('about.trademarksBody')}
+          </p>
+        </Card>
       </div>
     </>
   );

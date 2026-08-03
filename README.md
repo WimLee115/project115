@@ -85,8 +85,10 @@ verkocht. Zie [GEBRUIKSVOORWAARDEN.md](GEBRUIKSVOORWAARDEN.md).
 
 **De vragen zijn origineel.** Alle 160 vragen, hun antwoordopties en de
 toelichtingen daarbij zijn zelf geschreven aan de hand van de assessment
-criteria uit de openbaar gepubliceerde examenspecificaties. Er is geen enkele
-examenvraag overgenomen, niet uit een oefenexamen en niet uit een echt examen.
+criteria uit de examenspecificaties van PeopleCert en EXIN, en van het
+cursusmateriaal dat daarbij hoort. Welke bronnen dat precies zijn staat op naam
+in PLAN.md, onder "Herkomst". Er is geen enkele examenvraag overgenomen, niet
+uit een oefenexamen en niet uit een echt examen.
 
 **De begrippenlijst inmiddels ook.** In 1.0.0 was dat anders: de definities
 waren toen woordelijk overgenomen uit cursusmateriaal. Sinds 1.1.0 zijn ze

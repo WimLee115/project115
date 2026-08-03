@@ -107,9 +107,9 @@ programmabestanden.
 ## Wat je mag verspreiden en wat niet
 
 De vragen, toelichtingen en begrippen in deze app zijn **origineel geschreven**
-aan de hand van de openbaar gepubliceerde examenspecificaties van PeopleCert en
-EXIN. Er zijn geen examenvragen overgenomen, en er staat geen cursustekst in.
-Verspreiden mag daarom.
+aan de hand van de examenspecificaties van PeopleCert en EXIN, en van het
+cursusmateriaal dat bij die examens hoort. Er zijn geen examenvragen
+overgenomen, en er staat geen cursustekst in. Verspreiden mag daarom.
 
 Wat er níét in zit en er ook niet in mag: het Nederlandstalige reference manual
 van ITMG, de EXIN preparation guide, het examenboek van Hintzbergen, of enige
