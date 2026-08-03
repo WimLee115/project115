@@ -82,11 +82,9 @@ dependencies {
 
 apply from: 'capacitor.build.gradle'
 
-try {
-    def servicesJSON = file('google-services.json')
-    if (servicesJSON.text) {
-        apply plugin: 'com.google.gms.google-services'
-    }
-} catch(Exception e) {
-    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
-}
+// Capacitor zet hier standaard een blok neer dat de google-services-plugin
+// toepast zodra er een google-services.json ligt. Dat bestand is er niet en
+// komt er niet: de app draait volledig offline en heeft geen Firebase, geen
+// push en geen analytics. Het blok is verwijderd in plaats van blijven staan,
+// zodat er geen Google-plugin in de buildketen zit voor een functie die er
+// niet is. Zie ook de toelichting in de buildscript-dependencies hierboven.
