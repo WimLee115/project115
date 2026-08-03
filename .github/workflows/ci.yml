@@ -66,6 +66,27 @@ jobs:
           cache: npm
           cache-dependency-path: android-app/package-lock.json
 
+      # De runner heeft vijf JDK's staan en 17 is er de standaard. Welke dat is
+      # bepaalt GitHub, niet dit project: bij een nieuwe runner-image kan die
+      # standaard opschuiven zonder dat hier een regel verandert. Daarom pinnen
+      # we hem. 21 is wat Capacitor in capacitor.build.gradle als source- en
+      # targetCompatibility vastlegt, dus dat is de versie waar de Android-build
+      # op hoort te draaien.
+      #
+      # cache: gradle bewaart ~/.gradle/caches en ~/.gradle/wrapper. De wrapper
+      # krijgt een eigen sleutel op gradle-wrapper.properties, dus juist een
+      # pull request die de Gradle-versie optilt krijgt gegarandeerd geen
+      # cachetreffer en haalt de nieuwe distributie echt op. Dat is hier de
+      # bedoeling: die moet op de nieuwe Gradle getoetst worden.
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          java-version: 21
+          distribution: temurin
+          cache: gradle
+          cache-dependency-path: |
+            android-app/android/**/*.gradle*
+            android-app/android/gradle/wrapper/gradle-wrapper.properties
+
       - name: Afhankelijkheden installeren
         working-directory: android-app
         run: npm ci
@@ -81,6 +102,37 @@ jobs:
       - name: Webbuild
         working-directory: android-app
         run: npm run build
+
+      # capacitor-cordova-android-plugins staat in .gitignore en wordt door
+      # cap sync aangemaakt. Op een verse checkout bestaat die map dus niet en
+      # struikelt Gradle meteen over cordova.variables.gradle, dat vanuit
+      # capacitor.build.gradle wordt ingelezen. Deze stap moet daarom na de
+      # webbuild staan: cap sync kopieert dist/ mee.
+      - name: Capacitor synchroniseren
+        working-directory: android-app
+        run: npx cap sync android
+
+      # Hier zat een gat. Geen enkele job raakte Gradle aan, dus een
+      # Dependabot-pull-request die alleen gradle-wrapper.properties aanpast
+      # kwam met allemaal groene vinkjes binnen. Dat is bijna misgegaan: de
+      # voorgestelde bump naar Gradle 9.6.1 sloopt de configuratiefase, omdat
+      # Gradle 9.6.0 org.gradle.api.problems.internal.InternalProblems heeft
+      # verwijderd en Android Gradle Plugin 8.13.0 daarop leunt. De build faalt
+      # dan op "Failed to apply plugin 'com.android.internal.application'".
+      # Zonder deze stap was dat pas bij de eerstvolgende npm run
+      # android:release opgevallen, weken later, wanneer niet meer te zien is
+      # welke samenvoeging het gedaan heeft.
+      #
+      # --dry-run bouwt niets. Gradle configureert alle negen modules, past in
+      # elk daarvan de Android-plugin toe en stelt de volledige taakgraaf
+      # samen, en voert die dan niet uit. Dat is precies de fase waarin het
+      # misgaat, tegen een fractie van de kosten van een echte build. Debug en
+      # release allebei, want de release-variant heeft zijn eigen configuratie
+      # en loopt hier zonder keystore.properties langs hetzelfde pad als een
+      # verse kloon.
+      - name: Gradle-configuratie controleren
+        working-directory: android-app/android
+        run: ./gradlew assembleDebug assembleRelease --dry-run
 
   content:
     name: Vragenbank
