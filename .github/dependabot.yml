@@ -230,14 +230,12 @@ updates:
         patterns:
           - "*"
 
-  # De basisimage van de container: node:20-bookworm-slim, twee keer in de
+  # De basisimage van de container: node:24-bookworm-slim, twee keer in de
   # Dockerfile in de hoofdmap.
   #
   # Let op: Dependabot doet voor het docker-ecosysteem alleen versie-updates,
   # geen beveiligingsupdates. Een kwetsbaarheid in de basisimage komt hier dus
-  # niet vanzelf binnen. Daar komt bij dat node 20 sinds 30 april 2026 uit
-  # onderhoud is; de image hoort naar een reeks te gaan die nog patches krijgt.
-  # Dat is een eigen beslissing en geen bump die je blind samenvoegt.
+  # niet vanzelf binnen.
   - package-ecosystem: docker
     directory: /
     schedule:
@@ -251,6 +249,20 @@ updates:
     # wachttijden per semver-niveau.
     cooldown:
       default-days: 7
+    ignore:
+      # Dependabot kent het verschil tussen een LTS-uitgave en een tussenversie
+      # niet. Node brengt elk oneven nummer uit als kortlopende reeks: 25 kwam
+      # uit in oktober 2025 en was op 1 juni 2026 alweer uit onderhoud, terwijl
+      # 24 tot april 2028 patches krijgt. Zonder deze regel stelde Dependabot
+      # precies die stap achteruit voor.
+      #
+      # De image gebruikt bovendien de node_modules van de host, dus de
+      # hoofdversie moet met de host meebewegen en niet alleen hier. De sprong
+      # naar de volgende LTS is daarom handwerk: node 26 wordt op 28 oktober
+      # 2026 LTS. Patches binnen 24.x komen gewoon binnen.
+      - dependency-name: "node"
+        update-types:
+          - version-update:semver-major
     groups:
       basisimages:
         applies-to: version-updates
