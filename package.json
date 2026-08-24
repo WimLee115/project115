@@ -29,10 +29,10 @@
     "package:project": "tsx scripts/package-project.ts"
   },
   "dependencies": {
-    "@node-rs/argon2": "2.0.2",
-    "better-sqlite3": "13.0.2",
+    "@node-rs/argon2": "2.1.0",
+    "better-sqlite3": "13.0.3",
     "drizzle-orm": "0.45.2",
-    "next": "16.2.12",
+    "next": "16.3.1",
     "otpauth": "9.5.1",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -51,7 +51,7 @@
     "eslint": "^10.8.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "tailwindcss": "4.3.3",
-    "tsx": "4.23.1",
+    "tsx": "4.23.12",
     "typescript": "5.9.3",
     "typescript-eslint": "^8.46.0"
   },
